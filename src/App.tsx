@@ -1,9 +1,11 @@
+import { Text } from '@chakra-ui/react'
+
 import './App.css'
 
 function App() {
 
   return (
-    <h1>Hello world!</h1>
+    <Text fontSize='50px' color='tomato'>Hello world!</Text>
   )
 }
 
