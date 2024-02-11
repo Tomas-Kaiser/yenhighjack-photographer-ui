@@ -1,11 +1,15 @@
-import { Text } from '@chakra-ui/react'
+import { Grid, GridItem, Text } from '@chakra-ui/react'
 
 import './App.css'
 
 function App() {
 
   return (
-    <Text fontSize='50px' color='tomato'>Hello world!</Text>
+    <Grid templateAreas={`"header" "main" "footer"`}>
+      <GridItem bg={"red"} area={'header'}>Header</GridItem>
+      <GridItem bg={"blue"} area={'main'}>Main</GridItem>
+      <GridItem bg={"gold"} area={'footer'}>Footer</GridItem>
+    </Grid>
   )
 }
 
