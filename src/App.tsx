@@ -2,6 +2,7 @@ import { Grid, GridItem } from '@chakra-ui/react'
 
 import './App.css'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
     <Grid templateAreas={`"header" "main" "footer"`}>
       <GridItem bg={"black"} area={'header'}><NavBar /></GridItem>
       <GridItem bg={"blue"} area={'main'}>Main</GridItem>
-      <GridItem bg={"gold"} area={'footer'}>Footer</GridItem>
+      <GridItem area={'footer'}><Footer /></GridItem>
     </Grid>
   )
 }
