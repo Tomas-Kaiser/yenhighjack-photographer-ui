@@ -10,14 +10,8 @@ const NavBar = () => {
                 <VStack pb='10px'>
                     <Image src={logo} alt='logo' boxSize='150px' />
                     <VStack spacing={0} style={{ fontFamily: 'Ivar Text' }}>
-                        <Text color='white' style={{
-                            letterSpacing: '7px',
-                            fontSize: '4.6rem'
-                        }}>Yen Highjack</Text>
-                        <Text color='white' style={{
-                            letterSpacing: '2px',
-                            fontSize: '1.6rem'
-                        }}>Photography is a poetry for an eye</Text>
+                        <Text color='white' fontSize={{ base: '2.6rem', md: '4.6rem' }} letterSpacing={{ base: '4px', md: '7px' }}>Yen Highjack</Text>
+                        <Text color='white' fontSize={{ base: '1.2rem', md: '1.6rem' }} letterSpacing={{ base: '1.5px', md: '2px' }}>Photography is a poetry for an eye</Text>
                     </VStack>
                 </VStack>
             </Center >
