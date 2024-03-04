@@ -18,7 +18,7 @@ const Footer = () => {
     const instaIconSize = useBreakpointValue({ base: "40px", md: "50px" });
 
     return (
-        <VStack justifyContent="center" p={3} bg="gray">
+        <VStack justifyContent="center" p={3} bg="green.700" h="14vh">
             <a href="https://www.instagram.com/yenhighjack"><FaInstagram
                 color="white"
                 size={instaIconSize}
