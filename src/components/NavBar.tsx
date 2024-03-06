@@ -1,21 +1,19 @@
-import { Center, Image, Text, VStack } from "@chakra-ui/react"
+import { HStack } from "@chakra-ui/react"
 
-import logo from "../assets/logo.webp"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
-        <>
-            <Text color='white' align='right' h='2vh'>Toggle</Text>
-            <Center h='98vh'>
-                <VStack pb='10px'>
-                    <Image src={logo} alt='logo' boxSize='150px' />
-                    <VStack spacing={0} style={{ fontFamily: 'Ivar Text' }}>
-                        <Text color='white' fontSize={{ base: '2.6rem', md: '4.6rem' }} letterSpacing={{ base: '4px', md: '7px' }}>Yen Highjack</Text>
-                        <Text color='white' fontSize={{ base: '1.2rem', md: '1.6rem' }} letterSpacing={{ base: '1.5px', md: '2px' }}>Photography is a poetry for an eye</Text>
-                    </VStack>
-                </VStack>
-            </Center >
-        </>
+        <HStack style={{ position: 'absolute', width: '100%' }} h='50px' bgColor={'green.700'} justify='space-between' pl={10} pr={10}>
+            {/* <Text>Toggle</Text> */}
+            <div style={{ padding: '5px' }}>
+                <Link to='/' style={{ color: 'white' }}>Home</Link>
+            </div>
+            <div style={{ padding: '5px' }}>
+                <Link to='/about' style={{ padding: '20px', color: 'white' }}>About</Link>
+                <Link to='/contact' style={{ color: 'white' }}>Contact</Link>
+            </div>
+        </HStack>
     )
 }
 
