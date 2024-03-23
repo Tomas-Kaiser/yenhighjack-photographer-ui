@@ -1,24 +1,6 @@
 import { Image, Box } from "@chakra-ui/react"
 
 const photos = [
-    // {
-    //     path: '/IMG_5122_mpthrd_c_scale,w_300.webp'
-    // },
-    // {
-    //     path: '/IMG_5123_plzeqy_c_scale,w_300.webp'
-    // },
-    // {
-    //     path: '/IMG_5124_uibnz7_c_scale,w_300.webp'
-    // },
-    // {
-    //     path: '/IMG_5126_thse63_c_scale,w_1030.webp'
-    // },
-    // {
-    //     path: '/IMG_5128_fx8wkp_c_scale,w_842.webp'
-    // },
-    // {
-    //     path: '/IMG_5129_nftsqp_c_scale,w_1200.webp'
-    // },
     {
         path: '/IMG_5130.webp'
     },
