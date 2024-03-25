@@ -19,7 +19,7 @@ const Footer = () => {
 
     return (
         <VStack justifyContent="center" p={3} bg="green.700" h="14vh">
-            <a href="https://www.instagram.com/yenhighjack"><FaInstagram
+            <a href="https://www.instagram.com/yenhighjack/?igsh=Yzl0eW1wMGkxN3po&utm_source=qr" target="_blank"><FaInstagram
                 color="white"
                 size={instaIconSize}
                 style={instaIconStyle}
