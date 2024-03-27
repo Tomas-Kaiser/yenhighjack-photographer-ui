@@ -16,9 +16,9 @@ const photos = [
     {
         path: '/IMG_5134.webp'
     },
-    {
-        path: '/IMG_5135.webp'
-    },
+    // {
+    //     path: '/IMG_5135.webp'
+    // },
     {
         path: '/IMG_5136.webp'
     },
@@ -46,7 +46,7 @@ const PhotoGrid = () => {
     return (
         <Box p={3} sx={outerBoxStyle}>
             {photos.map((photo) => (
-                <Box style={innerBoxStyle}>
+                <Box id={photo.path} style={innerBoxStyle}>
                     <Image src={photo.path}></Image>
                 </Box>
             ))}
