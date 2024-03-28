@@ -1,4 +1,4 @@
-import { HStack, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import { Button, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { GrMenu } from "react-icons/gr"
 import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md"
@@ -6,6 +6,7 @@ import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md"
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
+    const [hamburgerActive, setHamburgerActive] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -27,16 +28,19 @@ const NavBar = () => {
                 <Link to='/' style={{ color: 'white' }}>Home</Link>
             </div>
 
-            {width <= 550 ? <Menu>
-                <MenuButton
+            {width <= 900 ? <Menu>
+                <MenuButton style={{ color: 'white' }}
                     as={IconButton}
                     aria-label='Options'
                     icon={<GrMenu />}
+                    _hover={{ bg: '#235c41' }}
+                    _expanded={{ bg: '#42b37e' }}
                     variant='outline'
+                    onClick={() => setHamburgerActive(!hamburgerActive)}
                 />
-                <MenuList>
-                    <MenuItem as={Link} to='/about' icon={<MdOutlineWorkHistory />}>About</MenuItem>
-                    <MenuItem as={Link} to='/contact' icon={<MdMailOutline />}>Contact</MenuItem>
+                <MenuList style={{ background: '#276749', color: 'white' }}>
+                    <MenuItem bg='#276749' _hover={{ bg: '#235c41' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />}>About</MenuItem>
+                    <MenuItem bg='#276749' _hover={{ bg: '#235c41' }} as={Link} to='/contact' icon={<MdMailOutline />}>Contact</MenuItem>
                 </MenuList>
             </Menu> : <div style={{ padding: '5px' }}>
                 <Link to='/about' style={{ padding: '20px', color: 'white' }}>About</Link>
