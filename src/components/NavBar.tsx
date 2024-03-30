@@ -1,7 +1,8 @@
-import { HStack, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import { Box, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { GrMenu } from "react-icons/gr"
 import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md"
+import { FaHome } from "react-icons/fa"
 
 import { Link } from "react-router-dom"
 
@@ -25,13 +26,12 @@ const NavBar = () => {
     return (
         <HStack style={{ position: 'absolute', width: '100%' }} h='50px' bgColor={'green.700'} justify='space-between' pl={10} pr={10}>
             {/* <Text>Toggle</Text> */}
-            <div style={{ padding: '5px' }}>
-                <Link
-                    to='/'
-                    style={{ padding: '15px', color: 'white', background: active === 'home' ? '#42b37e' : 'inherit' }}
-                    onClick={() => setActive('home')}
-                >Home</Link>
-            </div>
+            <Box
+                as={Link}
+                to='/'
+                style={{ padding: '15px', color: 'white', background: active === 'home' ? '#42b37e' : 'inherit' }}
+                onClick={() => setActive('home')}
+            ><FaHome style={{ color: 'white', fontSize: '20px' }} /></Box>
 
             {width <= 900 ? <Menu>
                 <MenuButton style={{ color: 'white' }}
