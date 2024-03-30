@@ -12,7 +12,7 @@ import {
 const ContactPage = () => {
 
     return (
-        <Flex p={{ base: 5, md: 8, lg: 12 }} mt={{ base: 8 }} direction="column" align="center" justify="center">
+        <Flex p={{ base: 5, md: 8, lg: 12 }} mt={{ base: 20 }} direction="column" align="center" justify="center">
             <Heading pb={5}>Contact Me</Heading>
             <Text pb={12}>Send me a message by filling out the form below or clicking on the instagram icon</Text>
             <Box as="form" w={{ base: '280px', sm: '400px', md: '500px', lg: '750px' }} name="contact" method="post" data-netlify="true">
