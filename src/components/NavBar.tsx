@@ -44,6 +44,7 @@ const NavBar = () => {
                     onClick={() => setHamburgerActive(!hamburgerActive)}
                 />
                 <MenuList style={{ background: '#276749', color: 'white' }}>
+                    <MenuItem bg={active === 'home' ? '#42b37e' : '#276749'} _hover={{ bg: '#235c41' }} as={Link} to='/' icon={<FaHome />} onClick={() => setActive('home')}>Home</MenuItem>
                     <MenuItem bg={active === 'about' ? '#42b37e' : '#276749'} _hover={{ bg: '#235c41' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>About</MenuItem>
                     <MenuItem bg={active === 'contact' ? '#42b37e' : '#276749'} _hover={{ bg: '#235c41' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>Contact</MenuItem>
                 </MenuList>
