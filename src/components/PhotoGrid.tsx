@@ -33,7 +33,8 @@ const photos = [
 const outerBoxStyle = {
     columnCount: { base: '2', lg: '3', xl: 4 },
     columnGap: '1rem',
-    width: '100%'
+    width: '100%',
+    background: 'grey'
 }
 
 const innerBoxStyle = {
