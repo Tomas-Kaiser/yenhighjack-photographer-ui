@@ -1,4 +1,6 @@
-import { Image, Box } from "@chakra-ui/react"
+import { Image, Box, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
+import { useState } from "react"
+import { SiAdafruit } from "react-icons/si"
 
 const photos = [
     {
@@ -44,14 +46,49 @@ const innerBoxStyle = {
 }
 
 const PhotoGrid = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [photoPath, setPhotoPath] = useState('');
+
+    const handleBoxClick = (photoPath: string) => {
+
+        console.log('Test: ', photoPath)
+        setPhotoPath(photoPath);
+
+        // Open the modal
+        onOpen();
+    };
+
     return (
-        <Box p={3} sx={outerBoxStyle}>
-            {photos.map((photo) => (
-                <Box id={photo.path} style={innerBoxStyle}>
-                    <Image src={photo.path}></Image>
-                </Box>
-            ))}
-        </Box>
+        <>
+            {/* <Button onClick={onOpen}>Open Modal</Button> */}
+            <Box p={3} sx={outerBoxStyle}>
+                {photos.map((photo) => (
+                    <Box key={photo.path} id={photo.path} style={innerBoxStyle} onClick={() => handleBoxClick(photo.path)}>
+                        <Image src={photo.path}></Image>
+                    </Box>
+                ))}
+            </Box>
+
+            {/* MODAL opens when user click on a photo */}
+            <Modal isOpen={isOpen} onClose={onClose} isCentered>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>{photoPath}</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        <Image src={photoPath}></Image>
+                    </ModalBody>
+
+                    <ModalFooter>
+                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                            Close
+                        </Button>
+                        <Button variant='ghost'>Secondary Action</Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
+        </>
+
     )
 }
 
