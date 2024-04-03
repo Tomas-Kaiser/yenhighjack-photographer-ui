@@ -1,4 +1,4 @@
-import { Image, Box, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
+import { Image, Box, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Center, Flex } from "@chakra-ui/react"
 import { useState } from "react"
 import { SiAdafruit } from "react-icons/si"
 
@@ -60,7 +60,6 @@ const PhotoGrid = () => {
 
     return (
         <>
-            {/* <Button onClick={onOpen}>Open Modal</Button> */}
             <Box p={3} sx={outerBoxStyle}>
                 {photos.map((photo) => (
                     <Box key={photo.path} id={photo.path} style={innerBoxStyle} onClick={() => handleBoxClick(photo.path)}>
@@ -70,20 +69,18 @@ const PhotoGrid = () => {
             </Box>
 
             {/* MODAL opens when user click on a photo */}
-            <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                <ModalOverlay />
+            <Modal isOpen={isOpen} onClose={onClose} size={'lg'} isCentered>
                 <ModalContent>
                     <ModalHeader>{photoPath}</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody>
-                        <Image src={photoPath}></Image>
+                    <ModalBody justifyContent='center'>
+                        <Image maxW='100%' src={photoPath}></Image>
                     </ModalBody>
 
-                    <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                    <ModalFooter justifyContent='center'>
+                        <Button colorScheme='green' mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
