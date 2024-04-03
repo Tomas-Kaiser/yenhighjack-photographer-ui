@@ -1,6 +1,5 @@
-import { Image, Box, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Center, Flex } from "@chakra-ui/react"
+import { Image, Box, useDisclosure, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
 import { useState } from "react"
-import { SiAdafruit } from "react-icons/si"
 
 const photos = [
     {
