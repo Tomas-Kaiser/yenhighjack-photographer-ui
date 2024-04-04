@@ -42,6 +42,7 @@ const innerBoxStyle = {
     display: 'inline-block',
     width: '100%',
     marginBottom: '1rem',
+    cursor: 'pointer'
 }
 
 const PhotoGrid = () => {
@@ -56,6 +57,17 @@ const PhotoGrid = () => {
         // Open the modal
         onOpen();
     };
+
+    const hanldeNextClick = () => {
+        let findIndex = photos.findIndex(photo => photo.path === photoPath);
+        // Check if the findIndex is the latest photo
+        if (findIndex === photos.length - 1) {
+            // If so then set findIndex -1 because we will increment it below before calling setPhotoPath
+            findIndex = -1;
+        }
+
+        setPhotoPath(photos[++findIndex].path);
+    }
 
     return (
         <>
@@ -79,6 +91,9 @@ const PhotoGrid = () => {
                     <ModalFooter justifyContent='center'>
                         <Button colorScheme='green' mr={3} onClick={onClose}>
                             Close
+                        </Button>
+                        <Button colorScheme='green' mr={3} onClick={hanldeNextClick}>
+                            Next
                         </Button>
                     </ModalFooter>
                 </ModalContent>
