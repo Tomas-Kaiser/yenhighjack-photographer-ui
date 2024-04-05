@@ -19,15 +19,15 @@ const ContactPage = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <Box mb="3">
                     <FormLabel>Your Name:</FormLabel>
-                    <Input type="text" name="name" />
+                    <Input id="name" type="text" name="name" />
                 </Box>
                 <Box mb="3">
                     <FormLabel>Your Email:</FormLabel>
-                    <Input type="email" name="email" />
+                    <Input id="email" type="email" name="email" />
                 </Box>
                 <Box mb="3">
                     <FormLabel>Message:</FormLabel>
-                    <Textarea name="message" />
+                    <Textarea id="message" name="message" />
                 </Box>
                 <Flex justify="center">
                     <Button type="submit" style={{ width: '100%' }}>Send</Button>
