@@ -1,4 +1,4 @@
-import { Image, Box, useDisclosure, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
+import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
 import { useState } from "react"
 
 const photos = [
@@ -61,6 +61,12 @@ const PhotoGrid = () => {
         setCurrentIndex(newIndex);
     }
 
+    const handlePreviousClick = () => {
+        let isFirstPhotoIndex = currentIndex === 0;
+        let newIndex = isFirstPhotoIndex ? photos.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    }
+
     return (
         <>
             <Box p={3} sx={outerBoxStyle}>
@@ -80,7 +86,10 @@ const PhotoGrid = () => {
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
                     <ModalFooter justifyContent='center'>
-                        <Button colorScheme='green' mr={3} onClick={onClose}>
+                        <Button colorScheme='green' mr={3} onClick={handlePreviousClick}>
+                            Previous
+                        </Button>
+                        <Button colorScheme='red' mr={3} onClick={onClose}>
                             Close
                         </Button>
                         <Button colorScheme='green' mr={3} onClick={handleNextClick}>
