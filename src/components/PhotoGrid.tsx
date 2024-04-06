@@ -55,7 +55,7 @@ const PhotoGrid = () => {
         onOpen();
     };
 
-    const hanldeNextClick = () => {
+    const handleNextClick = () => {
         let isLastPhotoIndex = currentIndex === photos.length - 1;
         let newIndex = isLastPhotoIndex ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
@@ -83,7 +83,7 @@ const PhotoGrid = () => {
                         <Button colorScheme='green' mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button colorScheme='green' mr={3} onClick={hanldeNextClick}>
+                        <Button colorScheme='green' mr={3} onClick={handleNextClick}>
                             Next
                         </Button>
                     </ModalFooter>
