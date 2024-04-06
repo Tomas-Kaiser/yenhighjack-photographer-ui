@@ -1,4 +1,4 @@
-import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
+import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, Button, ModalOverlay } from "@chakra-ui/react"
 import { useState } from "react"
 
 const photos = [
@@ -79,6 +79,10 @@ const PhotoGrid = () => {
 
             {/* MODAL opens when user click on a photo */}
             <Modal isOpen={isOpen} onClose={onClose} size={'lg'} isCentered>
+                <ModalOverlay
+                    bg='blackAlpha.300'
+                    backdropFilter='blur(10px) hue-rotate(90deg)'
+                />
                 <ModalContent>
                     {/* <ModalHeader></ModalHeader> */}
                     <ModalCloseButton />
