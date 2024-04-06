@@ -47,33 +47,25 @@ const innerBoxStyle = {
 
 const PhotoGrid = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [photoPath, setPhotoPath] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handleBoxClick = (photoPath: string) => {
-
-        console.log('Test: ', photoPath)
-        setPhotoPath(photoPath);
-
+    const handlePhotoClick = (index: number) => {
+        setCurrentIndex(index);
         // Open the modal
         onOpen();
     };
 
     const hanldeNextClick = () => {
-        let findIndex = photos.findIndex(photo => photo.path === photoPath);
-        // Check if the findIndex is the latest photo
-        if (findIndex === photos.length - 1) {
-            // If so then set findIndex -1 because we will increment it below before calling setPhotoPath
-            findIndex = -1;
-        }
-
-        setPhotoPath(photos[++findIndex].path);
+        let isLastPhotoIndex = currentIndex === photos.length - 1;
+        let newIndex = isLastPhotoIndex ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
     }
 
     return (
         <>
             <Box p={3} sx={outerBoxStyle}>
-                {photos.map((photo) => (
-                    <Box key={photo.path} id={photo.path} style={innerBoxStyle} onClick={() => handleBoxClick(photo.path)}>
+                {photos.map((photo, index) => (
+                    <Box key={photo.path} id={photo.path} style={innerBoxStyle} onClick={() => handlePhotoClick(index)}>
                         <Image src={photo.path}></Image>
                     </Box>
                 ))}
@@ -82,12 +74,11 @@ const PhotoGrid = () => {
             {/* MODAL opens when user click on a photo */}
             <Modal isOpen={isOpen} onClose={onClose} size={'lg'} isCentered>
                 <ModalContent>
-                    <ModalHeader>{photoPath}</ModalHeader>
+                    {/* <ModalHeader></ModalHeader> */}
                     <ModalCloseButton />
-                    <ModalBody justifyContent='center'>
-                        <Image maxW='100%' src={photoPath}></Image>
+                    <ModalBody pt={12} justifyContent='center'>
+                        <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
-
                     <ModalFooter justifyContent='center'>
                         <Button colorScheme='green' mr={3} onClick={onClose}>
                             Close
