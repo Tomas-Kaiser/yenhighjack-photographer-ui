@@ -1,5 +1,6 @@
 import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, Button, ModalOverlay } from "@chakra-ui/react"
 import { useState } from "react"
+import { useSwipeable } from "react-swipeable"
 
 const photos = [
     {
@@ -67,6 +68,14 @@ const PhotoGrid = () => {
         setCurrentIndex(newIndex);
     }
 
+    const handlers = useSwipeable({
+        swipeDuration: 500,
+        preventScrollOnSwipe: true,
+        trackMouse: true,
+        onSwipedLeft: () => handlePreviousClick(),
+        onSwipedRight: () => handleNextClick()
+    });
+
     return (
         <>
             <Box p={3} sx={outerBoxStyle}>
@@ -84,9 +93,8 @@ const PhotoGrid = () => {
                     backdropFilter='blur(10px) hue-rotate(90deg)'
                 />
                 <ModalContent>
-                    {/* <ModalHeader></ModalHeader> */}
                     <ModalCloseButton />
-                    <ModalBody pt={12} justifyContent='center'>
+                    <ModalBody {...handlers} pt={12} justifyContent='center' >
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
                     <ModalFooter justifyContent='center'>
@@ -103,7 +111,6 @@ const PhotoGrid = () => {
                 </ModalContent>
             </Modal>
         </>
-
     )
 }
 
