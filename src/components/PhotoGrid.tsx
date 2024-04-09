@@ -46,6 +46,30 @@ const innerBoxStyle = {
     cursor: 'pointer'
 }
 
+const rightArrowStyles = {
+    position: "absolute",
+    padding: "25px 0 25px 25px",
+    top: "50%",
+    transform: "translate(0, -50%)",
+    right: "32px",
+    fontSize: "45px",
+    color: "#fff",
+    zIndex: 1,
+    cursor: "pointer",
+  } as React.CSSProperties;
+  
+  const leftArrowStyles = {
+    position: "absolute",
+    padding: "25px 25px 25px 0",
+    top: "50%",
+    transform: "translate(0, -50%)",
+    left: "32px",
+    fontSize: "45px",
+    color: "#fff",
+    zIndex: 1,
+    cursor: "pointer",
+  } as React.CSSProperties;
+
 const PhotoGrid = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -98,14 +122,14 @@ const PhotoGrid = () => {
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
                     <ModalFooter justifyContent='center'>
-                        <Button colorScheme='green' mr={3} onClick={handlePreviousClick}>
-                            Previous
-                        </Button>
+                    <Box onClick={handlePreviousClick} style={leftArrowStyles}>
+                    ❰
+                    </Box>
+                    <Box onClick={handleNextClick} style={rightArrowStyles}>
+          ❱
+                    </Box>
                         <Button colorScheme='red' mr={3} onClick={onClose}>
                             Close
-                        </Button>
-                        <Button colorScheme='green' mr={3} onClick={handleNextClick}>
-                            Next
                         </Button>
                     </ModalFooter>
                 </ModalContent>
