@@ -1,4 +1,4 @@
-import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, Button, ModalOverlay } from "@chakra-ui/react"
+import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, ModalOverlay } from "@chakra-ui/react"
 import { useState } from "react"
 import { useSwipeable } from "react-swipeable"
 
