@@ -97,7 +97,8 @@ const PhotoGrid = () => {
         preventScrollOnSwipe: true,
         trackMouse: true,
         onSwipedLeft: () => handlePreviousClick(),
-        onSwipedRight: () => handleNextClick()
+        onSwipedRight: () => handleNextClick(),
+        onSwipedUp: () => onClose(),
     });
 
     return (
@@ -116,21 +117,21 @@ const PhotoGrid = () => {
                     bg='blackAlpha.300'
                     backdropFilter='blur(10px) hue-rotate(90deg)'
                 />
-                <ModalContent>
+                <ModalContent bg='#0000002b'>
                     <ModalCloseButton />
                     <ModalBody {...handlers} pt={12} justifyContent='center' >
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
                     <ModalFooter justifyContent='center'>
-                    <Box onClick={handlePreviousClick} style={leftArrowStyles}>
-                    ❰
-                    </Box>
-                    <Box onClick={handleNextClick} style={rightArrowStyles}>
-          ❱
-                    </Box>
-                        <Button colorScheme='red' mr={3} onClick={onClose}>
+                        <Box onClick={handlePreviousClick} style={leftArrowStyles}>
+                            ❰
+                        </Box>
+                        <Box onClick={handleNextClick} style={rightArrowStyles}>
+                            ❱
+                        </Box>
+                        {/* <Button colorScheme='red' mr={3} onClick={onClose}>
                             Close
-                        </Button>
+                        </Button> */}
                     </ModalFooter>
                 </ModalContent>
             </Modal>
