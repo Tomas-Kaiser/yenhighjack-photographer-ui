@@ -49,10 +49,10 @@ const NavBar = () => {
                     <MenuItem bg={active === 'about' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>About</MenuItem>
                     <MenuItem bg={active === 'contact' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>Contact</MenuItem>
                 </MenuList>
-            </Menu> : <div style={{ padding: '5px' }}>
+            </Menu> : <Box style={{ padding: '5px' }}>
                 <Link to='/about' style={{ padding: '15px', color: darkGreen, background: active === 'about' ? '#E2E8F0' : 'inherit' }} onClick={() => setActive('about')}>About</Link>
                 <Link to='/contact' style={{ padding: '15px', color: darkGreen, background: active === 'contact' ? '#E2E8F0' : 'inherit' }} onClick={() => setActive('contact')}>Contact</Link>
-            </div>}
+            </Box>}
         </HStack >
     )
 }
