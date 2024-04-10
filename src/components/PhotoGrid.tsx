@@ -118,10 +118,10 @@ const PhotoGrid = () => {
                     backdropFilter='blur(10px) hue-rotate(90deg)'
                 />
                 <ModalContent bg='#0000002b'>
-                    <ModalCloseButton />
-                    <ModalBody {...handlers} pt={12} justifyContent='center' >
+                    <ModalBody {...handlers} pt={12} justifyContent='center'>
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
+                    <ModalCloseButton style={{boxShadow: '0 0 0 3px rgba(71, 71, 11, 0.6)'}} color='white' />
                     <ModalFooter justifyContent='center'>
                         <Box onClick={handlePreviousClick} style={leftArrowStyles}>
                             ❰
