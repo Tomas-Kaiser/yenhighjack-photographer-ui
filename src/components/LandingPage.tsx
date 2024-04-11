@@ -1,5 +1,5 @@
-import { Center, VStack, Image, Text } from "@chakra-ui/react"
-import logo from "../assets/logo.webp"
+import { Center, VStack, Text } from "@chakra-ui/react"
+// import logo from "../assets/logo.webp"
 import PhotoGrid from "./PhotoGrid"
 
 const LandingPage = () => {
