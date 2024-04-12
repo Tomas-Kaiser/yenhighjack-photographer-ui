@@ -36,7 +36,7 @@ const outerBoxStyle = {
     columnCount: { base: '2', lg: '3', xl: 4 },
     columnGap: '1rem',
     width: '100%',
-    background: 'linear-gradient(#CBD5E0 80%, #F7FAFC 100%)'
+    background: 'linear-gradient(#17673430 80%, #F7FAFC 100%)'
 }
 
 const innerBoxStyle = {
@@ -53,7 +53,7 @@ const rightArrowStyles = {
     transform: "translate(0, -50%)",
     right: "32px",
     fontSize: "45px",
-    color: "#fff",
+    color: "#ffffff7a",
     zIndex: 1,
     cursor: "pointer",
   } as React.CSSProperties;
@@ -65,7 +65,7 @@ const rightArrowStyles = {
     transform: "translate(0, -50%)",
     left: "32px",
     fontSize: "45px",
-    color: "#fff",
+    color: "#ffffff7a",
     zIndex: 1,
     cursor: "pointer",
   } as React.CSSProperties;
@@ -121,7 +121,7 @@ const PhotoGrid = () => {
                     <ModalBody {...handlers} pt={12} justifyContent='center'>
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
-                    <ModalCloseButton style={{boxShadow: '0 0 0 3px rgba(71, 71, 11, 0.6)'}} color='white' />
+                    <ModalCloseButton style={{boxShadow: '0 0 0 3px #ffffff00'}} color='#ffffff7a' />
                     <ModalFooter justifyContent='center'>
                         <Box onClick={handlePreviousClick} style={leftArrowStyles}>
                             ❰
