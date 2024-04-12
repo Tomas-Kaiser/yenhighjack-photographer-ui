@@ -1,8 +1,8 @@
-import { Box, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { GrMenu } from "react-icons/gr"
 import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md"
-import { FaHome } from "react-icons/fa"
+import { FaFacebook, FaHome, FaInstagram } from "react-icons/fa"
 
 import { Link } from "react-router-dom"
 
@@ -27,12 +27,30 @@ const NavBar = () => {
     return (
         <HStack style={{ position: 'absolute', width: '100%' }} h='50px' bgColor={'gray.50'} justify='space-between' pl={10} pr={10}>
             {/* <Text>Toggle</Text> */}
-            <Box
-                as={Link}
-                to='/'
-                style={{ padding: '15px', color: darkGreen, background: active === 'home' ? '#E2E8F0' : 'inherit' }}
-                onClick={() => setActive('home')}
-            ><FaHome style={{ fontSize: '20px' }} /></Box>
+            <Flex>
+                <Flex w='50px' justifyContent='center' alignItems='center'>
+                    <Box
+                        as={Link}
+                        to='/'
+                        style={{ padding: '15px', color: darkGreen, background: active === 'home' ? '#E2E8F0' : 'inherit' }}
+                        onClick={() => setActive('home')}
+                    ><FaHome style={{ fontSize: '20px' }} />
+                    </Box>
+                </Flex>
+                <Flex w='20px' justifyContent='center' alignItems='center'>
+                    <Text color={darkGreen}>|</Text>
+                </Flex>
+                <Flex justifyContent='center' alignItems='center' >
+                    <Box as='a' p='10px' cursor='pointer' href="https://www.facebook.com/share/jpVp8s9n6sw2aGfd" target="_blank">
+                        <FaFacebook style={{ fontSize: '20px', color: darkGreen }} />
+                    </Box>
+                </Flex>
+                <Flex justifyContent='center' alignItems='center' >
+                    <Box as='a' p='10px' cursor='pointer' href="https://www.instagram.com/yenhighjack/?igsh=Yzl0eW1wMGkxN3po&utm_source=qr" target="_blank">
+                        <FaInstagram style={{ fontSize: '20px', color: darkGreen }} />
+                    </Box>
+                </Flex>
+            </Flex>
 
             {width <= 900 ? <Menu>
                 <MenuButton style={{ color: darkGreen }}
