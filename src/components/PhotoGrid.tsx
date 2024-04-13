@@ -36,7 +36,7 @@ const outerBoxStyle = {
     columnCount: { base: '2', lg: '3', xl: 4 },
     columnGap: '1rem',
     width: '100%',
-    background: 'linear-gradient(#17673430 80%, #F7FAFC 100%)'
+    background: 'linear-gradient(#fff 80%, #F7FAFC 100%)'
 }
 
 const innerBoxStyle = {

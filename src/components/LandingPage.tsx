@@ -5,7 +5,7 @@ import PhotoGrid from "./PhotoGrid"
 const LandingPage = () => {
     return (
         <>
-            <Center bg='linear-gradient(#F7FAFC 80%, #17673430 100%)' h='100vh'>
+            <Center bg='linear-gradient(#F7FAFC 80%, #fff 100%)' h='100vh'>
                 <VStack pb='10px'>
                     {/* <Image src={logo} alt='logo' boxSize='150px' /> */}
                     <VStack spacing={0} style={{ fontFamily: 'Ivar Text' }}>
