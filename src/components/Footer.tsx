@@ -1,29 +1,24 @@
-import { VStack, Text, useBreakpointValue, Link, Flex, Box, HStack } from "@chakra-ui/react"
+import { VStack, Text, useBreakpointValue, Box, HStack } from "@chakra-ui/react"
 import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     const [fbHover, setFbHover] = useState(false);
     const [instHover, setInstHover] = useState(false);
-
     const date = new Date();
-
 
     const fbIconStyle = {
         fontSize: useBreakpointValue({ base: "40px", md: "50px" }),
         cursor: 'pointer',
         borderRadius: '10px',
         color: fbHover ? '#1877F2' : '#176734',
-        // background: fbHover ? '#E53E3E' : 'transparent'
     }
 
     const instaIconStyle = {
         fontSize: useBreakpointValue({ base: "40px", md: "50px" }),
         cursor: 'pointer',
         borderRadius: '10px',
-        // color: '#176734',
         color: instHover ? '#fff' : '#176734',
-        // background: 'linear-radient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)',
         background: instHover ? 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)' : 'transparent'
     }
 
