@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     const [fbHover, setFbHover] = useState(false);
-    const [instHover, setInstHover] = useState(false);
+    const [instHover, setInstaHover] = useState(false);
     const date = new Date();
 
     const fbIconStyle = {
@@ -40,8 +40,8 @@ const Footer = () => {
                     cursor='pointer' 
                     href="https://www.instagram.com/yenhighjack/?igsh=Yzl0eW1wMGkxN3po&utm_source=qr" 
                     target="_blank"
-                    onMouseEnter={() => setInstHover(true)}
-                    onMouseLeave={() => setInstHover(false)}>
+                    onMouseEnter={() => setInstaHover(true)}
+                    onMouseLeave={() => setInstaHover(false)}>
                     <FaInstagram style={instaIconStyle} />
                 </Box>
             </HStack>
