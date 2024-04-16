@@ -30,21 +30,21 @@ const NavBar = () => {
     }, []);
 
     const fbIconStyle = {
-        fontSize: '20px',
+        fontSize: '30px',
         cursor: 'pointer',
         borderRadius: '10px',
         color: fbHover ? '#1877F2' : '#176734',
     }
 
     const instaIconStyle = {
-        fontSize: '20px',
+        fontSize: '30px',
         cursor: 'pointer',
         borderRadius: '10px',
         color: instHover ? '#d6249f' : '#176734',
     }
 
     const homeStyle = {
-        padding: '15px',
+        padding: '13px',
         color: darkGreen,
         background: active === 'home' || homeHover ? '#E2E8F0' : 'inherit' 
     }
@@ -73,7 +73,7 @@ const NavBar = () => {
                         onClick={() => setActive('home')}
                         onMouseEnter={() => setHomeHover(true)}
                         onMouseLeave={() => setHomeHover(false)}
-                    ><FaHome style={{ fontSize: '20px' }} />
+                    ><FaHome style={{ fontSize: '25px' }} />
                     </Box>
                 </Flex>
                 <Flex w='20px' justifyContent='center' alignItems='center'>
