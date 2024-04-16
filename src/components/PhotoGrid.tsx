@@ -1,4 +1,4 @@
-import { Image, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, ModalOverlay } from "@chakra-ui/react"
+import { Image, Text, Box, useDisclosure, Modal, ModalContent, ModalCloseButton, ModalBody, ModalFooter, ModalOverlay, Heading, Divider, Center } from "@chakra-ui/react"
 import { useState } from "react"
 import { useSwipeable } from "react-swipeable"
 
@@ -34,15 +34,15 @@ const photos = [
 
 const outerBoxStyle = {
     columnCount: { base: '2', lg: '3', xl: 4 },
-    columnGap: '1rem',
+    columnGap: '5px',
+    padding: '0 12px',
     width: '100%',
-    background: 'linear-gradient(#fff 80%, #F7FAFC 100%)'
+    background: '#fff' // linear-gradient(#fff 80%, #F7FAFC 100%)
 }
 
 const innerBoxStyle = {
     display: 'inline-block',
     width: '100%',
-    marginBottom: '1rem',
     cursor: 'pointer'
 }
 
@@ -103,13 +103,27 @@ const PhotoGrid = () => {
 
     return (
         <>
-            <Box p={3} sx={outerBoxStyle}>
+            <Heading as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>Show Case of My Art</Heading>
+            <Text textAlign='center' color='#176734' mb={3}>Click on a photo to see it in full size</Text>
+            <Center>
+                <Box w='180px' pb={10}>
+                    <Divider style={{borderColor: '#176734'}} />
+                </Box>
+            </Center>
+            <Box sx={outerBoxStyle}>
                 {photos.map((photo, index) => (
                     <Box key={photo.path} id={photo.path} style={innerBoxStyle} onClick={() => handlePhotoClick(index)}>
                         <Image src={photo.path}></Image>
                     </Box>
                 ))}
             </Box>
+            <Heading as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>Albums</Heading>
+            <Text textAlign='center' color='#176734' mb={3}>To see more of my work, check out my albums</Text>
+            <Center>
+                <Box w='180px' pb={10}>
+                    <Divider style={{borderColor: '#176734'}} />
+                </Box>
+            </Center>
 
             {/* MODAL opens when user click on a photo */}
             <Modal isOpen={isOpen} onClose={onClose} size={'lg'} isCentered>
