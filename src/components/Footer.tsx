@@ -8,14 +8,14 @@ const Footer = () => {
     const date = new Date();
 
     const fbIconStyle = {
-        fontSize: useBreakpointValue({ base: "40px", md: "50px" }),
+        fontSize: useBreakpointValue({ base: "30px", md: "50px" }),
         cursor: 'pointer',
         borderRadius: '10px',
         color: fbHover ? '#1877F2' : '#176734',
     }
 
     const instaIconStyle = {
-        fontSize: useBreakpointValue({ base: "40px", md: "50px" }),
+        fontSize: useBreakpointValue({ base: "30px", md: "50px" }),
         cursor: 'pointer',
         borderRadius: '10px',
         color: instHover ? '#d6249f' : '#176734',
