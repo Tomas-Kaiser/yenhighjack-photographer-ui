@@ -30,14 +30,14 @@ const NavBar = () => {
     }, []);
 
     const fbIconStyle = {
-        fontSize: '30px',
+        fontSize: '23px',
         cursor: 'pointer',
         borderRadius: '10px',
         color: fbHover ? '#1877F2' : '#176734',
     }
 
     const instaIconStyle = {
-        fontSize: '30px',
+        fontSize: '23px',
         cursor: 'pointer',
         borderRadius: '10px',
         color: instHover ? '#d6249f' : '#176734',
