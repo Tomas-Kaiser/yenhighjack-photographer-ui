@@ -56,9 +56,9 @@ const rightArrowStyles = {
     color: "#ffffff7a",
     zIndex: 1,
     cursor: "pointer",
-  } as React.CSSProperties;
-  
-  const leftArrowStyles = {
+} as React.CSSProperties;
+
+const leftArrowStyles = {
     position: "absolute",
     padding: "25px 25px 25px 0",
     top: "50%",
@@ -68,7 +68,7 @@ const rightArrowStyles = {
     color: "#ffffff7a",
     zIndex: 1,
     cursor: "pointer",
-  } as React.CSSProperties;
+} as React.CSSProperties;
 
 const PhotoGrid = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -81,14 +81,14 @@ const PhotoGrid = () => {
     };
 
     const handleNextClick = () => {
-        let isLastPhotoIndex = currentIndex === photos.length - 1;
-        let newIndex = isLastPhotoIndex ? 0 : currentIndex + 1;
+        const isLastPhotoIndex = currentIndex === photos.length - 1;
+        const newIndex = isLastPhotoIndex ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     }
 
     const handlePreviousClick = () => {
-        let isFirstPhotoIndex = currentIndex === 0;
-        let newIndex = isFirstPhotoIndex ? photos.length - 1 : currentIndex - 1;
+        const isFirstPhotoIndex = currentIndex === 0;
+        const newIndex = isFirstPhotoIndex ? photos.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
     }
 
@@ -107,7 +107,7 @@ const PhotoGrid = () => {
             <Text textAlign='center' color='#176734' mb={3}>Click on a photo to see it in full size</Text>
             <Center>
                 <Box w='180px' pb={10}>
-                    <Divider style={{borderColor: '#176734'}} />
+                    <Divider style={{ borderColor: '#176734' }} />
                 </Box>
             </Center>
             <Box sx={outerBoxStyle}>
@@ -117,13 +117,6 @@ const PhotoGrid = () => {
                     </Box>
                 ))}
             </Box>
-            <Heading as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>Albums</Heading>
-            <Text textAlign='center' color='#176734' mb={3}>To see more of my work, check out my albums</Text>
-            <Center>
-                <Box w='180px' pb={10}>
-                    <Divider style={{borderColor: '#176734'}} />
-                </Box>
-            </Center>
 
             {/* MODAL opens when user click on a photo */}
             <Modal isOpen={isOpen} onClose={onClose} size={'lg'} isCentered>
@@ -135,7 +128,7 @@ const PhotoGrid = () => {
                     <ModalBody {...handlers} pt={12} justifyContent='center'>
                         <Image maxW='100%' src={photos[currentIndex].path}></Image>
                     </ModalBody>
-                    <ModalCloseButton style={{boxShadow: '0 0 0 3px #ffffff00'}} color='#ffffff7a' />
+                    <ModalCloseButton style={{ boxShadow: '0 0 0 3px #ffffff00' }} color='#ffffff7a' />
                     <ModalFooter justifyContent='center'>
                         <Box onClick={handlePreviousClick} style={leftArrowStyles}>
                             ❰
