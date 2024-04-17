@@ -1,6 +1,7 @@
 import { Center, VStack, Text } from "@chakra-ui/react"
 // import logo from "../assets/logo.webp"
 import PhotoGrid from "./PhotoGrid"
+import AlbumMenu from "./AlbumMenu"
 
 const LandingPage = () => {
     return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
                 </VStack>
             </Center >
             <PhotoGrid />
+            <AlbumMenu />
         </>
     )
 }
