@@ -1,20 +1,21 @@
 import { Box, Center, Divider, Heading, Text, Image } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
+import { photosAlbums } from '../assets/photos'
 
-const photos = [
-    {
-        name: 'JANINE MADE BY LOVE',
-        path: '/IMG_5130.webp'
-    },
-    {
-        name: 'INFINIMY',
-        path: '/IMG_5131.webp'
-    },
-    {
-        name: 'ANOTHER ONE',
-        path: '/IMG_5132.webp'
-    },
-]
+// const photos = [
+//     {
+//         name: 'JANINE MADE BY LOVE',
+//         path: '/IMG_5130.webp'
+//     },
+//     {
+//         name: 'INFINIMY',
+//         path: '/IMG_5131.webp'
+//     },
+//     {
+//         name: 'ANOTHER ONE',
+//         path: '/IMG_5132.webp'
+//     },
+// ]
 
 const hoverImgStyle = {
     cursor: "pointer",
@@ -35,7 +36,7 @@ const AlbumMenu = () => {
                 </Box>
             </Center>
             <Box>
-                {photos.map((photo, index) => (
+                {photosAlbums.map((photo, index) => (
                     <Link to={`/album/${index}`}>
                         <Box
                             key={photo.path}
