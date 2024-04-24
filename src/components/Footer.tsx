@@ -22,23 +22,23 @@ const Footer = () => {
     }
 
     return (
-        <VStack justifyContent="center" p={3} bg="#F7FAFC" h="14vh">
+        <VStack justifyContent="center" mt={10} p={3} bg="#F7FAFC" h="14vh">
             <HStack>
-                <Box 
-                    as='a' 
-                    p='10px' 
-                    cursor='pointer' 
-                    href="https://www.facebook.com/share/jpVp8s9n6sw2aGfd" 
+                <Box
+                    as='a'
+                    p='10px'
+                    cursor='pointer'
+                    href="https://www.facebook.com/share/jpVp8s9n6sw2aGfd"
                     target="_blank"
                     onMouseEnter={() => setFbHover(true)}
                     onMouseLeave={() => setFbHover(false)}>
                     <FaFacebook style={fbIconStyle} />
                 </Box>
-                <Box 
+                <Box
                     as='a'
-                    p='10px' 
-                    cursor='pointer' 
-                    href="https://www.instagram.com/yenhighjack/?igsh=Yzl0eW1wMGkxN3po&utm_source=qr" 
+                    p='10px'
+                    cursor='pointer'
+                    href="https://www.instagram.com/yenhighjack/?igsh=Yzl0eW1wMGkxN3po&utm_source=qr"
                     target="_blank"
                     onMouseEnter={() => setInstaHover(true)}
                     onMouseLeave={() => setInstaHover(false)}>
