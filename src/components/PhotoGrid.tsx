@@ -2,36 +2,6 @@ import { Image, Text, Box, useDisclosure, Modal, ModalContent, ModalCloseButton,
 import { useState } from "react"
 import { useSwipeable } from "react-swipeable"
 
-const photos = [
-    {
-        path: '/IMG_5130.webp'
-    },
-    {
-        path: '/IMG_5131.webp'
-    },
-    {
-        path: '/IMG_5132.webp'
-    },
-    {
-        path: '/IMG_5133.webp'
-    },
-    {
-        path: '/IMG_5134.webp'
-    },
-    // {
-    //     path: '/IMG_5135.webp'
-    // },
-    {
-        path: '/IMG_5136.webp'
-    },
-    {
-        path: '/IMG_5137.webp'
-    },
-    {
-        path: '/IMG_5138.webp'
-    },
-]
-
 const outerBoxStyle = {
     columnCount: { base: '2', lg: '3', xl: 4 },
     columnGap: '5px',
@@ -70,7 +40,18 @@ const leftArrowStyles = {
     cursor: "pointer",
 } as React.CSSProperties;
 
-const PhotoGrid = () => {
+interface Photo {
+    path: string
+    name: string
+}
+
+interface Props {
+    heading: string,
+    subHeading: string,
+    photos: Photo[],
+}
+
+const PhotoGrid = ({ heading, subHeading, photos }: Props) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -103,8 +84,8 @@ const PhotoGrid = () => {
 
     return (
         <>
-            <Heading as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>Show Case of My Art</Heading>
-            <Text textAlign='center' color='#176734' mb={3}>Click on a photo to see it in full size</Text>
+            <Heading as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>{heading}</Heading>
+            <Text textAlign='center' color='#176734' mb={3}>{subHeading}</Text>
             <Center>
                 <Box w='180px' pb={10}>
                     <Divider style={{ borderColor: '#176734' }} />
