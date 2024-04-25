@@ -1,8 +1,9 @@
 import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
+import { HashLink } from 'react-router-hash-link';
 import { useEffect, useState } from "react"
 import { GrMenu } from "react-icons/gr"
 import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md"
-import { FaFacebook, FaHome, FaInstagram } from "react-icons/fa"
+import { FaCamera, FaFacebook, FaHome, FaInstagram } from "react-icons/fa"
 
 import { Link } from "react-router-dom"
 
@@ -14,6 +15,7 @@ const NavBar = () => {
     const [instHover, setInstaHover] = useState(false);
     const [homeHover, setHomeHover] = useState(false);
     const [aboutHover, setAboutHover] = useState(false);
+    const [albumsHover, setAlbumsHover] = useState(false);
     const [contactHover, setContactHover] = useState(false);
     const darkGreen = '#176734';
 
@@ -46,13 +48,19 @@ const NavBar = () => {
     const homeStyle = {
         padding: '13px',
         color: darkGreen,
-        background: active === 'home' || homeHover ? '#E2E8F0' : 'inherit' 
+        background: active === 'home' || homeHover ? '#E2E8F0' : 'inherit'
     }
 
     const aboutStyle = {
         padding: '15px',
         color: darkGreen,
-        background: (active === 'about' || aboutHover ? '#E2E8F0' : 'inherit') 
+        background: (active === 'about' || aboutHover ? '#E2E8F0' : 'inherit')
+    }
+
+    const albumsStyle = {
+        padding: '15px',
+        color: darkGreen,
+        background: (active === 'albums' || albumsHover ? '#E2E8F0' : 'inherit')
     }
 
     const contactStyle = {
@@ -107,14 +115,17 @@ const NavBar = () => {
                 />
                 <MenuList style={{ background: '#F7FAFC', color: darkGreen }}>
                     <MenuItem bg={active === 'home' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/' icon={<FaHome />} onClick={() => setActive('home')}>Home</MenuItem>
+                    <MenuItem bg={active === 'albums' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={HashLink} to='/#albums' icon={<FaCamera />} onClick={() => setActive('albums')}>Albums</MenuItem>
                     <MenuItem bg={active === 'about' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>About</MenuItem>
                     <MenuItem bg={active === 'contact' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>Contact</MenuItem>
                 </MenuList>
             </Menu> : <Box style={{ padding: '5px' }}>
+                <HashLink to='/#albums' smooth={true} style={albumsStyle} onClick={() => setActive('albums')} onMouseEnter={() => setAlbumsHover(true)}
+                    onMouseLeave={() => setAlbumsHover(false)}>Albums</HashLink>
                 <Link to='/about' style={aboutStyle} onClick={() => setActive('about')} onMouseEnter={() => setAboutHover(true)}
-                        onMouseLeave={() => setAboutHover(false)}>About</Link>
+                    onMouseLeave={() => setAboutHover(false)}>About</Link>
                 <Link to='/contact' style={contactStyle} onClick={() => setActive('contact')} onMouseEnter={() => setContactHover(true)}
-                        onMouseLeave={() => setContactHover(false)}>Contact</Link>
+                    onMouseLeave={() => setContactHover(false)}>Contact</Link>
             </Box>}
         </HStack >
     )
