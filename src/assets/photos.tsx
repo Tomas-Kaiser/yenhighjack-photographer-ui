@@ -85,7 +85,7 @@ export const photosBasedAlbum = [
         photos: [
             {
                 name: 'JANINE MADE BY LOVE 1',
-                path: '/Infinimy-1.jpg',
+                path: '/Janinemadebylove1.jpg',
             },
             {
                 name: 'JANINE MADE BY LOVE 2',
@@ -195,22 +195,3 @@ export const photosBasedAlbum = [
         ]
     }
 ];
-
-// {
-//     name: 'INFINIMY',
-//     photos: [
-//         {
-//             name: 'JANINE MADE BY LOVE',
-//             path: '/IMG_5131.webp'
-//         }
-//     ]
-// },
-// {
-//     name: 'ANOTHER ONE',
-//     photos: [
-//         {
-//             name: 'JANINE MADE BY LOVE',
-//             path: '/IMG_5132.webp'
-//         }
-//     ]
-// },
