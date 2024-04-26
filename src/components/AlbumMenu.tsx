@@ -8,7 +8,7 @@ const hoverImgStyle = {
 }
 
 const outerBoxStyle = {
-    columnCount: { base: '0', sm: '2', lg: '3' },
+    columnCount: { base: '0', sm: '2' },
     columnGap: { base: '0', sm: '5px' },
     padding: { base: '0', sm: '0 12px' },
     width: '100%',
