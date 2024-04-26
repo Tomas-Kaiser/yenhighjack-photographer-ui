@@ -4,42 +4,6 @@ import PhotoGrid from "./PhotoGrid"
 import AlbumMenu from "./AlbumMenu"
 import { topPhotos } from "../assets/photos"
 
-// const photos = [
-//     {
-
-//         name: 'name',
-//         path: '/IMG_5130.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5131.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5132.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5133.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5134.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5136.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5137.webp'
-//     },
-//     {
-//         name: 'name',
-//         path: '/IMG_5138.webp'
-//     },
-// ]
-
 const LandingPage = () => {
     return (
         <>
