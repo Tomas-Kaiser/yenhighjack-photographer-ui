@@ -6,11 +6,7 @@ export const photoCoverAlbums = [
     {
         name: 'INFINIMY',
         path: '/IMG_5131.webp'
-    },
-    {
-        name: 'ANOTHER ONE',
-        path: '/IMG_5132.webp'
-    },
+    }
 ];
 
 export const topPhotos = {
