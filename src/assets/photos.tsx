@@ -1,11 +1,11 @@
 export const photoCoverAlbums = [
     {
         name: 'JANINE MADE BY LOVE',
-        path: '/IMG_5130.webp'
+        path: '/Janinemadebylove1.jpg'
     },
     {
         name: 'INFINIMY',
-        path: '/IMG_5131.webp'
+        path: '/Infinimy-06.jpg'
     }
 ];
 
