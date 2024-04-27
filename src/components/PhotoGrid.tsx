@@ -77,8 +77,8 @@ const PhotoGrid = ({ heading, subHeading, photos }: Props) => {
         swipeDuration: 500,
         preventScrollOnSwipe: true,
         trackMouse: true,
-        onSwipedLeft: () => handlePreviousClick(),
-        onSwipedRight: () => handleNextClick(),
+        onSwipedLeft: () => handleNextClick(),
+        onSwipedRight: () => handlePreviousClick(),
         onSwipedUp: () => onClose(),
     });
 
