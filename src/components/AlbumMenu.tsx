@@ -8,11 +8,11 @@ const hoverImgStyle = {
 }
 
 const outerBoxStyle = {
-    columnCount: { base: '0', sm: '2' },
-    columnGap: { base: '0', sm: '5px' },
-    padding: { base: '0', sm: '0 12px' },
+    display: { sm: 'flex' },
+    justifyContent: { sm: 'center' },
+    padding: { sm: '0 12px' },
     width: '100%',
-    background: '#fff' // linear-gradient(#fff 80%, #F7FAFC 100%)
+    background: '#fff'
 }
 
 const AlbumMenu = () => {
@@ -25,18 +25,18 @@ const AlbumMenu = () => {
                     <Divider style={{ borderColor: '#176734' }} />
                 </Box>
             </Center>
-            <Center>
-                <Box sx={outerBoxStyle}>
-                    {photoCoverAlbums.map((photo, index) => (
-                        <Link to={`/album/${index}`}>
+            <Box sx={outerBoxStyle}>
+                {photoCoverAlbums.map((photo, index) => (
+                    <Box key={photo.path} width={{ sm: '230px', lg: '350px' }} p={{ sm: '10px' }}>
+                        <Link
+                            to={`/albums/${index}`} >
                             <Box
-                                key={photo.path}
                                 id={photo.path}
                                 position='relative'
                                 mb={3}
                                 _hover={{
                                     "> div": {
-                                        opacity: 1,
+                                        opacity: 0.80,
                                     },
                                     cursor: "pointer",
                                 }}
@@ -57,12 +57,11 @@ const AlbumMenu = () => {
                                 >
                                     <Text color="white">- {photo.name} -</Text>
                                 </Box>
-
                             </Box>
                         </Link>
-                    ))}
-                </Box >
-            </Center>
+                    </Box>
+                ))}
+            </Box >
         </>
     )
 }
