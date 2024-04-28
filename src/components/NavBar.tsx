@@ -8,7 +8,7 @@ import { FaCamera, FaFacebook, FaHome, FaInstagram } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
-    const [active, setActive] = useState('home')
+    const [active, setActive] = useState('')
     const [hamburgerActive, setHamburgerActive] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [fbHover, setFbHover] = useState(false);
@@ -18,7 +18,9 @@ const NavBar = () => {
     const [albumsHover, setAlbumsHover] = useState(false);
     const [contactHover, setContactHover] = useState(false);
     const darkGreen = '#176734';
+    const albumPositon = 3300;
 
+    // Listen to window resize events in order to change the navbar layout
     useEffect(() => {
         const handleResize = () => {
             setWidth(window.innerWidth);
@@ -30,6 +32,29 @@ const NavBar = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    // Listen to scroll events in order to change the active link in the navbar
+    useEffect(() => {
+        const handleScroll = () => {
+            window.scrollY > albumPositon ? setActive('albums') : null;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        setActive('home')
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const scrollToAlbum = () => {
+        setActive('albums')
+        window.scrollTo({ top: albumPositon, behavior: 'smooth' });
+    }
+
 
     const fbIconStyle = {
         fontSize: '23px',
@@ -46,7 +71,7 @@ const NavBar = () => {
     }
 
     const homeStyle = {
-        padding: '13px',
+        padding: '12px',
         color: darkGreen,
         background: active === 'home' || homeHover ? '#E2E8F0' : 'inherit'
     }
@@ -70,7 +95,7 @@ const NavBar = () => {
     }
 
     return (
-        <HStack style={{ position: 'absolute', width: '100%' }} h='50px' bgColor={'gray.50'} justify='space-between' pl={10} pr={10}>
+        <HStack style={{ position: 'fixed', width: '100%', zIndex: '1' }} h='50px' bgColor={'gray.50'} justify='space-between' pl={10} pr={10}>
             {/* <Text>Toggle</Text> */}
             <Flex>
                 <Flex w='50px' justifyContent='center' alignItems='center'>
@@ -78,7 +103,7 @@ const NavBar = () => {
                         as={Link}
                         to='/'
                         style={homeStyle}
-                        onClick={() => setActive('home')}
+                        onClick={() => scrollToTop()}
                         onMouseEnter={() => setHomeHover(true)}
                         onMouseLeave={() => setHomeHover(false)}
                     ><FaHome style={{ fontSize: '25px' }} />
@@ -102,31 +127,31 @@ const NavBar = () => {
                     </Box>
                 </Flex>
             </Flex>
-
-            {width <= 900 ? <Menu>
-                <MenuButton style={{ color: darkGreen }}
-                    as={IconButton}
-                    aria-label='Options'
-                    icon={<GrMenu />}
-                    _hover={{ bg: 'gray.200' }}
-                    _expanded={{ bg: 'gray.200' }}
-                    variant='outline'
-                    onClick={() => setHamburgerActive(!hamburgerActive)}
-                />
-                <MenuList style={{ background: '#F7FAFC', color: darkGreen }}>
-                    <MenuItem bg={active === 'home' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/' icon={<FaHome />} onClick={() => setActive('home')}>Home</MenuItem>
-                    <MenuItem bg={active === 'albums' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={HashLink} to='/#albums' icon={<FaCamera />} onClick={() => setActive('albums')}>Albums</MenuItem>
-                    <MenuItem bg={active === 'about' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>About</MenuItem>
-                    <MenuItem bg={active === 'contact' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>Contact</MenuItem>
-                </MenuList>
-            </Menu> : <Box style={{ padding: '5px' }}>
-                <HashLink to='/#albums' smooth={true} style={albumsStyle} onClick={() => setActive('albums')} onMouseEnter={() => setAlbumsHover(true)}
-                    onMouseLeave={() => setAlbumsHover(false)}>Albums</HashLink>
-                <Link to='/about' style={aboutStyle} onClick={() => setActive('about')} onMouseEnter={() => setAboutHover(true)}
-                    onMouseLeave={() => setAboutHover(false)}>About</Link>
-                <Link to='/contact' style={contactStyle} onClick={() => setActive('contact')} onMouseEnter={() => setContactHover(true)}
-                    onMouseLeave={() => setContactHover(false)}>Contact</Link>
-            </Box>}
+            {width <= 900 ?
+                <Menu>
+                    <MenuButton style={{ color: darkGreen }}
+                        as={IconButton}
+                        aria-label='Options'
+                        icon={<GrMenu />}
+                        _hover={{ bg: 'gray.200' }}
+                        _expanded={{ bg: 'gray.200' }}
+                        variant='outline'
+                        onClick={() => setHamburgerActive(!hamburgerActive)}
+                    />
+                    <MenuList style={{ background: '#F7FAFC', color: darkGreen }}>
+                        <MenuItem bg={active === 'home' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/' icon={<FaHome />} onClick={() => setActive('home')}>Home</MenuItem>
+                        <MenuItem bg={active === 'albums' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={HashLink} to='/#albums' icon={<FaCamera />} onClick={() => scrollToAlbum()}>Albums</MenuItem>
+                        <MenuItem bg={active === 'about' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>About</MenuItem>
+                        <MenuItem bg={active === 'contact' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>Contact</MenuItem>
+                    </MenuList>
+                </Menu> : <Box style={{ padding: '5px' }}>
+                    <HashLink to='/#albums' smooth={true} style={albumsStyle} onClick={() => scrollToAlbum()} onMouseEnter={() => setAlbumsHover(true)}
+                        onMouseLeave={() => setAlbumsHover(false)}>Albums</HashLink>
+                    <Link to='/about' style={aboutStyle} onClick={() => setActive('about')} onMouseEnter={() => setAboutHover(true)}
+                        onMouseLeave={() => setAboutHover(false)}>About</Link>
+                    <Link to='/contact' style={contactStyle} onClick={() => setActive('contact')} onMouseEnter={() => setContactHover(true)}
+                        onMouseLeave={() => setContactHover(false)}>Contact</Link>
+                </Box>}
         </HStack >
     )
 }
