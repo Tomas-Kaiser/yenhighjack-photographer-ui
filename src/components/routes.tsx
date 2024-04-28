@@ -13,7 +13,7 @@ const router = createBrowserRouter([
             { index: true, element: <LandingPage /> },
             { path: 'about', element: <AboutPage /> },
             { path: 'contact', element: <ContactPage /> },
-            { path: 'album/:id', element: <AlbumPage /> }
+            { path: 'albums/:id', element: <AlbumPage /> }
         ]
     }
 ])
