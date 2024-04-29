@@ -18,7 +18,8 @@ const outerBoxStyle = {
 const AlbumMenu = () => {
     return (
         <>
-            <Heading id='albums' as='h2' size='xl' textAlign='center' mt={70} mb={5} color='#176734'>Albums</Heading>
+            <Box id='albums'></Box>
+            <Heading as='h2' size='xl' textAlign='center' mt={70} mb={5} color='#176734'>Albums</Heading>
             <Text textAlign='center' color='#176734' mb={3}>To see more of my work, check out my albums</Text>
             <Center>
                 <Box w='180px' pb={10}>
