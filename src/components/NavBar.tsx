@@ -23,7 +23,7 @@ const NavBar = () => {
     const albumPositon = 2300;
 
     const controlNavbar = () => {
-        if (window.scrollY > lastScrollY) {
+        if (window.scrollY > lastScrollY && window.scrollY > 500) {
             // If scrolling down, hide the navbar
             setShow(false);
         } else {
