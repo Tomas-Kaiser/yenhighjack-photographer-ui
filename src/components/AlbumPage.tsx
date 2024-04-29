@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link, ScrollRestoration, useParams } from "react-router-dom"
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react"
 import { FaChevronRight } from "react-icons/fa"
 import { photosBasedAlbum } from "../assets/photos";
@@ -13,6 +13,7 @@ const AlbumPage = () => {
 
     return (
         <>
+            <ScrollRestoration />
             <Breadcrumb mt={20} pl={5} spacing='8px' separator={<FaChevronRight size='12px' color='#176734' />}>
                 <BreadcrumbItem>
                     <BreadcrumbLink as={Link} to='/' color='#176734'>
