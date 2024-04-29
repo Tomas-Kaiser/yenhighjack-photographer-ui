@@ -17,12 +17,33 @@ const NavBar = () => {
     const [aboutHover, setAboutHover] = useState(false);
     const [albumsHover, setAlbumsHover] = useState(false);
     const [contactHover, setContactHover] = useState(false);
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const darkGreen = '#176734';
-    const albumPositon = 3300;
+    const albumPositon = 2300;
+
+    const controlNavbar = () => {
+        if (window.scrollY > lastScrollY) {
+            // If scrolling down, hide the navbar
+            setShow(false);
+        } else {
+            // If scrolling up, show the navbar
+            setShow(true);
+        }
+        setLastScrollY(window.scrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    }, [lastScrollY]);
 
     // Listen to window resize events in order to change the navbar layout
     useEffect(() => {
         const handleResize = () => {
+            console.log('window.innerWidth: ', window.innerWidth);
             setWidth(window.innerWidth);
         };
 
@@ -36,7 +57,7 @@ const NavBar = () => {
     // Listen to scroll events in order to change the active link in the navbar
     useEffect(() => {
         const handleScroll = () => {
-            window.scrollY > albumPositon ? setActive('albums') : null;
+            window.scrollY < albumPositon ? setActive('home') : null;
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -52,7 +73,7 @@ const NavBar = () => {
 
     const scrollToAlbum = () => {
         setActive('albums')
-        window.scrollTo({ top: albumPositon, behavior: 'smooth' });
+        // window.scrollTo({ top: albumPositon, behavior: 'smooth' });
     }
 
 
@@ -95,7 +116,7 @@ const NavBar = () => {
     }
 
     return (
-        <HStack style={{ position: 'fixed', width: '100%', zIndex: '1' }} h='50px' bgColor={'gray.50'} justify='space-between' pl={10} pr={10}>
+        <HStack style={{ position: 'fixed', width: '100%', zIndex: '1', top: `${show ? '0' : '-50px'}`, transition: 'top 1s' }} h='50px' bgColor={'gray.50'} justify='space-between' pl={10} pr={10}>
             {/* <Text>Toggle</Text> */}
             <Flex>
                 <Flex w='50px' justifyContent='center' alignItems='center'>
