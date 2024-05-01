@@ -84,7 +84,7 @@ const PhotoGrid = ({ heading, subHeading, photos }: Props) => {
 
     return (
         <>
-            <Heading as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>{heading}</Heading>
+            <Heading id='topPhotos' as='h2' size='xl' textAlign='center' mt={5} mb={5} color='#176734'>{heading}</Heading>
             <Text textAlign='center' color='#176734' mb={3}>{subHeading}</Text>
             <Center>
                 <Box w='180px' pb={10}>
