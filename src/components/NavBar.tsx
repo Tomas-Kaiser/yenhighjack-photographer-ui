@@ -57,7 +57,7 @@ const NavBar = () => {
     // Listen to scroll events in order to change the active link in the navbar
     useEffect(() => {
         const handleScroll = () => {
-            window.scrollY < albumPositon ? setActive('home') : null;
+            window.scrollY < albumPositon ? setActive('home') : setActive('albums');
         };
 
         window.addEventListener('scroll', handleScroll);
