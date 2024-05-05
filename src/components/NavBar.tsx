@@ -156,7 +156,9 @@ const NavBar = () => {
                         icon={<GrMenu />}
                         _hover={{ bg: 'gray.200' }}
                         _expanded={{ bg: 'gray.200' }}
+                        _focusVisible={{ boxShadow: 'none' }}
                         variant='outline'
+
                         onClick={() => setHamburgerActive(!hamburgerActive)}
                     />
                     <MenuList style={{ background: '#F7FAFC', color: darkGreen }}>
