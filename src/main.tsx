@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 import './index.css'
 import router from './components/routes'
+import './i18n'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
