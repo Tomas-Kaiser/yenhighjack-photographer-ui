@@ -1,10 +1,12 @@
 import { VStack, Text, useBreakpointValue, Box, HStack } from "@chakra-ui/react"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import LanguageContext from "../state-management/Contexts/languageContext";
 
 const Footer = () => {
     const [fbHover, setFbHover] = useState(false);
     const [instHover, setInstaHover] = useState(false);
+    const { t } = useContext(LanguageContext);
     const date = new Date();
 
     const fbIconStyle = {
@@ -45,7 +47,7 @@ const Footer = () => {
                     <FaInstagram style={instaIconStyle} />
                 </Box>
             </HStack>
-            <Text color="#176734" mb={3}>&copy; {date.getFullYear()} Jan Hajek | created by Tomas</Text>
+            <Text color="#176734" mb={3}>&copy; {date.getFullYear()} Jan Hajek | {t('created')} Tomas</Text>
         </VStack>
     )
 }

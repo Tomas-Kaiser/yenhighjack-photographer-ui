@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
+import { Box, Flex, HStack, IconButton, Menu, MenuButton, MenuDivider, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, Text } from "@chakra-ui/react"
 import { HashLink } from 'react-router-hash-link';
 import { useEffect, useState } from "react"
 import { GrMenu } from "react-icons/gr"
@@ -6,6 +6,8 @@ import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md"
 import { FaCamera, FaFacebook, FaHome, FaInstagram } from "react-icons/fa"
 
 import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next";
+
 
 const NavBar = () => {
     const [active, setActive] = useState('')
@@ -19,8 +21,16 @@ const NavBar = () => {
     const [contactHover, setContactHover] = useState(false);
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    // const [lang, setLang] = useState('cz');
+    const { t, i18n } = useTranslation();
     const darkGreen = '#176734';
     const albumPositon = 2300;
+
+
+    const handleLanguageChange = (lang: string) => {
+        i18n.changeLanguage(lang);
+        console.log(lang); // Now this should log the correct value
+    };
 
     const controlNavbar = () => {
         if (window.scrollY > lastScrollY && window.scrollY > 500) {
@@ -75,7 +85,6 @@ const NavBar = () => {
         setActive('albums')
         // window.scrollTo({ top: albumPositon, behavior: 'smooth' });
     }
-
 
     const fbIconStyle = {
         fontSize: '23px',
@@ -162,19 +171,25 @@ const NavBar = () => {
                         onClick={() => setHamburgerActive(!hamburgerActive)}
                     />
                     <MenuList style={{ background: '#F7FAFC', color: darkGreen }}>
-                        <MenuItem bg={active === 'home' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/' icon={<FaHome />} onClick={() => setActive('home')}>Home</MenuItem>
-                        <MenuItem bg={active === 'albums' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={HashLink} to='/#albums' icon={<FaCamera />} onClick={() => scrollToAlbum()}>Albums</MenuItem>
-                        <MenuItem bg={active === 'about' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>About</MenuItem>
-                        <MenuItem bg={active === 'contact' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>Contact</MenuItem>
+                        <MenuItem bg={active === 'home' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/' icon={<FaHome />} onClick={() => setActive('home')}>{t('home')}</MenuItem>
+                        <MenuItem bg={active === 'albums' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={HashLink} to='/#albums' icon={<FaCamera />} onClick={() => scrollToAlbum()}>{t('albums')}</MenuItem>
+                        <MenuItem bg={active === 'about' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/about' icon={<MdOutlineWorkHistory />} onClick={() => setActive('about')}>{t('about')}</MenuItem>
+                        <MenuItem bg={active === 'contact' ? '#E2E8F0' : '#F7FAFC'} _hover={{ bg: '#E2E8F0' }} as={Link} to='/contact' icon={<MdMailOutline />} onClick={() => setActive('contact')}>{t('contact')}</MenuItem>
+                        <MenuDivider />
+                        <MenuOptionGroup defaultValue='cz' title='Language' type='radio'>
+                            <MenuItemOption closeOnSelect={false} value='cz' onClick={() => handleLanguageChange('cz')}> Czech</MenuItemOption>
+                            <MenuItemOption closeOnSelect={false} value='en' onClick={() => handleLanguageChange('en')}>English</MenuItemOption>
+                        </MenuOptionGroup>
                     </MenuList>
                 </Menu> : <Box style={{ padding: '5px' }}>
                     <HashLink to='/#albums' smooth={true} style={albumsStyle} onClick={() => scrollToAlbum()} onMouseEnter={() => setAlbumsHover(true)}
-                        onMouseLeave={() => setAlbumsHover(false)}>Albums</HashLink>
+                        onMouseLeave={() => setAlbumsHover(false)}>{t('albums')}</HashLink>
                     <Link to='/about' style={aboutStyle} onClick={() => setActive('about')} onMouseEnter={() => setAboutHover(true)}
-                        onMouseLeave={() => setAboutHover(false)}>About</Link>
+                        onMouseLeave={() => setAboutHover(false)}>{t('about')}</Link>
                     <Link to='/contact' style={contactStyle} onClick={() => setActive('contact')} onMouseEnter={() => setContactHover(true)}
-                        onMouseLeave={() => setContactHover(false)}>Contact</Link>
-                </Box>}
+                        onMouseLeave={() => setContactHover(false)}>{t('contact')}</Link>
+                </Box>
+            }
         </HStack >
     )
 }

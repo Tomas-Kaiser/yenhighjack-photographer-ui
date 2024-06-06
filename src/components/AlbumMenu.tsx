@@ -1,6 +1,7 @@
 import { Box, Center, Divider, Heading, Text, Image } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import { photoCoverAlbums } from '../assets/photos'
+import { useTranslation } from "react-i18next"
 
 const hoverImgStyle = {
     cursor: "pointer",
@@ -16,11 +17,13 @@ const outerBoxStyle = {
 }
 
 const AlbumMenu = () => {
+    const { t } = useTranslation();
+
     return (
         <>
             <Box id='albums'></Box>
-            <Heading as='h2' size='xl' textAlign='center' mt={70} mb={5} color='#176734'>Albums</Heading>
-            <Text textAlign='center' color='#176734' mb={3}>To see more of my work, check out my albums</Text>
+            <Heading as='h2' size='xl' textAlign='center' mt={70} mb={5} color='#176734'>{t('albums')}</Heading>
+            <Text textAlign='center' color='#176734' mb={3}>{t('albumSubText')}</Text>
             <Center>
                 <Box w='180px' pb={10}>
                     <Divider style={{ borderColor: '#176734' }} />
