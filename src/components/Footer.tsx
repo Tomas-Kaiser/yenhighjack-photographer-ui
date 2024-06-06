@@ -1,12 +1,12 @@
 import { VStack, Text, useBreakpointValue, Box, HStack } from "@chakra-ui/react"
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import LanguageContext from "../state-management/Contexts/languageContext";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
     const [fbHover, setFbHover] = useState(false);
     const [instHover, setInstaHover] = useState(false);
-    const { t } = useContext(LanguageContext);
+    const { t } = useTranslation();
     const date = new Date();
 
     const fbIconStyle = {
