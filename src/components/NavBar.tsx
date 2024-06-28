@@ -221,7 +221,7 @@ const NavBar = () => {
               bg={active === "albums" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={HashLink}
-              to="/#albums"
+              to="/albums"
               icon={<FaCamera />}
               onClick={() => scrollToAlbum()}
             >
