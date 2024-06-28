@@ -33,14 +33,11 @@ const NavBar = () => {
   const [contactHover, setContactHover] = useState(false);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  // const [lang, setLang] = useState('cz');
   const { t, i18n } = useTranslation();
   const darkGreen = "#176734";
-  const albumPositon = 2300;
 
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
-    console.log(lang); // Now this should log the correct value
   };
 
   const controlNavbar = () => {
@@ -59,7 +56,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  });
 
   // Listen to window resize events in order to change the navbar layout
   useEffect(() => {
@@ -72,18 +69,6 @@ const NavBar = () => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // Listen to scroll events in order to change the active link in the navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY < albumPositon ? setActive("home") : setActive("albums");
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
