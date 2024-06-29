@@ -5,10 +5,10 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import HomeContext from "../state-management/Contexts/HomeContext";
 
 const About = () => {
   const { t } = useTranslation();
@@ -16,10 +16,16 @@ const About = () => {
   const line2 = t("aboutMeText.line2");
   const line3 = t("aboutMeText.line3");
   const line4 = t("aboutMeText.line4");
+  const context = useContext(HomeContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleClickHome = () => {
+    context.setActive("home");
+    window.location.href = "/";
+  };
 
   return (
     <>
@@ -30,7 +36,7 @@ const About = () => {
         separator={<FaChevronRight size="12px" color="#176734" />}
       >
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/" color="#176734">
+          <BreadcrumbLink as="button" onClick={handleClickHome} color="#176734">
             {t("home")}
           </BreadcrumbLink>
         </BreadcrumbItem>

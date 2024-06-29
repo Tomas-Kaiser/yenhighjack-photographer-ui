@@ -13,16 +13,17 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { HashLink } from "react-router-hash-link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GrMenu } from "react-icons/gr";
 import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md";
 import { FaCamera, FaFacebook, FaHome, FaInstagram } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import HomeContext from "../state-management/Contexts/HomeContext";
 
 const NavBar = () => {
-  const [active, setActive] = useState("home");
+  const context = useContext(HomeContext);
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [fbHover, setFbHover] = useState(false);
@@ -73,12 +74,12 @@ const NavBar = () => {
   }, []);
 
   const scrollToTop = () => {
-    setActive("home");
+    context.setActive("home");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToAlbum = () => {
-    setActive("albums");
+    context.setActive("albums");
     // window.scrollTo({ top: albumPositon, behavior: 'smooth' });
   };
 
@@ -99,25 +100,28 @@ const NavBar = () => {
   const homeStyle = {
     padding: "12px",
     color: darkGreen,
-    background: active === "home" || homeHover ? "#E2E8F0" : "inherit",
+    background: context.active === "home" || homeHover ? "#E2E8F0" : "inherit",
   };
 
   const aboutStyle = {
     padding: "15px",
     color: darkGreen,
-    background: active === "about" || aboutHover ? "#E2E8F0" : "inherit",
+    background:
+      context.active === "about" || aboutHover ? "#E2E8F0" : "inherit",
   };
 
   const albumsStyle = {
     padding: "15px",
     color: darkGreen,
-    background: active === "albums" || albumsHover ? "#E2E8F0" : "inherit",
+    background:
+      context.active === "albums" || albumsHover ? "#E2E8F0" : "inherit",
   };
 
   const contactStyle = {
     padding: "15px",
     color: darkGreen,
-    background: active === "contact" || contactHover ? "#E2E8F0" : "inherit",
+    background:
+      context.active === "contact" || contactHover ? "#E2E8F0" : "inherit",
   };
 
   return (
@@ -193,17 +197,17 @@ const NavBar = () => {
           />
           <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
             <MenuItem
-              bg={active === "home" ? "#E2E8F0" : "#F7FAFC"}
+              bg={context.active === "home" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={Link}
               to="/"
               icon={<FaHome />}
-              onClick={() => setActive("home")}
+              onClick={() => context.setActive("home")}
             >
               {t("home")}
             </MenuItem>
             <MenuItem
-              bg={active === "albums" ? "#E2E8F0" : "#F7FAFC"}
+              bg={context.active === "albums" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={HashLink}
               to="/albums"
@@ -213,22 +217,22 @@ const NavBar = () => {
               {t("albums")}
             </MenuItem>
             <MenuItem
-              bg={active === "about" ? "#E2E8F0" : "#F7FAFC"}
+              bg={context.active === "about" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={Link}
               to="/about"
               icon={<MdOutlineWorkHistory />}
-              onClick={() => setActive("about")}
+              onClick={() => context.setActive("about")}
             >
               {t("about")}
             </MenuItem>
             <MenuItem
-              bg={active === "contact" ? "#E2E8F0" : "#F7FAFC"}
+              bg={context.active === "contact" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={Link}
               to="/contact"
               icon={<MdMailOutline />}
-              onClick={() => setActive("contact")}
+              onClick={() => context.setActive("contact")}
             >
               {t("contact")}
             </MenuItem>
@@ -267,7 +271,7 @@ const NavBar = () => {
           <Link
             to="/about"
             style={aboutStyle}
-            onClick={() => setActive("about")}
+            onClick={() => context.setActive("about")}
             onMouseEnter={() => setAboutHover(true)}
             onMouseLeave={() => setAboutHover(false)}
           >
@@ -276,7 +280,7 @@ const NavBar = () => {
           <Link
             to="/contact"
             style={contactStyle}
-            onClick={() => setActive("contact")}
+            onClick={() => context.setActive("contact")}
             onMouseEnter={() => setContactHover(true)}
             onMouseLeave={() => setContactHover(false)}
           >

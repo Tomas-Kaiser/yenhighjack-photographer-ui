@@ -1,17 +1,25 @@
-import { Link, ScrollRestoration, useParams } from "react-router-dom";
+import { ScrollRestoration, useParams } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
 import { photosBasedAlbum } from "../assets/photos";
 import PhotoGrid from "./PhotoGrid";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import HomeContext from "../state-management/Contexts/HomeContext";
 
 const AlbumPage = () => {
+  const context = useContext(HomeContext);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const params = useParams();
   if (!params.id) return null;
+
+  const handleClickHome = () => {
+    context.setActive("home");
+    window.location.href = "/";
+  };
 
   return (
     <>
@@ -23,7 +31,7 @@ const AlbumPage = () => {
         separator={<FaChevronRight size="12px" color="#176734" />}
       >
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/" color="#176734">
+          <BreadcrumbLink as="button" onClick={handleClickHome} color="#176734">
             Home
           </BreadcrumbLink>
         </BreadcrumbItem>
