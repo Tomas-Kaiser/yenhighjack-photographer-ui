@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("home");
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [fbHover, setFbHover] = useState(false);
