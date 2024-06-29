@@ -3,6 +3,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
 import { photosBasedAlbum } from "../assets/photos";
 import PhotoGrid from "./PhotoGrid";
+import { useEffect } from "react";
 
 const AlbumPage = () => {
   useEffect(() => {
