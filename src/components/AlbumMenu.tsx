@@ -17,7 +17,7 @@ const outerBoxStyle = {
 };
 
 interface Props {
-  scrollDown: React.RefObject<HTMLDivElement>;
+  scrollDown?: React.RefObject<HTMLDivElement>;
 }
 
 const AlbumMenu = ({ scrollDown }: Props) => {
