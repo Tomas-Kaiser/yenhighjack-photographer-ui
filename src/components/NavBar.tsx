@@ -16,7 +16,13 @@ import { HashLink } from "react-router-hash-link";
 import { useContext, useEffect, useState } from "react";
 import { GrMenu } from "react-icons/gr";
 import { MdMailOutline, MdOutlineWorkHistory } from "react-icons/md";
-import { FaCamera, FaFacebook, FaHome, FaInstagram } from "react-icons/fa";
+import {
+  FaCamera,
+  FaFacebook,
+  FaHome,
+  FaInstagram,
+  FaGlobe,
+} from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -286,6 +292,41 @@ const NavBar = () => {
           >
             {t("contact")}
           </Link>
+          <Menu>
+            <MenuButton
+              style={{ color: darkGreen }}
+              mb="4px"
+              as={IconButton}
+              aria-label="Options"
+              icon={<FaGlobe />}
+              _hover={{ bg: "gray.200" }}
+              _expanded={{ bg: "gray.200" }}
+              _focusVisible={{ boxShadow: "none" }}
+              // what else variant can be used?
+              // a: "link" | "outline" | "solid" | "ghost" | "unstyled"
+              variant="ghost"
+              onClick={() => setHamburgerActive(!hamburgerActive)}
+            />
+            <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
+              <MenuOptionGroup defaultValue="cz" title="Language" type="radio">
+                <MenuItemOption
+                  closeOnSelect={false}
+                  value="cz"
+                  onClick={() => handleLanguageChange("cz")}
+                >
+                  {" "}
+                  Czech
+                </MenuItemOption>
+                <MenuItemOption
+                  closeOnSelect={false}
+                  value="en"
+                  onClick={() => handleLanguageChange("en")}
+                >
+                  English
+                </MenuItemOption>
+              </MenuOptionGroup>
+            </MenuList>
+          </Menu>
         </Box>
       )}
     </HStack>
