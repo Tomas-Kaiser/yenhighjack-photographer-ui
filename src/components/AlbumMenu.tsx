@@ -16,16 +16,12 @@ const outerBoxStyle = {
   background: "#fff",
 };
 
-interface Props {
-  scrollDown?: React.RefObject<HTMLDivElement>;
-}
-
-const AlbumMenu = ({ scrollDown }: Props) => {
+const AlbumMenu = () => {
   const { t } = useTranslation();
 
   return (
     <>
-      <Box ref={scrollDown} id="albums"></Box>
+      <Box id="albums"></Box>
       <Heading
         as="h2"
         size="xl"

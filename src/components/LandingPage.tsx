@@ -57,11 +57,12 @@ const LandingPage = () => {
         </VStack>
       </Center>
       <PhotoGrid
+        scrollDown={topPhotosRef}
         heading={t("heading")}
         subHeading={t("subHeading")}
         photos={topPhotos.photos}
       />
-      <AlbumMenu scrollDown={topPhotosRef} />
+      <AlbumMenu />
     </Box>
   );
 };
