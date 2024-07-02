@@ -73,7 +73,7 @@ i18n
 
                     // Landing Page
                     welcomeSlogan: 'Fotografie je poezie pro oko',
-                    ctaBtn: 'Prozkoumejte moje umění',
+                    ctaBtn: 'Prozkoumejte mé umění',
                     heading: 'Ukázka mé práce',
                     subHeading: 'Klikněte na fotografii pro zobrazení v plné velikosti',
 
