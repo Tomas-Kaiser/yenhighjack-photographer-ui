@@ -1,12 +1,14 @@
-import { ScrollRestoration, useParams } from "react-router-dom";
+import { Link, ScrollRestoration, useParams } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
 import { photosBasedAlbum } from "../assets/photos";
 import PhotoGrid from "./PhotoGrid";
 import { useContext, useEffect } from "react";
 import HomeContext from "../state-management/Contexts/HomeContext";
+import { useTranslation } from "react-i18next";
 
 const AlbumPage = () => {
+  const { t } = useTranslation();
   const context = useContext(HomeContext);
 
   useEffect(() => {
@@ -32,7 +34,12 @@ const AlbumPage = () => {
       >
         <BreadcrumbItem>
           <BreadcrumbLink as="button" onClick={handleClickHome} color="#176734">
-            Home
+            {t("home")}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink as={Link} to="/albums" color="#176734">
+            {t("albums")}
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
