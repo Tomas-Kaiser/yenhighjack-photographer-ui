@@ -1,7 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
+    .use(LanguageDetector)  
     .use(initReactI18next)
     .init({
         debug: true,
@@ -13,6 +15,8 @@ i18n
         resources: {
             en: {
                 translation: {
+                    // Title
+                    app_title: 'Jan Hajek | Photographer',
                     // General
                     albums: 'Albums',
 
@@ -63,6 +67,9 @@ i18n
             },
             cz: {
                 translation: {
+                    // Title
+                    app_title: 'Jan Hajek | Fotograf',
+
                     // General
                     albums: 'Alba',
 

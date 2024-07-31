@@ -5,9 +5,12 @@ import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import HomeContext from "./state-management/Contexts/HomeContext";
+import useLocalizeDocumentAttributes from "./i18n/useLocalizeDocumentAttributes";
 
 function App() {
   const [active, setActive] = useState("home");
+
+  useLocalizeDocumentAttributes();
 
   return (
     <Grid
