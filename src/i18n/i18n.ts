@@ -28,11 +28,11 @@ i18n
                     // Landing Page 
                     welcomeSlogan: 'Photography is a poetry for an eye',
                     ctaBtn: 'Explore My Art',
-                    heading: 'Show Case of My Art',
+                    heading: 'SHOW CASE OF MY ART',
                     subHeading: 'Click on a photo to see it in full size',
 
                     // Albums Menu
-                    albumSubText: 'To see more of my work, check out my albums',
+                    albumSubText: 'Explore more of my work',
 
                     // Contact Page
                     contactMe: 'Contact Me',
@@ -85,7 +85,7 @@ i18n
                     subHeading: 'Klikněte na fotografii pro zobrazení v plné velikosti',
 
                     // Albums Menu
-                    albumSubText: 'Pro zobrazení více fotek, podívejte se na mé alba',
+                    albumSubText: 'Prozkoumejte mé alba',
 
                     // Contact Page
                     contactMe: 'Kontaktujte mě',
