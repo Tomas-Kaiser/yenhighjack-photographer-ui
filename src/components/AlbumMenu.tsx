@@ -1,7 +1,17 @@
-import { Box, Center, Divider, Heading, Text, Image } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import {
+  Box,
+  Center,
+  Divider,
+  Heading,
+  Text,
+  Image,
+  Link,
+} from "@chakra-ui/react";
+// import { Link } from "react-router-dom";
 import { photoCoverAlbums } from "../assets/photos";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import HomeContext from "../state-management/Contexts/HomeContext";
 
 const hoverImgStyle = {
   cursor: "pointer",
@@ -18,25 +28,37 @@ const outerBoxStyle = {
 
 const AlbumMenu = () => {
   const { t } = useTranslation();
+  const context = useContext(HomeContext);
+
+  const hanlderClick = (index: number) => {
+    context.setActive("albums");
+    window.location.href = `/albums/${index}`;
+  };
 
   return (
     <>
       <Box id="albums"></Box>
+      <Center>
+        <Box w="90%" pb={1} mt={70}>
+          <Divider style={{ borderColor: "#176734" }} />
+        </Box>
+      </Center>
       <Heading
         as="h2"
         size="xl"
         textAlign="center"
-        mt={70}
         mb={5}
+        mt="20px"
         color="#176734"
+        letterSpacing={{ base: "2px", md: "3px" }}
       >
-        {t("albums")}
+        {t("albums").toUpperCase()}
       </Heading>
       <Text textAlign="center" color="#176734" mb={3}>
-        {t("albumSubText")}
+        {t("albumSubText").toUpperCase()}
       </Text>
       <Center>
-        <Box w="180px" pb={10}>
+        <Box w="70%" pb={10} mt="8px">
           <Divider style={{ borderColor: "#176734" }} />
         </Box>
       </Center>
@@ -44,10 +66,15 @@ const AlbumMenu = () => {
         {photoCoverAlbums.map((photo, index) => (
           <Box
             key={photo.path}
-            width={{ sm: "230px", lg: "350px" }}
             p={{ sm: "10px" }}
+            display="flex"
+            justifyContent={"center"}
           >
-            <Link to={`/albums/${index}`}>
+            <Link
+              as="button"
+              width={{ base: "100%", sm: "200px", md: "300px", lg: "350px" }}
+              onClick={() => hanlderClick(index)}
+            >
               <Box
                 id={photo.path}
                 position="relative"
