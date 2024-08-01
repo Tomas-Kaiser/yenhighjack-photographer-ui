@@ -243,7 +243,7 @@ const NavBar = () => {
               {t("contact")}
             </MenuItem>
             <MenuDivider />
-            <MenuOptionGroup defaultValue="cz" title="Language" type="radio">
+            <MenuOptionGroup title="Language" type="radio">
               <MenuItemOption
                 closeOnSelect={false}
                 value="cz"
@@ -308,7 +308,7 @@ const NavBar = () => {
               onClick={() => setHamburgerActive(!hamburgerActive)}
             />
             <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
-              <MenuOptionGroup defaultValue="cz" title="Language" type="radio">
+              <MenuOptionGroup title="Language" type="radio">
                 <MenuItemOption
                   closeOnSelect={false}
                   value="cz"
