@@ -99,8 +99,12 @@ const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
 
   return (
     <>
+      <Center ref={scrollDown}>
+        <Box w="90%" pb={1}>
+          <Divider style={{ borderColor: "#176734" }} />
+        </Box>
+      </Center>
       <Heading
-        ref={scrollDown}
         id="topPhotos"
         as="h2"
         size="xl"
@@ -108,14 +112,15 @@ const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
         mt={5}
         mb={5}
         color="#176734"
+        letterSpacing={{ base: "2px", md: "3px" }}
       >
-        {heading}
+        {heading.toUpperCase()}
       </Heading>
       <Text textAlign="center" color="#176734" mb={3}>
-        {subHeading}
+        {subHeading.toUpperCase()}
       </Text>
       <Center>
-        <Box w="180px" pb={10}>
+        <Box w="60%" mt="8px" pb={10}>
           <Divider style={{ borderColor: "#176734" }} />
         </Box>
       </Center>
@@ -153,9 +158,6 @@ const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
             <Box onClick={handleNextClick} style={rightArrowStyles}>
               ❱
             </Box>
-            {/* <Button colorScheme='red' mr={3} onClick={onClose}>
-                            Close
-                        </Button> */}
           </ModalFooter>
         </ModalContent>
       </Modal>
