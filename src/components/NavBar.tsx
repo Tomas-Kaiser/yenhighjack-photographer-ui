@@ -41,6 +41,7 @@ const NavBar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t, i18n } = useTranslation();
+  const [navBg, setNavBg] = useState<string>("#f7fafc");
   const darkGreen = "#176734";
 
   const handleLanguageChange = (lang: string) => {
@@ -48,6 +49,13 @@ const NavBar = () => {
   };
 
   const controlNavbar = () => {
+    if (window.scrollY < 800) {
+      // BG with opacity 70%
+      setNavBg("#f7fafc70");
+    } else {
+      setNavBg("#f7fafc");
+    }
+
     if (window.scrollY > lastScrollY && window.scrollY > 500) {
       // If scrolling down, hide the navbar
       setShow(false);
@@ -140,7 +148,7 @@ const NavBar = () => {
         transition: "top 1s",
       }}
       h="50px"
-      bgColor={"gray.50"}
+      bgColor={navBg}
       justify="space-between"
       pl={10}
       pr={10}
