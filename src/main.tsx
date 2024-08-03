@@ -1,16 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
-import { ChakraProvider } from '@chakra-ui/react'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 
-import './index.css'
-import router from './components/routes'
-import './i18n'
+import "./index.css";
+import router from "./components/routes";
+import "./i18n/i18n";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChakraProvider>
       <RouterProvider router={router} />
     </ChakraProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
