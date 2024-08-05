@@ -1,17 +1,10 @@
-import {
-  Box,
-  Center,
-  Divider,
-  Heading,
-  Text,
-  Image,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Text, Image, Link } from "@chakra-ui/react";
 // import { Link } from "react-router-dom";
 import { photoCoverAlbums } from "../assets/photos";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import HomeContext from "../state-management/Contexts/HomeContext";
+import Heading from "./common/Heading";
 
 const hoverImgStyle = {
   cursor: "pointer",
@@ -38,7 +31,7 @@ const AlbumMenu = () => {
   return (
     <>
       <Box id="albums"></Box>
-      <Center>
+      {/* <Center>
         <Box w="90%" pb={1} mt={70}>
           <Divider style={{ borderColor: "#176734" }} />
         </Box>
@@ -58,10 +51,14 @@ const AlbumMenu = () => {
         {t("albumSubText").toUpperCase()}
       </Text>
       <Center>
-        <Box w="70%" pb={10} mt="8px">
+        <Box w="60%" pb={10} mt="8px">
           <Divider style={{ borderColor: "#176734" }} />
         </Box>
-      </Center>
+      </Center> */}
+      <Heading
+        headingText={t("albums").toUpperCase()}
+        subHeadingText={t("albumSubText").toUpperCase()}
+      />
       <Box sx={outerBoxStyle}>
         {photoCoverAlbums.map((photo, index) => (
           <Box

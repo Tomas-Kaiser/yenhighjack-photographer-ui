@@ -6,7 +6,6 @@ import {
   Box,
   Flex,
   Text,
-  Heading,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -15,6 +14,7 @@ import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
 import HomeContext from "../state-management/Contexts/HomeContext";
+import Heading from "./common/Heading";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -51,16 +51,14 @@ const ContactPage = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
+      <Heading headingText={t("contactMe")} />
       <Flex
         p={{ base: 5, md: 8, lg: 12 }}
-        mt={{ base: 20 }}
+        mt={{ base: 5 }}
         direction="column"
         align="center"
         justify="center"
       >
-        <Heading pb={5} color="#176734">
-          {t("contactMe")}
-        </Heading>
         <Text pb={12} color="#176734">
           {t("contactMeSubText")}
         </Text>

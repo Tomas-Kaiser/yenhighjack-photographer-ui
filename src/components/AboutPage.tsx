@@ -2,13 +2,13 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Heading,
   Text,
 } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
 import HomeContext from "../state-management/Contexts/HomeContext";
+import Heading from "./common/Heading";
 
 const About = () => {
   const { t } = useTranslation();
@@ -46,16 +46,7 @@ const About = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
-      <Heading
-        as="h2"
-        size="xl"
-        textAlign="center"
-        mt={70}
-        mb={5}
-        color="#176734"
-      >
-        {t("aboutMe")}
-      </Heading>
+      <Heading headingText={t("aboutMe")} />
       <Text style={{ padding: "30px" }}>{line1}</Text>
       <Text style={{ padding: "30px" }}>{line2}</Text>
       <Text style={{ padding: "30px" }}>{line3}</Text>
