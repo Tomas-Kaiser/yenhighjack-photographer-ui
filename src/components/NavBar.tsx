@@ -41,7 +41,7 @@ const NavBar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t, i18n } = useTranslation();
-  const [navBg, setNavBg] = useState<string>("#f7fafc");
+  const [navBg, setNavBg] = useState<string>("#f7fafc70");
   const darkGreen = "#176734";
 
   const handleLanguageChange = (lang: string) => {
