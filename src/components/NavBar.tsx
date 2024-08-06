@@ -113,8 +113,7 @@ const NavBar = () => {
 
   const homeStyle = {
     padding: "12px",
-    color: darkGreen,
-    background: context.active === "home" || homeHover ? "#E2E8F0" : "inherit",
+    color: context.active === "home" || homeHover ? "#06150c" : darkGreen,
   };
 
   const aboutStyle = {
