@@ -7,6 +7,7 @@ import PhotoGrid from "./PhotoGrid";
 import AlbumMenu from "./AlbumMenu";
 import { topPhotos } from "../assets/photos";
 import { useTranslation } from "react-i18next";
+import img from "./landingPhotoJanWide.jpg";
 
 const LandingPage = () => {
   const { t } = useTranslation();
@@ -14,11 +15,31 @@ const LandingPage = () => {
   const topPhotosRef = useRef<null | HTMLDivElement>(null);
 
   return (
-    <Box style={{ scrollBehavior: "smooth", overflowY: "scroll" }}>
-      <Center bg="linear-gradient(#F7FAFC 80%, #fff 100%)" h="100vh">
+    <Box
+      style={{
+        scrollBehavior: "smooth",
+        overflowY: "scroll",
+      }}
+    >
+      <Center
+        style={{
+          background: `url(${img})`,
+          height: "100vh",
+          width: "100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "65% 64%",
+          backgroundSize: "cover",
+        }}
+      >
         <VStack pb="10px">
           {/* <Image src={logo} alt='logo' boxSize='150px' /> */}
-          <VStack spacing={0} style={{ fontFamily: "Ivar Text" }}>
+          <VStack
+            spacing={0}
+            position={"relative"}
+            top={"-10rem"}
+            bg={"#ffffffbd"}
+            style={{ fontFamily: "Ivar Text" }}
+          >
             <Heading
               as="h1"
               color="#176734"
@@ -34,6 +55,8 @@ const LandingPage = () => {
             >
               {t("welcomeSlogan")}
             </Text>
+          </VStack>
+          <Center p={1} position={"relative"} top={"230px"}>
             <Button
               as="a"
               onClick={() =>
@@ -41,19 +64,19 @@ const LandingPage = () => {
                   behavior: "smooth",
                 })
               }
+              bg={"white"}
               color="#176734"
               cursor="pointer"
               borderColor="#176734"
               size="lg"
               variant="outline"
-              mt={45}
               _hover={{ shadow: "1px 1px gray" }}
               leftIcon={<FaArrowDown />}
               rightIcon={<FaArrowDown />}
             >
               {t("ctaBtn")}
             </Button>
-          </VStack>
+          </Center>
         </VStack>
       </Center>
       <PhotoGrid
