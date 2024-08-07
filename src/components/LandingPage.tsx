@@ -72,8 +72,6 @@ const LandingPage = () => {
               size="lg"
               variant="outline"
               _hover={{ shadow: "1px 1px gray" }}
-              leftIcon={<FaArrowDown />}
-              rightIcon={<FaArrowDown />}
             >
               {t("ctaBtn")}
             </Button>
