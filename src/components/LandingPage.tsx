@@ -8,6 +8,7 @@ import AlbumMenu from "./AlbumMenu";
 import { topPhotos } from "../assets/photos";
 import { useTranslation } from "react-i18next";
 import img from "./landingPhotoJanWide.jpg";
+import Arrow from "./common/Arrow";
 
 const LandingPage = () => {
   const { t } = useTranslation();
@@ -56,7 +57,7 @@ const LandingPage = () => {
               {t("welcomeSlogan")}
             </Text>
           </VStack>
-          <Center p={1} position={"relative"} top={"230px"}>
+          <VStack p={1} position={"relative"} top={"230px"}>
             <Button
               as="a"
               onClick={() =>
@@ -76,7 +77,18 @@ const LandingPage = () => {
             >
               {t("ctaBtn")}
             </Button>
-          </Center>
+            <Box
+              cursor="pointer"
+              pt={10}
+              onClick={() =>
+                topPhotosRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+            >
+              <Arrow />
+            </Box>
+          </VStack>
         </VStack>
       </Center>
       <PhotoGrid
