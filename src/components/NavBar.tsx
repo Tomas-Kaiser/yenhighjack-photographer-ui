@@ -24,7 +24,7 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import HomeContext from "../state-management/Contexts/HomeContext";
 
@@ -43,12 +43,19 @@ const NavBar = () => {
   const { t, i18n } = useTranslation();
   const [navBg, setNavBg] = useState<string>("#f7fafc70");
   const darkGreen = "#176734";
+  const location = useLocation();
 
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
   };
 
   const controlNavbar = () => {
+    // Apply only when user is on the landing page
+    if (location.pathname !== "/") {
+      setNavBg("#f7fafc");
+      return;
+    }
+
     if (window.scrollY < 800) {
       // BG with opacity 70%
       setNavBg("#f7fafc70");
@@ -76,7 +83,6 @@ const NavBar = () => {
   // Listen to window resize events in order to change the navbar layout
   useEffect(() => {
     const handleResize = () => {
-      console.log("window.innerWidth: ", window.innerWidth);
       setWidth(window.innerWidth);
     };
 
@@ -256,7 +262,6 @@ const NavBar = () => {
                 value="cz"
                 onClick={() => handleLanguageChange("cz")}
               >
-                {" "}
                 Czech
               </MenuItemOption>
               <MenuItemOption
