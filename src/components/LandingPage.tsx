@@ -2,7 +2,6 @@ import { Center, VStack, Text, Button, Heading, Box } from "@chakra-ui/react";
 import { useRef } from "react";
 
 // import logo from "../assets/logo.webp"
-import { FaArrowDown } from "react-icons/fa";
 import PhotoGrid from "./PhotoGrid";
 import AlbumMenu from "./AlbumMenu";
 import { topPhotos } from "../assets/photos";
