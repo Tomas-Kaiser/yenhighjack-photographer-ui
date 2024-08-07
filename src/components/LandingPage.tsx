@@ -36,6 +36,7 @@ const LandingPage = () => {
           {/* <Image src={logo} alt='logo' boxSize='150px' /> */}
           <VStack
             spacing={0}
+            p={3}
             position={"relative"}
             top={"-10rem"}
             bg={"#ffffffbd"}
