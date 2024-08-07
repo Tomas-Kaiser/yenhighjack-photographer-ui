@@ -71,7 +71,8 @@ const LandingPage = () => {
               borderColor="#176734"
               size="lg"
               variant="outline"
-              _hover={{ shadow: "1px 1px gray" }}
+              // _hover={{ shadow: "1px 1px gray" }}
+              _hover={{ background: "#176734", color: "white" }}
             >
               {t("ctaBtn")}
             </Button>
