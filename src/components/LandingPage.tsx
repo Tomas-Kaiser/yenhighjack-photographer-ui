@@ -58,7 +58,7 @@ const LandingPage = () => {
               {t("welcomeSlogan")}
             </Text>
           </VStack>
-          <VStack p={1} position={"relative"} top={"160px"}>
+          <VStack p={1} position={"relative"} top={"155px"}>
             <Button
               as="a"
               onClick={() =>
