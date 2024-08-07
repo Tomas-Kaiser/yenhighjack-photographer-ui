@@ -38,7 +38,8 @@ const LandingPage = () => {
             spacing={0}
             p={3}
             position={"relative"}
-            top={"-10rem"}
+            top={{ base: "-10rem", "2xl": "0rem" }}
+            left={{ "2xl": "-30rem" }}
             bg={"#ffffffbd"}
             style={{ fontFamily: "Ivar Text" }}
           >
