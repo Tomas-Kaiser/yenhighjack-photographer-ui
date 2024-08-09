@@ -258,14 +258,12 @@ const NavBar = () => {
             <MenuDivider />
             <MenuOptionGroup title="Language" type="radio">
               <MenuItemOption
-                closeOnSelect={false}
                 value="cz"
                 onClick={() => handleLanguageChange("cz")}
               >
                 Czech
               </MenuItemOption>
               <MenuItemOption
-                closeOnSelect={false}
                 value="en"
                 onClick={() => handleLanguageChange("en")}
               >
@@ -322,7 +320,6 @@ const NavBar = () => {
             <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
               <MenuOptionGroup title="Language" type="radio">
                 <MenuItemOption
-                  closeOnSelect={false}
                   value="cz"
                   onClick={() => handleLanguageChange("cz")}
                 >
@@ -330,7 +327,6 @@ const NavBar = () => {
                   Czech
                 </MenuItemOption>
                 <MenuItemOption
-                  closeOnSelect={false}
                   value="en"
                   onClick={() => handleLanguageChange("en")}
                 >
