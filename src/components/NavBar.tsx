@@ -29,7 +29,7 @@ import { useTranslation } from "react-i18next";
 import HomeContext from "../state-management/Contexts/HomeContext";
 
 const NavBar = () => {
-  const context = useContext(HomeContext);
+  const homeContext = useContext(HomeContext);
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [fbHover, setFbHover] = useState(false);
@@ -94,12 +94,12 @@ const NavBar = () => {
   }, []);
 
   const scrollToTop = () => {
-    context.setActive("home");
+    homeContext.setActive("home");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToAlbum = () => {
-    context.setActive("albums");
+    homeContext.setActive("albums");
     // window.scrollTo({ top: albumPositon, behavior: 'smooth' });
   };
 
@@ -119,28 +119,28 @@ const NavBar = () => {
 
   const homeStyle = {
     padding: "12px",
-    color: context.active === "home" || homeHover ? "#06150c" : darkGreen,
+    color: homeContext.active === "home" || homeHover ? "#06150c" : darkGreen,
   };
 
   const aboutStyle = {
     padding: "15px",
     color: darkGreen,
     background:
-      context.active === "about" || aboutHover ? "#E2E8F0" : "inherit",
+      homeContext.active === "about" || aboutHover ? "#E2E8F0" : "inherit",
   };
 
   const albumsStyle = {
     padding: "15px",
     color: darkGreen,
     background:
-      context.active === "albums" || albumsHover ? "#E2E8F0" : "inherit",
+      homeContext.active === "albums" || albumsHover ? "#E2E8F0" : "inherit",
   };
 
   const contactStyle = {
     padding: "15px",
     color: darkGreen,
     background:
-      context.active === "contact" || contactHover ? "#E2E8F0" : "inherit",
+      homeContext.active === "contact" || contactHover ? "#E2E8F0" : "inherit",
   };
 
   return (
@@ -216,17 +216,17 @@ const NavBar = () => {
           />
           <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
             <MenuItem
-              bg={context.active === "home" ? "#E2E8F0" : "#F7FAFC"}
+              bg={homeContext.active === "home" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={Link}
               to="/"
               icon={<FaHome />}
-              onClick={() => context.setActive("home")}
+              onClick={() => homeContext.setActive("home")}
             >
               {t("home")}
             </MenuItem>
             <MenuItem
-              bg={context.active === "albums" ? "#E2E8F0" : "#F7FAFC"}
+              bg={homeContext.active === "albums" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={HashLink}
               to="/albums"
@@ -236,27 +236,31 @@ const NavBar = () => {
               {t("albums")}
             </MenuItem>
             <MenuItem
-              bg={context.active === "about" ? "#E2E8F0" : "#F7FAFC"}
+              bg={homeContext.active === "about" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={Link}
               to="/about"
               icon={<MdOutlineWorkHistory />}
-              onClick={() => context.setActive("about")}
+              onClick={() => homeContext.setActive("about")}
             >
               {t("about")}
             </MenuItem>
             <MenuItem
-              bg={context.active === "contact" ? "#E2E8F0" : "#F7FAFC"}
+              bg={homeContext.active === "contact" ? "#E2E8F0" : "#F7FAFC"}
               _hover={{ bg: "#E2E8F0" }}
               as={Link}
               to="/contact"
               icon={<MdMailOutline />}
-              onClick={() => context.setActive("contact")}
+              onClick={() => homeContext.setActive("contact")}
             >
               {t("contact")}
             </MenuItem>
             <MenuDivider />
-            <MenuOptionGroup title="Language" type="radio">
+            <MenuOptionGroup
+              defaultValue={i18n.resolvedLanguage as string}
+              title="Language"
+              type="radio"
+            >
               <MenuItemOption
                 value="cz"
                 onClick={() => handleLanguageChange("cz")}
@@ -287,7 +291,7 @@ const NavBar = () => {
           <Link
             to="/about"
             style={aboutStyle}
-            onClick={() => context.setActive("about")}
+            onClick={() => homeContext.setActive("about")}
             onMouseEnter={() => setAboutHover(true)}
             onMouseLeave={() => setAboutHover(false)}
           >
@@ -296,7 +300,7 @@ const NavBar = () => {
           <Link
             to="/contact"
             style={contactStyle}
-            onClick={() => context.setActive("contact")}
+            onClick={() => homeContext.setActive("contact")}
             onMouseEnter={() => setContactHover(true)}
             onMouseLeave={() => setContactHover(false)}
           >
@@ -318,7 +322,11 @@ const NavBar = () => {
               onClick={() => setHamburgerActive(!hamburgerActive)}
             />
             <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
-              <MenuOptionGroup title="Language" type="radio">
+              <MenuOptionGroup
+                defaultValue={i18n.resolvedLanguage as string}
+                title="Language"
+                type="radio"
+              >
                 <MenuItemOption
                   value="cz"
                   onClick={() => handleLanguageChange("cz")}
