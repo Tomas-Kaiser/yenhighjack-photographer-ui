@@ -123,24 +123,31 @@ const NavBar = () => {
   };
 
   const aboutStyle = {
-    padding: "15px",
+    padding: "11px",
+    borderRadius: "8px",
     color: darkGreen,
     background:
       homeContext.active === "about" || aboutHover ? "#E2E8F0" : "inherit",
+    fontWeight: "bold",
   };
 
   const albumsStyle = {
-    padding: "15px",
+    padding: "11px",
+    borderRadius: "8px",
     color: darkGreen,
     background:
       homeContext.active === "albums" || albumsHover ? "#E2E8F0" : "inherit",
+
+    fontWeight: "bold",
   };
 
   const contactStyle = {
-    padding: "15px",
+    padding: "11px",
+    borderRadius: "8px",
     color: darkGreen,
     background:
       homeContext.active === "contact" || contactHover ? "#E2E8F0" : "inherit",
+    fontWeight: "bold",
   };
 
   return (
