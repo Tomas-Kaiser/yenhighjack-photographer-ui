@@ -29,7 +29,7 @@ i18n
                     welcomeSlogan: 'Photography is a poetry for an eye',
                     ctaBtn: 'Explore My Art',
                     heading: 'SHOW CASE OF MY ART',
-                    subHeading: 'Click on a photo to see it in full size',
+                    subHeading: 'A FEW TOP PHOTOS',
 
                     // Albums Menu
                     albumSubText: 'Explore more of my work',
@@ -82,7 +82,7 @@ i18n
                     welcomeSlogan: 'Fotografie je poezie pro oko',
                     ctaBtn: 'Prozkoumejte mé umění',
                     heading: 'Ukázka mé práce',
-                    subHeading: 'Klikněte na fotografii pro zobrazení v plné velikosti',
+                    subHeading: 'Pár top fotek k nahlédnutí',
 
                     // Albums Menu
                     albumSubText: 'Prozkoumejte mé alba',
