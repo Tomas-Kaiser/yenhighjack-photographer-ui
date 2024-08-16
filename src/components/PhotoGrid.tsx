@@ -104,6 +104,7 @@ const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
       <Box sx={outerBoxStyle}>
         {photos.map((photo, index) => (
           <Box
+            cursor="pointer"
             key={photo.path}
             id={photo.path}
             style={innerBoxStyle}
