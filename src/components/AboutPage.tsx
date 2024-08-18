@@ -47,10 +47,10 @@ const About = () => {
         </BreadcrumbItem>
       </Breadcrumb>
       <Heading headingText={t("aboutMe")} />
-      <Text style={{ padding: "30px" }}>{line1}</Text>
-      <Text style={{ padding: "30px" }}>{line2}</Text>
-      <Text style={{ padding: "30px" }}>{line3}</Text>
-      <Text style={{ padding: "30px" }}>{line4}</Text>
+      <Text style={{ padding: "30px", color: "#176734" }}>{line1}</Text>
+      <Text style={{ padding: "30px", color: "#176734" }}>{line2}</Text>
+      <Text style={{ padding: "30px", color: "#176734" }}>{line3}</Text>
+      <Text style={{ padding: "30px", color: "#176734" }}>{line4}</Text>
     </>
   );
 };
