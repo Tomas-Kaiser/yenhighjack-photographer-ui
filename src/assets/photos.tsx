@@ -7,6 +7,14 @@ export const photoCoverAlbums = [
     name: "INFINIMY",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9f1fc37e-1e2c-4d06-f390-2ea4b9a83d00/public",
   },
+  {
+    name: `Portraits`,
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d541f89a-a95a-40c4-bae6-aaa622ab2100/public",
+  },
+  {
+    name: "Wedding",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
+  },
 ];
 
 export const topPhotos = {
@@ -187,6 +195,120 @@ export const photosBasedAlbum = [
       {
         name: "INFINIMY 13",
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/afc07cec-873a-4280-c07b-a9bfdde73000/public",
+      },
+    ],
+  },
+  {
+    name: "Portraits",
+    photos: [
+      {
+        name: "Portrait 1",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d541f89a-a95a-40c4-bae6-aaa622ab2100/public",
+      },
+      {
+        name: "Portrait 2",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/946751b6-b367-4d03-e210-110b3ca53200/public",
+      },
+      {
+        name: "Portrait 3",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/069207ec-a54c-4de5-9d5c-1df29bbfd500/public",
+      },
+      {
+        name: "Portrait 4",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/b74fd435-1ad9-463f-12de-405fb29a6e00/public",
+      },
+      {
+        name: "Portrait 5",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/7606495c-a59a-48b0-05bc-dadd00d10a00/public",
+      },
+      {
+        name: "Portrait 6",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/4d753e76-c264-42f7-1394-c097bae94700/public",
+      },
+      {
+        name: "Portrait 7",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/31758c63-c86c-4cdb-a857-1ab37a0e3d00/public",
+      },
+      {
+        name: "Portrait 8",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/79882449-209d-4651-f384-cf67b0ffb100/public",
+      },
+    ],
+  },
+  {
+    name: "Wedding",
+    photos: [
+      {
+        name: "Wedding 1",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
+      },
+      {
+        name: "Wedding 2",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ae410aac-b840-4acc-3c97-98d736930f00/public",
+      },
+      {
+        name: "Wedding 3",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/634c50b2-d094-44ae-ae0c-e16a3d5c7f00/public",
+      },
+      {
+        name: "Wedding 4",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/c338eb27-3072-4ede-54bb-5b2e8d276b00/public",
+      },
+      {
+        name: "Wedding 5",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5551716d-7196-470e-4b7b-65c0b1dcff00/public",
+      },
+      {
+        name: "Wedding 6",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/53e1d951-bf4b-491c-701d-8c71c1286700/public",
+      },
+      {
+        name: "Wedding 7",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e79912a7-2907-4548-a18d-85d6ee739b00/public",
+      },
+      {
+        name: "Wedding 8",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/cc3a708c-e098-44d3-a5de-c933ff802400/public",
+      },
+      {
+        name: "Wedding 9",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1545b807-7a0c-40ed-ff42-9145a0e2fb00/public",
+      },
+      {
+        name: "Wedding 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/97b121a7-35ee-4e3e-513d-5060dead3a00/public",
+      },
+      {
+        name: "Wedding 11",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5a3cb755-6d9b-4579-9c85-abe6a1302a00/public",
+      },
+      {
+        name: "Wedding 12",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1f73f7ee-254c-4eb9-7a7d-b5a5b7c84900/public",
+      },
+      {
+        name: "Wedding 13",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8d2f3913-be27-44d6-83e8-91638b39db00/public",
+      },
+      {
+        name: "Wedding 14",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/12d504af-9001-44d3-901b-d950aac32600/public",
+      },
+      {
+        name: "Wedding 15",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2cc2de87-1c2a-48e4-9133-621e1e277200/public",
+      },
+      {
+        name: "Wedding 16",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ac2de499-1cc6-4751-95d0-c5371db1f000/public",
+      },
+      {
+        name: "Wedding 17",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2877ab17-8498-4c82-28f5-c85a1009d100/public",
+      },
+      {
+        name: "Wedding 18",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8956f902-46b4-4139-9346-323bb15c2c00/public",
       },
     ],
   },
