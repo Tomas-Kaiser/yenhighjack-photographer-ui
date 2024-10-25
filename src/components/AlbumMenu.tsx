@@ -12,8 +12,8 @@ const hoverImgStyle = {
 };
 
 const outerBoxStyle = {
-  display: { sm: "flex" },
-  justifyContent: { sm: "center" },
+  columnCount: { base: "1", sm: "2" },
+  columnGap: "5px",
   padding: { sm: "0 12px" },
   width: "100%",
   background: "#fff",
@@ -103,7 +103,17 @@ const AlbumMenu = () => {
                   opacity="1"
                   transition="opacity 1s"
                 >
-                  <Text color="white">- {photo.name} -</Text>
+                  {photo.name === "Wedding" && (
+                    <Text color="white">- {t("wedding")} -</Text>
+                  )}
+
+                  {photo.name === "Portraits" && (
+                    <Text color="white">- {t("portraits")} -</Text>
+                  )}
+
+                  {photo.name !== "Wedding" && photo.name !== "Portraits" && (
+                    <Text color="white">- {photo.name} -</Text>
+                  )}
                 </Box>
               </Box>
             </Link>
