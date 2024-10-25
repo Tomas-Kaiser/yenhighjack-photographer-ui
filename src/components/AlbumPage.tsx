@@ -23,6 +23,8 @@ const AlbumPage = () => {
     window.location.href = "/";
   };
 
+  const albumName = getAlbumName(+params.id);
+
   return (
     <>
       <ScrollRestoration />
@@ -49,12 +51,18 @@ const AlbumPage = () => {
         </BreadcrumbItem>
       </Breadcrumb>
       <PhotoGrid
-        heading={photosBasedAlbum[+params.id].name}
-        subHeading="Click on a photo to see it in full size"
+        heading={albumName}
+        subHeading={t("subHeadingAlbumPage")}
         photos={photosBasedAlbum[+params.id].photos}
       />
     </>
   );
+
+  function getAlbumName(id: number) {
+    if (photosBasedAlbum[id].name === "Wedding") return t("wedding");
+    if (photosBasedAlbum[id].name === "Portraits") return t("portraits");
+    return photosBasedAlbum[id].name;
+  }
 };
 
 export default AlbumPage;
