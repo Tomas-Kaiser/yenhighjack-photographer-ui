@@ -20,6 +20,7 @@ i18n
                     // General
                     albums: 'Albums',
 
+
                     // Navbar:
                     home: 'Home',
                     about: 'About',
@@ -33,6 +34,11 @@ i18n
 
                     // Albums Menu
                     albumSubText: 'Explore more of my work',
+                    wedding: 'Wedding',
+                    portraits: 'Portraits',
+
+                    // Album Page
+                    subHeadingAlbumPage: 'Explore my work',
 
                     // Contact Page
                     contactMe: 'Contact Me',
@@ -86,6 +92,11 @@ i18n
 
                     // Albums Menu
                     albumSubText: 'Prozkoumejte mé alba',
+                    wedding: 'Svatba',
+                    portraits: 'Portréty',
+
+                    // Album Page
+                    subHeadingAlbumPage: 'Prozkoumejte moji práci',
 
                     // Contact Page
                     contactMe: 'Kontaktujte mě',
