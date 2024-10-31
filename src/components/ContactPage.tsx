@@ -13,12 +13,12 @@ import {
 import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
-import HomeContext from "../state-management/Contexts/HomeContext";
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
 import Heading from "./common/Heading";
 
 const ContactPage = () => {
   const { t } = useTranslation();
-  const context = useContext(HomeContext);
+  const context = useContext(NavBarActiveContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);

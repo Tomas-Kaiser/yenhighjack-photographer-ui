@@ -3,7 +3,7 @@ import { Box, Text, Image, Link } from "@chakra-ui/react";
 import { photoCoverAlbums } from "../assets/photos";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
-import HomeContext from "../state-management/Contexts/HomeContext";
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
 import Heading from "./common/Heading";
 
 const hoverImgStyle = {
@@ -21,7 +21,7 @@ const outerBoxStyle = {
 
 const AlbumMenu = () => {
   const { t } = useTranslation();
-  const context = useContext(HomeContext);
+  const context = useContext(NavBarActiveContext);
 
   const hanlderClick = (index: number) => {
     context.setActive("albums");

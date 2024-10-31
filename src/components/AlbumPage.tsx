@@ -4,12 +4,12 @@ import { FaChevronRight } from "react-icons/fa";
 import { photosBasedAlbum } from "../assets/photos";
 import PhotoGrid from "./PhotoGrid";
 import { useContext, useEffect } from "react";
-import HomeContext from "../state-management/Contexts/HomeContext";
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
 import { useTranslation } from "react-i18next";
 
 const AlbumPage = () => {
   const { t } = useTranslation();
-  const context = useContext(HomeContext);
+  const context = useContext(NavBarActiveContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);

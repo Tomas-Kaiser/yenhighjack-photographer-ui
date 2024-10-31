@@ -7,7 +7,7 @@ import {
 import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
-import HomeContext from "../state-management/Contexts/HomeContext";
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
 import Heading from "./common/Heading";
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
   const line2 = t("aboutMeText.line2");
   const line3 = t("aboutMeText.line3");
   const line4 = t("aboutMeText.line4");
-  const context = useContext(HomeContext);
+  const context = useContext(NavBarActiveContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);

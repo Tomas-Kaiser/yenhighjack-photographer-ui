@@ -3,11 +3,11 @@ import AlbumMenu from "./AlbumMenu";
 import { FaChevronRight } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
-import HomeContext from "../state-management/Contexts/HomeContext";
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
 
 const AlbumMenuPage = () => {
   const { t } = useTranslation();
-  const context = useContext(HomeContext);
+  const context = useContext(NavBarActiveContext);
 
   const handleClickHome = () => {
     context.setActive("home");
