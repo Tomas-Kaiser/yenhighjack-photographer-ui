@@ -1,5 +1,4 @@
 import { Box, Text, Image, Link } from "@chakra-ui/react";
-// import { Link } from "react-router-dom";
 import { photoCoverAlbums } from "../assets/photos";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
