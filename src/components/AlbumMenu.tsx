@@ -104,11 +104,13 @@ const AlbumMenu = () => {
                   transition="opacity 1s"
                 >
                   {photo.name === "Wedding" && (
-                    <Text color="white">- {t("wedding")} -</Text>
+                    <Text color="white">- {t("wedding").toUpperCase()} -</Text>
                   )}
 
                   {photo.name === "Portraits" && (
-                    <Text color="white">- {t("portraits")} -</Text>
+                    <Text color="white">
+                      - {t("portraits").toUpperCase()} -
+                    </Text>
                   )}
 
                   {photo.name !== "Wedding" && photo.name !== "Portraits" && (
