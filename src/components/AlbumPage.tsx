@@ -13,6 +13,7 @@ const AlbumPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (context.active !== "albums") context.setActive("albums");
   }, []);
 
   const params = useParams();
