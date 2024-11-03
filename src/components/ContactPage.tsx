@@ -32,7 +32,7 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        mt={120}
+        mt={170}
         pl={5}
         spacing="8px"
         separator={<FaChevronRight size="12px" color="#176734" />}
