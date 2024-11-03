@@ -387,7 +387,7 @@ const NavBar = () => {
             zIndex: "0",
             top: `${showHeader ? "50px" : "-230px"}`,
             transition: "top 1s",
-            justifyItems: "center",
+            textAlign: "center",
           }}
           pt={1}
           pb={5}
