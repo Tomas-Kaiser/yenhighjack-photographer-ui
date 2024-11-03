@@ -149,7 +149,7 @@ const NavBar = () => {
         style={{
           position: "fixed",
           width: "100%",
-          zIndex: "1",
+          zIndex: "2",
           top: `${showNavBar ? "0" : "-200px"}`,
           transition: "top 1s",
         }}
@@ -384,7 +384,7 @@ const NavBar = () => {
             position: "fixed",
             background: `${navBg}`,
             width: "100%",
-            zIndex: "0",
+            zIndex: "1",
             top: `${showHeader ? "50px" : "-230px"}`,
             transition: "top 1s",
             textAlign: "center",
