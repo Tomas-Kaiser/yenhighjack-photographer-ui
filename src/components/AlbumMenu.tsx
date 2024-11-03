@@ -31,10 +31,7 @@ const AlbumMenu = () => {
   return (
     <>
       <Box id="albums"></Box>
-      <Heading
-        headingText={t("albums").toUpperCase()}
-        subHeadingText={t("albumSubText").toUpperCase()}
-      />
+      <Heading headingText={t("albums").toUpperCase()} />
       <Box sx={outerBoxStyle}>
         {photoCoverAlbums.map((photo, index) => (
           <Box

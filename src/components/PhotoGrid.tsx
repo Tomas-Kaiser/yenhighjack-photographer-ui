@@ -58,12 +58,12 @@ interface Photo {
 
 interface Props {
   heading: string;
-  subHeading: string;
   photos: Photo[];
+  subHeading?: string;
   scrollDown?: React.RefObject<HTMLDivElement>;
 }
 
-const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
+const PhotoGrid = ({ heading, photos, subHeading, scrollDown }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -99,7 +99,7 @@ const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
       <Box pt={3} ref={scrollDown}></Box>
       <Heading
         headingText={heading.toUpperCase()}
-        subHeadingText={subHeading.toUpperCase()}
+        subHeadingText={subHeading?.toUpperCase()}
       />
       <Box sx={outerBoxStyle}>
         {photos.map((photo, index) => (
@@ -117,10 +117,7 @@ const PhotoGrid = ({ heading, subHeading, photos, scrollDown }: Props) => {
 
       {/* MODAL opens when user click on a photo */}
       <Modal isOpen={isOpen} onClose={onClose} size={"lg"} isCentered>
-        <ModalOverlay
-          bg="blackAlpha.300"
-          backdropFilter="blur(10px) hue-rotate(90deg)"
-        />
+        <ModalOverlay bg="blackAlpha.300" backdropFilter="blur(10px)" />
         <ModalContent bg="#0000002b">
           <ModalBody {...handlers} pt={12} justifyContent="center">
             <Image maxW="100%" src={photos[currentIndex].path}></Image>
