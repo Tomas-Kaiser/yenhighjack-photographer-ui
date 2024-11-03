@@ -30,7 +30,7 @@ const AlbumPage = () => {
     <>
       <ScrollRestoration />
       <Breadcrumb
-        mt={20}
+        mt={120}
         pl={5}
         spacing="8px"
         separator={<FaChevronRight size="12px" color="#176734" />}

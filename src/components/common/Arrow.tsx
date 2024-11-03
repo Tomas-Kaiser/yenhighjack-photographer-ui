@@ -3,7 +3,7 @@ const arrowStyle = {
   height: 0,
   borderLeft: "10px solid transparent",
   borderRight: "10px solid transparent",
-  borderTop: "20px solid white",
+  borderTop: "20px solid #fff",
   animation: "bounce 2s infinite",
 };
 
