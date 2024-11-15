@@ -388,7 +388,7 @@ const NavBar = () => {
       {width <= 950 && (
         <Box
           style={{
-            position: "relative",
+            position: "absolute",
             background: `${navBg}`,
             width: "100%",
             zIndex: "1",
