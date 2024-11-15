@@ -15,7 +15,7 @@ const Heading = ({ headingText, subHeadingText }: Props) => {
   return (
     <>
       <Center>
-        <Box w="90%" pb={1} mt={70}>
+        <Box w="90%" pb={1} mt={50}>
           <Divider style={{ borderColor: "#176734" }} />
         </Box>
       </Center>
