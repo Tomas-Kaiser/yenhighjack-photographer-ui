@@ -59,14 +59,14 @@ const NavBar = () => {
       return;
     }
 
-    if (window.scrollY < 800) {
+    if (window.scrollY < 600) {
       // BG with opacity 75%
       setNavBg("#f7fafcbf");
     } else {
       setNavBg("#f7fafc");
     }
 
-    if (window.scrollY > lastScrollY && window.scrollY > 500) {
+    if (window.scrollY > lastScrollY && window.scrollY > 300) {
       // If scrolling down, hide the navbar
       setShowNavBar(false);
       setFixedNavBar(true);
@@ -74,7 +74,7 @@ const NavBar = () => {
       // If scrolling up, show the navbar
       setShowNavBar(true);
     }
-    if (window.scrollY < 500) {
+    if (window.scrollY < 300) {
       setFixedNavBar(false);
     }
 
