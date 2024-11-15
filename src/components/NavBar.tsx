@@ -115,7 +115,7 @@ const NavBar = () => {
       fontSize: "23px",
       cursor: "pointer",
       borderRadius: "10px",
-      color: socHover ? hoverColor : "#176734",
+      color: socHover ? hoverColor : "#000",
     };
   };
 
@@ -131,7 +131,7 @@ const NavBar = () => {
     return {
       padding: "11px",
       borderRadius: "8px",
-      color: darkGreen,
+      color: "#000",
       background:
         navBarActiveContext.active === pageName || hover
           ? "#E2E8F0"
@@ -176,7 +176,7 @@ const NavBar = () => {
             </Box>
           </Flex>
           <Flex w="20px" justifyContent="center" alignItems="center">
-            <Text color={darkGreen}>|</Text>
+            <Text color={"#000"}>|</Text>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
             <Box
@@ -209,14 +209,14 @@ const NavBar = () => {
           <Box justifyItems={"center"}>
             <Heading
               as="h1"
-              color="#176734"
+              color="#000"
               fontSize={{ base: "2.0rem", md: "2.5rem" }}
               letterSpacing={{ base: "4px", md: "7px" }}
             >
               {t("name")}
             </Heading>
             <Text
-              color="#176734"
+              color="#000"
               fontSize={{ base: "1.0rem", md: "1.0rem" }}
               letterSpacing={{ base: "1.5px", md: "2px" }}
             >
@@ -228,18 +228,18 @@ const NavBar = () => {
         {width <= 766 ? (
           <Menu>
             <MenuButton
-              style={{ color: darkGreen }}
+              style={{ color: "#000" }}
               as={IconButton}
               aria-label="Options"
               icon={<GrMenu />}
-              borderColor={darkGreen}
+              borderColor={"#000"}
               _hover={{ bg: "gray.200" }}
               _expanded={{ bg: "gray.200" }}
               _focusVisible={{ boxShadow: "none" }}
               variant="outline"
               onClick={() => setHamburgerActive(!hamburgerActive)}
             />
-            <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
+            <MenuList style={{ background: "#F7FAFC", color: "#000" }}>
               <MenuItem
                 bg={
                   navBarActiveContext.active === "home" ? "#E2E8F0" : "#F7FAFC"
@@ -349,7 +349,7 @@ const NavBar = () => {
             </Link>
             <Menu>
               <MenuButton
-                style={{ color: darkGreen }}
+                style={{ color: "#000" }}
                 mb="4px"
                 as={IconButton}
                 aria-label="Options"
@@ -360,7 +360,7 @@ const NavBar = () => {
                 variant="ghost"
                 onClick={() => setHamburgerActive(!hamburgerActive)}
               />
-              <MenuList style={{ background: "#F7FAFC", color: darkGreen }}>
+              <MenuList style={{ background: "#F7FAFC", color: "#000" }}>
                 <MenuOptionGroup
                   defaultValue={i18n.resolvedLanguage as string}
                   title="Language"
@@ -401,14 +401,14 @@ const NavBar = () => {
         >
           <Heading
             as="h1"
-            color="#176734"
+            color="#000"
             fontSize={{ base: "2.0rem", md: "3.1rem" }}
             letterSpacing={{ base: "4px", md: "7px" }}
           >
             {t("name")}
           </Heading>
           <Text
-            color="#176734"
+            color="#000"
             fontSize={{ base: "1.0rem", md: "1.1rem" }}
             letterSpacing={{ base: "1.5px", md: "2px" }}
           >
