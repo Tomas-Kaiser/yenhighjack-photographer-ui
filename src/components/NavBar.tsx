@@ -42,6 +42,7 @@ const NavBar = () => {
   const [contactHover, setContactHover] = useState(false);
   const [showNavBar, setShowNavBar] = useState(true);
   const [showHeader, setShowHeader] = useState(true);
+  const [fixedNavBar, setFixedNavBar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t, i18n } = useTranslation();
   const [navBg, setNavBg] = useState<string>("#f7fafcbf");
@@ -69,12 +70,16 @@ const NavBar = () => {
     if (window.scrollY > lastScrollY && window.scrollY > 500) {
       // If scrolling down, hide the navbar
       setShowNavBar(false);
-      setShowHeader(false);
+      // setShowHeader(false);
+      setFixedNavBar(true);
     } else {
       // If scrolling up, show the navbar
       setShowNavBar(true);
     }
-    if (window.scrollY < 500) setShowHeader(true);
+    if (window.scrollY < 500) {
+      setFixedNavBar(false);
+      // setShowHeader(true);
+    }
 
     setLastScrollY(window.scrollY);
   };
@@ -140,6 +145,11 @@ const NavBar = () => {
 
   return (
     <VStack bgColor={navBg}>
+      {/* Helper box when navbar changes from fixed to relative to avoing skipping */}
+      <Box
+        height={"50px"}
+        position={`${!fixedNavBar ? "fixed" : "relative"}`}
+      ></Box>
       <HStack
         h={width <= 950 ? "50px" : "100px"}
         bgColor={navBg}
@@ -147,11 +157,11 @@ const NavBar = () => {
         pl={10}
         pr={10}
         style={{
-          position: "fixed",
+          position: `${fixedNavBar ? "fixed" : "relative"}`,
           width: "100%",
           zIndex: "2",
           top: `${showNavBar ? "0" : "-200px"}`,
-          transition: "top 1s",
+          transition: `${showNavBar ? "top 1s" : "top 0s"}`,
         }}
       >
         {/* Left icons in navbar */}
@@ -381,11 +391,11 @@ const NavBar = () => {
       {width <= 950 && (
         <Box
           style={{
-            position: "fixed",
+            position: "relative",
             background: `${navBg}`,
             width: "100%",
             zIndex: "1",
-            top: `${showHeader ? "50px" : "-230px"}`,
+            top: "50px",
             transition: "top 1s",
             textAlign: "center",
           }}
