@@ -1,9 +1,8 @@
 import { Center, VStack, Button, Box } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 
-import PhotoGrid from "./PhotoGrid";
 import AlbumMenu from "./AlbumMenu";
-import { photosBasedAlbum, topPhotos } from "../assets/photos";
+import { photosBasedAlbum } from "../assets/photos";
 import { useTranslation } from "react-i18next";
 
 const LandingPage = () => {
@@ -75,11 +74,6 @@ const LandingPage = () => {
           </VStack>
         </VStack>
       </Center>
-      <PhotoGrid
-        scrollDown={topPhotosRef}
-        heading={t("heading")}
-        photos={topPhotos.photos}
-      />
       <AlbumMenu />
     </Box>
   );

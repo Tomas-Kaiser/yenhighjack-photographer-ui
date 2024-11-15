@@ -29,7 +29,6 @@ i18n
           // Landing Page
           welcomeSlogan: "Photography is a poetry for an eye",
           ctaBtn: "Explore My Art",
-          heading: "SHOW CASE OF MY ART",
           subHeading: "A FEW TOP PHOTOS",
 
           // Albums Menu
@@ -89,7 +88,6 @@ i18n
           // Landing Page
           welcomeSlogan: "Fotografie je poezie pro oko",
           ctaBtn: "Prozkoumejte mé umění",
-          heading: "Ukázka mé práce",
           subHeading: "Pár top fotek k nahlédnutí",
 
           // Albums Menu
