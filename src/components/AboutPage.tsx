@@ -30,7 +30,7 @@ const About = () => {
   return (
     <>
       <Breadcrumb
-        mt={170}
+        mt={{ base: 100, md: 120, lg: 3 }}
         pl={5}
         spacing="8px"
         separator={<FaChevronRight size="12px" color="#176734" />}
