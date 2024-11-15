@@ -41,7 +41,6 @@ const NavBar = () => {
   const [albumsHover, setAlbumsHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
   const [showNavBar, setShowNavBar] = useState(true);
-  const [showHeader, setShowHeader] = useState(true);
   const [fixedNavBar, setFixedNavBar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t, i18n } = useTranslation();
@@ -70,7 +69,6 @@ const NavBar = () => {
     if (window.scrollY > lastScrollY && window.scrollY > 500) {
       // If scrolling down, hide the navbar
       setShowNavBar(false);
-      // setShowHeader(false);
       setFixedNavBar(true);
     } else {
       // If scrolling up, show the navbar
@@ -78,7 +76,6 @@ const NavBar = () => {
     }
     if (window.scrollY < 500) {
       setFixedNavBar(false);
-      // setShowHeader(true);
     }
 
     setLastScrollY(window.scrollY);
