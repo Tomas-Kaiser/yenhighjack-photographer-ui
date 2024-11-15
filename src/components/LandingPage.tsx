@@ -37,7 +37,7 @@ const LandingPage = () => {
         key={imgSelected}
         style={{
           background: `url(${imgSelected})`,
-          height: "100vh",
+          height: `${width <= 950 ? "94vh" : "87vh"}`,
           width: "100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "0% 0%",
