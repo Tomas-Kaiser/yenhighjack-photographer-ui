@@ -16,22 +16,22 @@ const Footer = () => {
   const date = new Date();
 
   const fbIconStyle = {
-    fontSize: useBreakpointValue({ base: "30px", md: "50px" }),
+    fontSize: useBreakpointValue({ base: "30px", md: "40px" }),
     cursor: "pointer",
     borderRadius: "10px",
     color: fbHover ? "#1877F2" : "#176734",
   };
 
   const instaIconStyle = {
-    fontSize: useBreakpointValue({ base: "30px", md: "50px" }),
+    fontSize: useBreakpointValue({ base: "30px", md: "40px" }),
     cursor: "pointer",
     borderRadius: "10px",
     color: instHover ? "#d6249f" : "#176734",
   };
 
   return (
-    <VStack justifyContent="center" mt={10} p={3} bg="#F7FAFC" h="14vh">
-      <HStack>
+    <VStack justifyContent="center" mt={10} p={3} bg="#F7FAFC">
+      <HStack pt={2} pb={2}>
         <Box
           as="a"
           p="10px"
