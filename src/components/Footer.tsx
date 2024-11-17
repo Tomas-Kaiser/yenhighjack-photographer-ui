@@ -19,14 +19,14 @@ const Footer = () => {
     fontSize: useBreakpointValue({ base: "30px", md: "40px" }),
     cursor: "pointer",
     borderRadius: "10px",
-    color: fbHover ? "#1877F2" : "#176734",
+    color: fbHover ? "#1877F2" : "#000",
   };
 
   const instaIconStyle = {
     fontSize: useBreakpointValue({ base: "30px", md: "40px" }),
     cursor: "pointer",
     borderRadius: "10px",
-    color: instHover ? "#d6249f" : "#176734",
+    color: instHover ? "#d6249f" : "#000",
   };
 
   return (
@@ -55,7 +55,7 @@ const Footer = () => {
           <FaInstagram style={instaIconStyle} />
         </Box>
       </HStack>
-      <Text color="#176734" mb={3}>
+      <Text color="#000" mb={3}>
         &copy; {date.getFullYear()} Jan Hajek | {t("created")}{" "}
         <a href="https://www.linkedin.com/in/tomas-kaiser-06/" target="_blank">
           Tomas Kaiser

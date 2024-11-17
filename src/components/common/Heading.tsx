@@ -16,7 +16,7 @@ const Heading = ({ headingText, subHeadingText }: Props) => {
     <>
       <Center>
         <Box w="90%" pb={1} mt={50}>
-          <Divider style={{ borderColor: "#176734" }} />
+          <Divider style={{ borderColor: "#000" }} />
         </Box>
       </Center>
       <ChakraHeading
@@ -25,17 +25,17 @@ const Heading = ({ headingText, subHeadingText }: Props) => {
         textAlign="center"
         mb={5}
         mt="20px"
-        color="#176734"
+        color="#000"
         letterSpacing={{ base: "2px", md: "3px" }}
       >
         {headingText}
       </ChakraHeading>
-      <Text textAlign="center" color="#176734" mb={3}>
+      <Text textAlign="center" color="#000" mb={3}>
         {subHeadingText}
       </Text>
       <Center>
         <Box w="70%" pb={10} mt="8px">
-          <Divider style={{ borderColor: "#176734" }} />
+          <Divider style={{ borderColor: "#000" }} />
         </Box>
       </Center>
     </>

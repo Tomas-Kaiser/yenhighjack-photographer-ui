@@ -53,12 +53,12 @@ const LandingPage = () => {
                 })
               }
               bg={"white"}
-              color="#176734"
+              color="#000"
               cursor="pointer"
-              borderColor="#176734"
+              borderColor="#000"
               size="lg"
               variant="outline"
-              _hover={{ background: "#176734", color: "white" }}
+              _hover={{ background: "#000", color: "white" }}
             >
               {t("ctaBtn")}
             </Button>

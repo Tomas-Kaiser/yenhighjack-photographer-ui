@@ -45,7 +45,6 @@ const NavBar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const { t, i18n } = useTranslation();
   const [navBg, setNavBg] = useState<string>("#f7fafcbf");
-  const darkGreen = "#176734";
   const location = useLocation();
 
   const handleLanguageChange = (lang: string) => {
@@ -124,7 +123,7 @@ const NavBar = () => {
     color:
       navBarActiveContext.active === "home" || homeHover
         ? "#06150c"
-        : darkGreen,
+        : "#707070",
   };
 
   const hoverMenuItemStyle = (pageName: string, hover: boolean) => {
@@ -176,7 +175,7 @@ const NavBar = () => {
             </Box>
           </Flex>
           <Flex w="20px" justifyContent="center" alignItems="center">
-            <Text color={"#000"}>|</Text>
+            <Text color="#000">|</Text>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
             <Box

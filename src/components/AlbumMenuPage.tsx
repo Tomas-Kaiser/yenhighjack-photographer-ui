@@ -20,15 +20,15 @@ const AlbumMenuPage = () => {
         mt={{ base: 100, md: 120, lg: 3 }}
         pl={5}
         spacing="8px"
-        separator={<FaChevronRight size="12px" color="#176734" />}
+        separator={<FaChevronRight size="12px" color="#000" />}
       >
         <BreadcrumbItem>
-          <BreadcrumbLink as="button" onClick={handleClickHome} color="#176734">
+          <BreadcrumbLink as="button" onClick={handleClickHome} color="#000">
             {t("home")}
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink isCurrentPage color="#176734">
+          <BreadcrumbLink isCurrentPage color="#000">
             {t("albums")}
           </BreadcrumbLink>
         </BreadcrumbItem>

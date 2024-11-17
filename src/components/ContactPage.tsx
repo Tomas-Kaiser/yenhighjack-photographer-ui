@@ -35,18 +35,18 @@ const ContactPage = () => {
         mt={{ base: 100, md: 120, lg: 3 }}
         pl={5}
         spacing="8px"
-        separator={<FaChevronRight size="12px" color="#176734" />}
+        separator={<FaChevronRight size="12px" color="#000" />}
       >
         <BreadcrumbItem>
-          <BreadcrumbLink as="button" onClick={handleClickHome} color="#176734">
+          <BreadcrumbLink as="button" onClick={handleClickHome} color="#000">
             {t("home")}
           </BreadcrumbLink>
-          {/* <BreadcrumbLink as={Link} to="/" color="#176734">
+          {/* <BreadcrumbLink as={Link} to="/" color="#000">
             {t("home")}
           </BreadcrumbLink> */}
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink isCurrentPage={true} color="#176734">
+          <BreadcrumbLink isCurrentPage={true} color="#000">
             {t("contact")}
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -59,7 +59,7 @@ const ContactPage = () => {
         align="center"
         justify="center"
       >
-        <Text pb={12} color="#176734">
+        <Text pb={12} color="#000">
           {t("contactMeSubText")}
         </Text>
         <Box
@@ -71,40 +71,40 @@ const ContactPage = () => {
         >
           <input type="hidden" name="form-name" value="contact" />
           <Box mb="3">
-            <FormLabel color="#176734">{t("yourName")}</FormLabel>
+            <FormLabel color="#000">{t("yourName")}</FormLabel>
             <Input
               id="name"
               type="text"
               name="name"
-              focusBorderColor="green.500"
+              focusBorderColor="#000"
               isRequired={true}
             />
           </Box>
           <Box mb="3">
-            <FormLabel color="#176734">{t("yourEmail")}</FormLabel>
+            <FormLabel color="#000">{t("yourEmail")}</FormLabel>
             <Input
               id="email"
               type="email"
               name="email"
-              focusBorderColor="green.500"
+              focusBorderColor="#000"
               isRequired={true}
             />
           </Box>
           <Box mb="3">
-            <FormLabel color="#176734">{t("message")}</FormLabel>
+            <FormLabel color="#000">{t("message")}</FormLabel>
             <Textarea
               id="message"
               name="message"
-              focusBorderColor="green.500"
+              focusBorderColor="#000"
               isRequired={true}
             />
           </Box>
           <Flex justify="center">
             <Button
               type="submit"
-              bg="#176734"
-              _hover={{ bg: "#1e9c4b" }}
-              style={{ width: "100%", color: "#f7fafc" }}
+              bg="#000"
+              _hover={{ bg: "#707070" }}
+              style={{ width: "100%", color: "#fff" }}
             >
               Send
             </Button>
