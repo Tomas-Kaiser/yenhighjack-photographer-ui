@@ -1,6 +1,6 @@
 export const photoCoverAlbums = [
   {
-    name: "JANINE MADE BY LOVE",
+    name: "JANINE MADE BY LOVE - Spring Collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6a65c9f7-e8db-413f-0cd2-2ddb092f0900/public",
   },
   {
@@ -22,6 +22,10 @@ export const photoCoverAlbums = [
   {
     name: "Caira",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/36584577-0020-440f-09f7-04166f3aa200/public",
+  },
+  {
+    name: "JANINE MADE BY LOVE - Autumn Collection",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3d889cda-13a5-44f8-7300-225575d6ce00/public",
   },
 ];
 
@@ -337,6 +341,47 @@ export const photosBasedAlbum = [
       {
         name: "Caira 9",
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e1d172a7-1249-4c5a-b825-3cc8c8bb3b00/public",
+      },
+    ],
+  },
+  {
+    name: "JANINE MADE BY LOVE - Autumn Collection",
+    photos: [
+      {
+        name: "JANINE MADE BY LOVE 1",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3d889cda-13a5-44f8-7300-225575d6ce00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 2",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5fde9906-6ca0-4696-093a-8d4f1d89cf00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 3",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/fa3f0458-6fb1-47eb-6bf2-17f6caef6800/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 4",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e2498a0d-0e02-4732-bffb-04400a55ef00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 5",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/bb512ba2-dfcc-485d-65dc-c02e111ea200/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 6",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/f2ddf53a-fe11-4232-61db-66fd83a89000/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 7",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d321741a-d959-40ee-d995-4a38ed3a5c00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 8",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ee01e24b-107c-450d-b5fb-e410a0cfcc00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE 9",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/22b54848-d8bc-4cd5-45c8-3bf9a9bebb00/public",
       },
     ],
   },
