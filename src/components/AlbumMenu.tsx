@@ -86,7 +86,7 @@ const AlbumMenu = () => {
                   )}
 
                   {photo.name !== "Wedding" && photo.name !== "Portraits" && (
-                    <Text color="white">- {photo.name} -</Text>
+                    <Text color="white">- {photo.name.toUpperCase()} -</Text>
                   )}
                 </Box>
               </Box>
