@@ -15,6 +15,10 @@ export const photoCoverAlbums = [
     name: "Wedding",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
   },
+  {
+    name: "Hotel Pupp",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a8865897-a6b4-4a87-53cf-f101a5ef8100/public",
+  },
 ];
 
 export const photosBasedAlbum = [
@@ -243,6 +247,51 @@ export const photosBasedAlbum = [
       {
         name: "Wedding 18",
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8956f902-46b4-4139-9346-323bb15c2c00/public",
+      },
+    ],
+  },
+  {
+    name: "Hotel Pupp",
+    photos: [
+      {
+        name: "Hotel Pupp 1",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a8865897-a6b4-4a87-53cf-f101a5ef8100/public",
+      },
+      {
+        name: "Hotel Pupp 2",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e84233ed-0ab1-4e61-e658-e3a8e8b44900/public",
+      },
+      {
+        name: "Hotel Pupp 3",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9e4596f3-f27a-4d33-4e0a-794bfadf3600/public",
+      },
+      {
+        name: "Hotel Pupp 4",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/eafa4e3f-4ef0-4b19-0e4a-f5a23ed7f300/public",
+      },
+      {
+        name: "Hotel Pupp 5",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/14f9a7eb-1540-4a09-ef14-80fa77f15c00/public",
+      },
+      {
+        name: "Hotel Pupp 6",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/7566b550-4838-4d07-77ad-859ced8d1200/public",
+      },
+      {
+        name: "Hotel Pupp 7",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/f1c1cca7-91bf-4cc1-5afe-ccde5d04f300/public",
+      },
+      {
+        name: "Hotel Pupp 8",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/19cc2387-3139-46cb-3178-4ce4f8dcbf00/public",
+      },
+      {
+        name: "Hotel Pupp 9",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8826ee5e-6c83-4a87-784b-8e090b9c8700/public",
+      },
+      {
+        name: "Hotel Pupp 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e0dc79d9-87d0-435f-adc1-954da6d27000/public",
       },
     ],
   },
