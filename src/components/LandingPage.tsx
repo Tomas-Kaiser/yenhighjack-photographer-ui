@@ -8,8 +8,8 @@ import { useTranslation } from "react-i18next";
 const LandingPage = () => {
   const { t } = useTranslation();
 
-  // Used to scroll to top of photos section
-  const topPhotosRef = useRef<null | HTMLDivElement>(null);
+  // Used to scroll to album section
+  const albumsRef = useRef<null | HTMLDivElement>(null);
 
   const [width, setWidth] = useState(window.innerWidth);
   const imgUrlSmallScreen = photosBasedAlbum[0].photos[0].path;
@@ -48,7 +48,7 @@ const LandingPage = () => {
             <Button
               as="a"
               onClick={() =>
-                topPhotosRef.current?.scrollIntoView({
+                albumsRef.current?.scrollIntoView({
                   behavior: "smooth",
                 })
               }
@@ -62,19 +62,10 @@ const LandingPage = () => {
             >
               {t("ctaBtn")}
             </Button>
-            <Box
-              cursor="pointer"
-              pt={10}
-              onClick={() =>
-                topPhotosRef.current?.scrollIntoView({
-                  behavior: "smooth",
-                })
-              }
-            ></Box>
           </VStack>
         </VStack>
       </Center>
-      <AlbumMenu />
+      <AlbumMenu scrollDown={albumsRef} />
     </Box>
   );
 };
