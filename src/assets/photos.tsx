@@ -19,6 +19,10 @@ export const photoCoverAlbums = [
     name: "Hotel Pupp",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a8865897-a6b4-4a87-53cf-f101a5ef8100/public",
   },
+  {
+    name: "Caira",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/36584577-0020-440f-09f7-04166f3aa200/public",
+  },
 ];
 
 export const photosBasedAlbum = [
@@ -292,6 +296,47 @@ export const photosBasedAlbum = [
       {
         name: "Hotel Pupp 10",
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e0dc79d9-87d0-435f-adc1-954da6d27000/public",
+      },
+    ],
+  },
+  {
+    name: "Caira",
+    photos: [
+      {
+        name: "Caira 1",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/36584577-0020-440f-09f7-04166f3aa200/public",
+      },
+      {
+        name: "Caira 2",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/31647e92-7792-44f2-aedd-0069a9a0bf00/public",
+      },
+      {
+        name: "Caira 3",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/32833eea-a79f-41a7-d6ad-eb13bb0e4600/public",
+      },
+      {
+        name: "Caira 4",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/64140259-fc45-43dd-a4fc-76215789a000/public",
+      },
+      {
+        name: "Caira 5",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/638b9707-335f-4e46-072d-174bf682b600/public",
+      },
+      {
+        name: "Caira 6",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/31a5ab2a-dad1-4c8d-40dd-084816fce500/public",
+      },
+      {
+        name: "Caira 7",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a20a6859-2587-402c-a261-271c0852d300/public",
+      },
+      {
+        name: "Caira 8",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/369f4686-ab65-4ac3-9ab3-c248a780be00/public",
+      },
+      {
+        name: "Caira 9",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e1d172a7-1249-4c5a-b825-3cc8c8bb3b00/public",
       },
     ],
   },
