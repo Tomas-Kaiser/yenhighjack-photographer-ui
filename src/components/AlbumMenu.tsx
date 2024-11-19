@@ -19,7 +19,11 @@ const outerBoxStyle = {
   background: "#fff",
 };
 
-const AlbumMenu = () => {
+interface Props {
+  scrollDown?: React.RefObject<HTMLDivElement>;
+}
+
+const AlbumMenu = ({ scrollDown }: Props) => {
   const { t } = useTranslation();
   const context = useContext(NavBarActiveContext);
 
@@ -30,7 +34,7 @@ const AlbumMenu = () => {
 
   return (
     <>
-      <Box id="albums"></Box>
+      <Box id="albums" ref={scrollDown}></Box>
       <Heading headingText={t("albums").toUpperCase()} />
       <Box sx={outerBoxStyle}>
         {photoCoverAlbums.map((photo, index) => (
