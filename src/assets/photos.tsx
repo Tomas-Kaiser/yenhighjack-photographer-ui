@@ -17,7 +17,7 @@ export const photoCoverAlbums = [
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
   },
   {
-    name: "Hotel Pupp",
+    name: "Grandhotel Pupp",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a8865897-a6b4-4a87-53cf-f101a5ef8100/public",
   },
   {
