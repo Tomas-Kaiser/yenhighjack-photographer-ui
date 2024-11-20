@@ -1,6 +1,7 @@
 export const photoCoverAlbums = [
   {
-    name: "JANINE MADE BY LOVE - Spring Collection",
+    name: "JANINE MADE BY LOVE",
+    subName: "Spring Collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6a65c9f7-e8db-413f-0cd2-2ddb092f0900/public",
   },
   {
@@ -24,7 +25,8 @@ export const photoCoverAlbums = [
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/36584577-0020-440f-09f7-04166f3aa200/public",
   },
   {
-    name: "JANINE MADE BY LOVE - Autumn Collection",
+    name: "JANINE MADE BY LOVE",
+    subName: "Autumn Collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3d889cda-13a5-44f8-7300-225575d6ce00/public",
   },
 ];
