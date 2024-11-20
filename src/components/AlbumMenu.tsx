@@ -79,19 +79,28 @@ const AlbumMenu = ({ scrollDown }: Props) => {
                   opacity="1"
                   transition="opacity 1s"
                 >
-                  {photo.name === "Wedding" && (
-                    <Text color="white">- {t("wedding").toUpperCase()} -</Text>
-                  )}
+                  <Box>
+                    {photo.name === "Wedding" && (
+                      <Text color="white">
+                        - {t("wedding").toUpperCase()} -
+                      </Text>
+                    )}
 
-                  {photo.name === "Portraits" && (
-                    <Text color="white">
-                      - {t("portraits").toUpperCase()} -
-                    </Text>
-                  )}
+                    {photo.name === "Portraits" && (
+                      <Text color="white">
+                        - {t("portraits").toUpperCase()} -
+                      </Text>
+                    )}
 
-                  {photo.name !== "Wedding" && photo.name !== "Portraits" && (
-                    <Text color="white">- {photo.name.toUpperCase()} -</Text>
-                  )}
+                    {photo.name !== "Wedding" && photo.name !== "Portraits" && (
+                      <Text color="white">- {photo.name.toUpperCase()} -</Text>
+                    )}
+                    {photo.subName && (
+                      <Text color="white" fontSize={".8rem"}>
+                        {photo.subName.toUpperCase()}
+                      </Text>
+                    )}
+                  </Box>
                 </Box>
               </Box>
             </Link>
