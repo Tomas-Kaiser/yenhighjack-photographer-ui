@@ -3,6 +3,8 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Text,
+  Image,
+  Box,
 } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -47,10 +49,21 @@ const About = () => {
         </BreadcrumbItem>
       </Breadcrumb>
       <Heading headingText={t("aboutMe")} />
-      <Text style={{ padding: "30px", color: "#000" }}>{line1}</Text>
-      <Text style={{ padding: "30px", color: "#000" }}>{line2}</Text>
-      <Text style={{ padding: "30px", color: "#000" }}>{line3}</Text>
-      <Text style={{ padding: "30px", color: "#000" }}>{line4}</Text>
+      <Box p={{ lg: "30px" }} display={{ lg: "flex" }}>
+        <Box maxWidth="500px" width="100%" m={"auto"}>
+          <Image
+            src={
+              "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3861b556-534f-47cb-6a4a-c40ee75bca00/public"
+            }
+          ></Image>
+        </Box>
+        <Box width="100%" p={4}>
+          <Text style={{ padding: "30px", color: "#000" }}>{line1}</Text>
+          <Text style={{ padding: "30px", color: "#000" }}>{line2}</Text>
+          <Text style={{ padding: "30px", color: "#000" }}>{line3}</Text>
+          <Text style={{ padding: "30px", color: "#000" }}>{line4}</Text>
+        </Box>
+      </Box>
     </>
   );
 };
