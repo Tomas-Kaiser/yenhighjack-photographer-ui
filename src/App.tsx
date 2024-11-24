@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Grid, GridItem } from "@chakra-ui/react";
+
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
+import { useState } from "react";
+import useLocalizeDocumentAttributes from "./i18n/useLocalizeDocumentAttributes";
+import navBarActiveContext from "./state-management/Contexts/NavBarActiveContext";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [active, setActive] = useState("home");
+
+  useLocalizeDocumentAttributes();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Grid
+      templateAreas={`"nav" "main" "footer"`}
+      templateRows="auto 1fr auto"
+      minHeight="100vh"
+    >
+      <navBarActiveContext.Provider value={{ active, setActive }}>
+        <GridItem area={"nav"}>
+          <NavBar />
+        </GridItem>
+        <GridItem area={"main"}>
+          <Outlet />
+        </GridItem>
+        <GridItem area={"footer"}>
+          <Footer />
+        </GridItem>
+      </navBarActiveContext.Provider>
+    </Grid>
+  );
 }
 
-export default App
+export default App;
