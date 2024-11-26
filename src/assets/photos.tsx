@@ -2,7 +2,7 @@ export const photoCoverAlbums = [
   {
     name: "JANINE MADE BY LOVE",
     subName: "Spring Collection",
-    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6a65c9f7-e8db-413f-0cd2-2ddb092f0900/public",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/14789a56-e5e8-4429-6df9-c78ec4ccf000/public",
   },
   {
     name: "INFINIMY",
