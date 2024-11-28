@@ -50,16 +50,25 @@ const ContactPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // const form = e.target;
     console.log("form: ", { "form-name": "contact", ...formData });
-    toast.success("Form submitted successfully!");
+    // toast.success("Form submitted successfully!");
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({ "form-name": "contact", ...formData }),
+      body: encode({ "form-name": "contact", ...formData }),
     })
       .then(() => {
         toast.success("Form submitted successfully!");

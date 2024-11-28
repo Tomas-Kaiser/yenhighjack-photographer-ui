@@ -8,21 +8,14 @@
   </head>
 
   <body>
-    <div id="root"></div>
-
     <!-- Add from for detecting by Netlify to handle the contact form submition -->
-    <form
-      name="contact"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      hidden
-    >
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input id="name" type="text" name="name" />
       <input id="email" type="email" name="email" />
       <textarea id="message" name="message"></textarea>
     </form>
-    <div style="display: none"><input name="bot-field" /></div>
 
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
