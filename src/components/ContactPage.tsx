@@ -13,7 +13,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { FormEvent, useContext, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
@@ -37,7 +37,7 @@ const ContactPage = () => {
     window.location.href = "/";
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
