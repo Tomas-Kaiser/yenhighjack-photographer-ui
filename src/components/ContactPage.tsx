@@ -13,10 +13,10 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { ChangeEvent, useContext, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 interface FormData {
@@ -50,26 +50,26 @@ const ContactPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleSubmit = (e: FormEvent) => {
-  //   e.preventDefault();
-  //   // const form = e.target;
-  //   console.log("form: ", formData);
-  //   toast.success("Form submitted successfully!");
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // const form = e.target;
+    console.log("form: ", { "form-name": "contact", ...formData });
+    toast.success("Form submitted successfully!");
 
-  // fetch("/", {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //   body: JSON.stringify(formData),
-  // })
-  //   .then(() => {
-  //     toast.success("Form submitted successfully!");
-  //     setFormData({ name: "", email: "", message: "" });
-  //   })
-  //   .catch((error) => {
-  //     toast.error("Form submission failed!");
-  //     console.error("Error submitting form:", error);
-  //   });
-  // };
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify(formData),
+    })
+      .then(() => {
+        toast.success("Form submitted successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        toast.error("Form submission failed!");
+        console.error("Error submitting form:", error);
+      });
+  };
 
   return (
     <>
@@ -108,8 +108,8 @@ const ContactPage = () => {
           as="form"
           w={{ base: "280px", sm: "400px", md: "500px", lg: "750px" }}
           name="contact"
-          method="post"
-          // onSubmit={handleSubmit}
+          // method="post"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
           <Box mb="3">
