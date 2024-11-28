@@ -50,26 +50,26 @@ const ContactPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // const form = e.target;
-    console.log("form: ", formData);
-    toast.success("Form submitted successfully!");
+  // const handleSubmit = (e: FormEvent) => {
+  //   e.preventDefault();
+  //   // const form = e.target;
+  //   console.log("form: ", formData);
+  //   toast.success("Form submitted successfully!");
 
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: JSON.stringify(formData),
-    // })
-    //   .then(() => {
-    //     toast.success("Form submitted successfully!");
-    //     setFormData({ name: "", email: "", message: "" });
-    //   })
-    //   .catch((error) => {
-    //     toast.error("Form submission failed!");
-    //     console.error("Error submitting form:", error);
-    //   });
-  };
+  // fetch("/", {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //   body: JSON.stringify(formData),
+  // })
+  //   .then(() => {
+  //     toast.success("Form submitted successfully!");
+  //     setFormData({ name: "", email: "", message: "" });
+  //   })
+  //   .catch((error) => {
+  //     toast.error("Form submission failed!");
+  //     console.error("Error submitting form:", error);
+  //   });
+  // };
 
   return (
     <>
