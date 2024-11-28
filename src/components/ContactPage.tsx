@@ -109,9 +109,7 @@ const ContactPage = () => {
           w={{ base: "280px", sm: "400px", md: "500px", lg: "750px" }}
           name="contact"
           method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
           <Box mb="3">
