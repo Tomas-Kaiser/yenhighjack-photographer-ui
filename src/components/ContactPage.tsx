@@ -1,3 +1,6 @@
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
+import Heading from "./common/Heading";
+
 import {
   FormLabel,
   Input,
@@ -10,11 +13,11 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { useContext, useEffect } from "react";
+import { FormEvent, useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
-import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
-import Heading from "./common/Heading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -27,6 +30,11 @@ const ContactPage = () => {
   const handleClickHome = () => {
     context.setActive("home");
     window.location.href = "/";
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    toast.success("Form submitted successfully!");
   };
 
   return (
@@ -68,6 +76,7 @@ const ContactPage = () => {
           name="contact"
           method="post"
           data-netlify="true"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
           <Box mb="3">
@@ -110,6 +119,15 @@ const ContactPage = () => {
             </Button>
           </Flex>
         </Box>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar
+          closeOnClick
+          pauseOnHover
+          draggable
+          style={{ width: "auto", textAlign: "center" }}
+        />
       </Flex>
     </>
   );
