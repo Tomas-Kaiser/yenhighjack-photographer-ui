@@ -13,7 +13,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { FormEvent, useContext, useEffect } from "react";
+import { FormEvent, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
@@ -22,6 +22,11 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactPage = () => {
   const { t } = useTranslation();
   const context = useContext(NavBarActiveContext);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,9 +37,29 @@ const ContactPage = () => {
     window.location.href = "/";
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    toast.success("Form submitted successfully!");
+    // const form = e.target;
+    console.log("form: ", formData);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify(formData),
+    })
+      .then(() => {
+        toast.success("Form submitted successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        toast.error("Form submission failed!");
+        console.error("Error submitting form:", error);
+      });
   };
 
   return (
@@ -82,6 +107,8 @@ const ContactPage = () => {
           <Box mb="3">
             <FormLabel color="#000">{t("yourName")}</FormLabel>
             <Input
+              value={formData.name}
+              onChange={handleChange}
               id="name"
               type="text"
               name="name"
@@ -92,6 +119,8 @@ const ContactPage = () => {
           <Box mb="3">
             <FormLabel color="#000">{t("yourEmail")}</FormLabel>
             <Input
+              value={formData.email}
+              onChange={handleChange}
               id="email"
               type="email"
               name="email"
@@ -102,6 +131,8 @@ const ContactPage = () => {
           <Box mb="3">
             <FormLabel color="#000">{t("message")}</FormLabel>
             <Textarea
+              value={formData.message}
+              onChange={handleChange}
               id="message"
               name="message"
               focusBorderColor="#000"
