@@ -54,20 +54,21 @@ const ContactPage = () => {
     e.preventDefault();
     // const form = e.target;
     console.log("form: ", formData);
+    toast.success("Form submitted successfully!");
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify(formData),
-    })
-      .then(() => {
-        toast.success("Form submitted successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((error) => {
-        toast.error("Form submission failed!");
-        console.error("Error submitting form:", error);
-      });
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: JSON.stringify(formData),
+    // })
+    //   .then(() => {
+    //     toast.success("Form submitted successfully!");
+    //     setFormData({ name: "", email: "", message: "" });
+    //   })
+    //   .catch((error) => {
+    //     toast.error("Form submission failed!");
+    //     console.error("Error submitting form:", error);
+    //   });
   };
 
   return (
@@ -109,6 +110,7 @@ const ContactPage = () => {
           name="contact"
           method="post"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />

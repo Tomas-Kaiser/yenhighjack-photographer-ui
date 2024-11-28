@@ -1,24 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan Hajek | Photographer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jan Hajek | Photographer</title>
-</head>
+  <body>
+    <div id="root"></div>
 
-<body>
-  <div id="root"></div>
+    <!-- Add from for detecting by Netlify to handle the contact form submition -->
+    <form
+      action="/"
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input id="name" type="text" name="name" />
+      <input id="email" type="email" name="email" />
+      <textarea id="message" name="message"></textarea>
+    </form>
+    <div style="display: none"><input name="bot-field" /></div>
 
-  <!-- Add from for detecting by Netlify to handle the contact form submition -->
-  <form action="/" name="contact" data-netlify="true"  hidden>
-    <input id="name" type="text" name="name" />
-    <input id="email" type="email" name="email" />
-    <textarea id="message" name="message"></textarea>
-  </form>
-
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
