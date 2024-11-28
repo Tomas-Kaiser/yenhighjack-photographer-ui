@@ -59,7 +59,7 @@ const ContactPage = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ "form-name": "contact", ...formData }),
     })
       .then(() => {
         toast.success("Form submitted successfully!");
@@ -107,7 +107,7 @@ const ContactPage = () => {
         <Box
           as="form"
           w={{ base: "280px", sm: "400px", md: "500px", lg: "750px" }}
-          name="contact"
+          // name="contact"
           // method="post"
           onSubmit={handleSubmit}
         >
