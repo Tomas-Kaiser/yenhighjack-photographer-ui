@@ -19,10 +19,16 @@ import { FaChevronRight } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const ContactPage = () => {
   const { t } = useTranslation();
   const context = useContext(NavBarActiveContext);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
@@ -37,7 +43,9 @@ const ContactPage = () => {
     window.location.href = "/";
   };
 
-  const handleChange = (e: ChangeEvent) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
