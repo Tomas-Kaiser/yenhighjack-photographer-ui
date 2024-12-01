@@ -46,6 +46,10 @@ i18n
           yourName: "Your Name:",
           yourEmail: "Your Email:",
           message: "Message:",
+          successSubmitMessage:
+            "Your message has been sent successfully! Jan will be in touch with you shortly.",
+          errorSubmitMessage:
+            "There was an error sending your message. Please try again later.",
 
           // About Page
           aboutMe: "About Me",
@@ -105,6 +109,10 @@ i18n
           yourName: "Vaše jméno:",
           yourEmail: "Váš email:",
           message: "Zpráva:",
+          successSubmitMessage:
+            "Vaše zpráva byla úspěšně odeslána! Jan se s vámi brzy spojí.",
+          errorSubmitMessage:
+            "Při odesílání zprávy došlo k chybě. Zkuste to prosím později.",
 
           // About page
           aboutMe: "O mně",

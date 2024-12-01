@@ -71,11 +71,11 @@ const ContactPage = () => {
       body: encode({ "form-name": "contact", ...formData }),
     })
       .then(() => {
-        toast.success("Form submitted successfully!");
+        toast.success(t("successSubmitMessage"));
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
-        toast.error("Form submission failed!");
+        toast.error(t("errorSubmitMessage"));
         console.error("Error submitting form:", error);
       });
   };
@@ -116,8 +116,6 @@ const ContactPage = () => {
         <Box
           as="form"
           w={{ base: "280px", sm: "400px", md: "500px", lg: "750px" }}
-          // name="contact"
-          // method="post"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -170,11 +168,13 @@ const ContactPage = () => {
         <ToastContainer
           position="top-center"
           autoClose={5000}
-          hideProgressBar
+          // hideProgressBar
           closeOnClick
           pauseOnHover
           draggable
           style={{ width: "auto", textAlign: "center" }}
+          progressStyle={{ backgroundColor: "white" }}
+          toastStyle={{ backgroundColor: "#000", color: "#fff" }}
         />
       </Flex>
     </>
