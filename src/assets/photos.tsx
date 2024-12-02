@@ -2,31 +2,38 @@ export const photoCoverAlbums = [
   {
     name: "JANINE MADE BY LOVE",
     subName: "Spring Collection",
+    urlName: "janine-made-by-love-spring-collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/14789a56-e5e8-4429-6df9-c78ec4ccf000/public",
   },
   {
     name: "INFINIMY",
+    urlName: "infinimy",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9f1fc37e-1e2c-4d06-f390-2ea4b9a83d00/public",
   },
   {
     name: `Portraits`,
+    urlName: "portraits",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d541f89a-a95a-40c4-bae6-aaa622ab2100/public",
   },
   {
     name: "Wedding",
+    urlName: "wedding",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
   },
   {
     name: "Grandhotel Pupp",
+    urlName: "grandhotel-pupp",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a8865897-a6b4-4a87-53cf-f101a5ef8100/public",
   },
   {
     name: "Caira",
+    urlName: "caira",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/36584577-0020-440f-09f7-04166f3aa200/public",
   },
   {
     name: "JANINE MADE BY LOVE",
     subName: "Autumn Collection",
+    urlName: "janine-made-by-love-autumn-collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3d889cda-13a5-44f8-7300-225575d6ce00/public",
   },
 ];
@@ -388,3 +395,13 @@ export const photosBasedAlbum = [
     ],
   },
 ];
+
+// function buildAlbum(name: string, paths: string[]) {
+//   return {
+//     name,
+//     photos: paths.map((path, index) => ({
+//       name: `${name} ${index + 1}`,
+//       path,
+//     })),
+//   };
+}

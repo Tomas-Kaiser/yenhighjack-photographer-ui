@@ -1,22 +1,23 @@
 import { Link, ScrollRestoration, useParams } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
-import { photosBasedAlbum } from "../assets/photos";
+import { photoCoverAlbums, photosBasedAlbum } from "../assets/photos";
 import PhotoGrid from "./PhotoGrid";
 import { useContext, useEffect } from "react";
 import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
 import { useTranslation } from "react-i18next";
 
 const AlbumPage = () => {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const context = useContext(NavBarActiveContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     if (context.active !== "albums") context.setActive("albums");
-  }, []);
+  });
 
   const params = useParams();
+  // TODO: Instead of returning null, return a default value for the album
   if (!params.id) return null;
 
   const handleClickHome = () => {
@@ -24,7 +25,18 @@ const AlbumPage = () => {
     window.location.href = "/";
   };
 
-  const albumName = getAlbumName(+params.id);
+  const getAlbumIndex = (urlName: string) => {
+    console.log(">> LAN: ", i18n.language);
+    console.log(">> urlName: ", urlName);
+    if (i18n.language === "cz") {
+      if (urlName === "svatba" || urlName === "portrety") {
+        urlName = urlName === "svatba" ? "wedding" : "portraits";
+      }
+    }
+    return photoCoverAlbums.findIndex((album) => album.urlName === urlName);
+  };
+  const id = getAlbumIndex(params.id);
+  const albumName = getAlbumName(id);
 
   return (
     <>
@@ -54,7 +66,7 @@ const AlbumPage = () => {
       <PhotoGrid
         heading={albumName}
         subHeading={t("subHeadingAlbumPage")}
-        photos={photosBasedAlbum[+params.id].photos}
+        photos={photosBasedAlbum[id].photos}
       />
     </>
   );
