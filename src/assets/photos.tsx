@@ -404,4 +404,4 @@ export const photosBasedAlbum = [
 //       path,
 //     })),
 //   };
-}
+// }
