@@ -29,7 +29,7 @@ const AlbumPage = () => {
     console.log(">> LAN: ", i18n.language);
     console.log(">> urlName: ", urlName);
     if (i18n.language === "cz") {
-      if (urlName === "svatba" || urlName === "portrety") {
+      if (urlName === "svatba" || urlName === "portréty") {
         urlName = urlName === "svatba" ? "wedding" : "portraits";
       }
     }
