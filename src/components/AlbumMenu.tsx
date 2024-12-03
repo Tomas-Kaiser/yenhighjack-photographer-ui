@@ -29,7 +29,9 @@ const AlbumMenu = ({ scrollDown }: Props) => {
 
   const hanlderClick = (urlName: string) => {
     context.setActive("albums");
-    window.location.href = `/albums/${getAlbumUrlNameBasedLang(urlName)}`;
+    window.location.href = `/${t(
+      "albums"
+    ).toLowerCase()}/${getAlbumUrlNameBasedLang(urlName)}`;
   };
 
   function getAlbumUrlNameBasedLang(urlName: string) {

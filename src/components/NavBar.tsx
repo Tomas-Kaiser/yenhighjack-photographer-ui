@@ -259,7 +259,7 @@ const NavBar = () => {
                 }
                 _hover={{ bg: "#E2E8F0" }}
                 as={HashLink}
-                to="/albums"
+                to={`/${t("albums").toLowerCase()}`}
                 icon={<FaCamera />}
                 onClick={() => scrollToAlbum()}
               >
@@ -271,7 +271,7 @@ const NavBar = () => {
                 }
                 _hover={{ bg: "#E2E8F0" }}
                 as={Link}
-                to="/about"
+                to={`/${t("about").replace(/\s+/g, "-").toLowerCase()}`}
                 icon={<MdOutlineWorkHistory />}
                 onClick={() => navBarActiveContext.setActive("about")}
               >
@@ -285,7 +285,7 @@ const NavBar = () => {
                 }
                 _hover={{ bg: "#E2E8F0" }}
                 as={Link}
-                to="/contact"
+                to={`/${t("contact").toLowerCase()}`}
                 icon={<MdMailOutline />}
                 onClick={() => navBarActiveContext.setActive("contact")}
               >
@@ -319,7 +319,7 @@ const NavBar = () => {
         ) : (
           <Box style={{ padding: "5px" }}>
             <HashLink
-              to="/albums"
+              to={`/${t("albums").toLowerCase()}`}
               smooth={true}
               style={hoverMenuItemStyle("albums", albumsHover)}
               onClick={() => scrollToAlbum()}
@@ -329,7 +329,7 @@ const NavBar = () => {
               {t("albums")}
             </HashLink>
             <Link
-              to="/about"
+              to={`/${t("about").replace(/\s+/g, "-").toLowerCase()}`}
               style={hoverMenuItemStyle("about", aboutHover)}
               onClick={() => navBarActiveContext.setActive("about")}
               onMouseEnter={() => setAboutHover(true)}
@@ -338,7 +338,7 @@ const NavBar = () => {
               {t("about")}
             </Link>
             <Link
-              to="/contact"
+              to={`/${t("contact").toLowerCase()}`}
               style={hoverMenuItemStyle("contact", contactHover)}
               onClick={() => navBarActiveContext.setActive("contact")}
               onMouseEnter={() => setContactHover(true)}

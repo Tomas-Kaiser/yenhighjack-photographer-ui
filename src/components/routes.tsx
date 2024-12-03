@@ -13,9 +13,13 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <LandingPage /> },
       { path: "about", element: <AboutPage /> },
+      { path: "o-mně", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
+      { path: "kontakt", element: <ContactPage /> },
       { path: "albums", element: <AlbumMenuPage /> },
+      { path: "alba", element: <AlbumMenuPage /> },
       { path: "albums/:id", element: <AlbumPage /> },
+      { path: "alba/:id", element: <AlbumPage /> },
     ],
   },
 ]);
