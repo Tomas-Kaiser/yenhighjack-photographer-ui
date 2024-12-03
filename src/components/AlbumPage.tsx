@@ -26,13 +26,8 @@ const AlbumPage = () => {
   };
 
   const getAlbumIndex = (urlName: string) => {
-    console.log(">> LAN: ", i18n.language);
-    console.log(">> urlName: ", urlName);
-    if (i18n.language === "cz") {
-      if (urlName === "svatba" || urlName === "portréty") {
-        urlName = urlName === "svatba" ? "wedding" : "portraits";
-      }
-    }
+    if (urlName === "svatba" || urlName === "portréty")
+      urlName = urlName === "svatba" ? "wedding" : "portraits";
     return photoCoverAlbums.findIndex((album) => album.urlName === urlName);
   };
   const id = getAlbumIndex(params.id);
