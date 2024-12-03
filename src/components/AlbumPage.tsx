@@ -48,7 +48,11 @@ const AlbumPage = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/albums" color="#000">
+          <BreadcrumbLink
+            as={Link}
+            to={`/${t("albums").toLowerCase()}`}
+            color="#000"
+          >
             {t("albums")}
           </BreadcrumbLink>
         </BreadcrumbItem>
