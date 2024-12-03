@@ -8,7 +8,7 @@ import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContex
 import { useTranslation } from "react-i18next";
 
 const AlbumPage = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
   const context = useContext(NavBarActiveContext);
 
   useEffect(() => {
