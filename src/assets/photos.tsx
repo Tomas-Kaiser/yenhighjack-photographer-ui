@@ -157,6 +157,46 @@ export const photosBasedAlbum = [
     name: "Portraits",
     photos: [
       {
+        name: "Port 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/935a93ce-f8d4-40a0-800f-511c81c6be00/public",
+      },
+      {
+        name: "Port 09",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/97d283e7-1e49-429c-c421-392c93ba3000/public",
+      },
+      {
+        name: "Port 08",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/59c2d30d-a6c3-47a1-ce94-3bbeb97c5b00/public",
+      },
+      {
+        name: "Port 07",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/bf11bc33-5287-43f2-b9da-83928d9e6f00/public",
+      },
+      {
+        name: "Port 06",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6a22da20-388b-4a49-72f0-86d3720a1400/public",
+      },
+      {
+        name: "Port 05",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/efabe405-9681-4710-f0a8-83359d4e5900/public",
+      },
+      {
+        name: "Port 04",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2aeaa7c0-fbd3-41ad-59bd-992ba40d5100/public",
+      },
+      {
+        name: "Port 03",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/cfbf4331-5921-44f4-9dce-610d5d2c3900/public",
+      },
+      {
+        name: "Port 02",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a4b24e0f-c98a-4558-10a6-e7ccdc3a3e00/public",
+      },
+      {
+        name: "Port 01",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a79c5e9b-db3e-4409-1fa3-ec9ffd654000/public",
+      },
+      {
         name: "Portrait 1",
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d541f89a-a95a-40c4-bae6-aaa622ab2100/public",
       },
