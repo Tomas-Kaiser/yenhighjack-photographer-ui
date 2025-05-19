@@ -16,6 +16,21 @@ export const photoCoverAlbums = [
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d541f89a-a95a-40c4-bae6-aaa622ab2100/public",
   },
   {
+    name: `Stillin Style`,
+    urlName: "stillin-style",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6bd5f04a-5de2-4104-10da-daf20cee9300/public",
+  },
+  {
+    name: `Couple`,
+    urlName: "couple",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/da5000a7-a695-4be6-b4b8-dbd28eeead00/public",
+  },
+  {
+    name: `Visual Story`,
+    urlName: "visual-story",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/92f6f6c1-e85f-498d-e175-a0c71c6efd00/public",
+  },
+  {
     name: "Wedding",
     urlName: "wedding",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
@@ -229,6 +244,128 @@ export const photosBasedAlbum = [
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/79882449-209d-4651-f384-cf67b0ffb100/public",
       },
     ],
+  },
+  {
+    name: "Stillin Style",
+    photos: [
+      {
+        name: "Stillin 01",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6bd5f04a-5de2-4104-10da-daf20cee9300/public",
+      },
+      {
+        name: "Stillin 02",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3aea453e-90bd-479a-46a0-e2c916035300/public",
+      },
+      {
+        name: "Stillin 03",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/7b66d645-5332-41db-afea-c0fd24b22b00/public",
+      },
+      {
+        name: "Stillin 04",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/60680062-1cd1-4c05-1ef9-853475de1100/public",
+      },
+      {
+        name: "Stillin 05",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ab564a41-78d8-4df4-a1ae-4ad12d3c7800/public",
+      },
+      {
+        name: "Stillin 06",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ea92fd31-61ea-4207-d2a1-910ff0c94f00/public",
+      },
+      {
+        name: "Stillin 07",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/f6c47142-ccb0-49dd-bb45-44257a2d4a00/public",
+      },
+    ],
+  },
+  {name: "Couple Style",
+    photos: [
+      {
+        name: "Couple 01",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/da5000a7-a695-4be6-b4b8-dbd28eeead00/public",
+      },
+      {
+        name: "Couple 02",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3901c60a-ea15-4872-2e69-9308c7c3aa00/public",
+      },
+      {
+        name: "Couple 03",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/988f8d74-6e6d-4f64-059c-12b6f27a2200/public",
+      },
+      {
+        name: "Couple 04",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/96e989a0-aa6a-484d-ec14-19996d47ba00/public",
+      },
+      {
+        name: "Couple 05",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/31d5f07e-9990-4f41-745c-35e8aa9f5400/public",
+      },
+      {
+        name: "Couple 06",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2681bd33-623d-4a51-c335-371a9271b400/public",
+      },
+      {
+        name: "Couple 07",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/6698dc7c0-1506-45f6-8c57-4bf4fe9cbc00/public",
+      },
+      {
+        name: "Couple 08",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0497a458-a65e-4beb-b3b2-a44c10054f00/public",
+      },
+      {
+        name: "Couple 09",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/4a8904d4-afbc-4078-d19d-f80a5761af00/public",
+      },
+      {
+        name: "Couple 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/f71ae79a-0bc6-49b5-958d-3be7fc7ae600/public",
+      },
+      {
+        name: "Couple 11",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/88dbb3e4-9672-42df-817a-283ff83c2900/public",
+      },
+      {
+        name: "Couple 12",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1d7223f8-51f0-47f4-8e5e-3feb09c37800/public",
+      },
+      {
+        name: "Couple 13",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1a93af0b-92f6-400a-fb3d-f6fb076dfc00/public",
+      },
+    ]
+  },
+  {
+    name: "Visual Story",
+    photos: [
+      {
+        name: "Visual story 01",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/92f6f6c1-e85f-498d-e175-a0c71c6efd00/public",
+      },
+      {
+        name: "Visual story 02",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/98248836-86f0-4fbe-a9f1-84ce4e35df00/public",
+      },
+      {
+        name: "Visual story 03",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/cf5f8dc4-ed66-4970-fdf1-4ab686a96c00/public",
+      },
+      {
+        name: "Visual story 04",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1e53840f-942c-4779-a7c7-d944ef8e6600/public",
+      },
+      {
+        name: "Visual story 05",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/b9456802-bc45-454e-76d1-bfa9068aa400/public",
+      },
+      {
+        name: "Visual story 06",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/41fc3e38-c116-4411-b231-a5fe01fd0000/public",
+      },
+      {
+        name: "Visual story 07",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/b36b4f37-ef0a-4a18-db1f-89888eaed600/public",
+      }
+    ]
   },
   {
     name: "Wedding",
