@@ -1,3 +1,6 @@
+import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
+import Heading from "./common/Heading";
+
 import {
   FormLabel,
   Input,
@@ -10,15 +13,26 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { useContext, useEffect } from "react";
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
-import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
-import Heading from "./common/Heading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 const ContactPage = () => {
   const { t } = useTranslation();
   const context = useContext(NavBarActiveContext);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,6 +41,43 @@ const ContactPage = () => {
   const handleClickHome = () => {
     context.setActive("home");
     window.location.href = "/";
+  };
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // const form = e.target;
+    console.log("form: ", { "form-name": "contact", ...formData });
+    // toast.success("Form submitted successfully!");
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData }),
+    })
+      .then(() => {
+        toast.success(t("successSubmitMessage"));
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        toast.error(t("errorSubmitMessage"));
+        console.error("Error submitting form:", error);
+      });
   };
 
   return (
@@ -65,14 +116,14 @@ const ContactPage = () => {
         <Box
           as="form"
           w={{ base: "280px", sm: "400px", md: "500px", lg: "750px" }}
-          name="contact"
-          method="post"
-          data-netlify="true"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
           <Box mb="3">
             <FormLabel color="#000">{t("yourName")}</FormLabel>
             <Input
+              value={formData.name}
+              onChange={handleChange}
               id="name"
               type="text"
               name="name"
@@ -83,6 +134,8 @@ const ContactPage = () => {
           <Box mb="3">
             <FormLabel color="#000">{t("yourEmail")}</FormLabel>
             <Input
+              value={formData.email}
+              onChange={handleChange}
               id="email"
               type="email"
               name="email"
@@ -93,6 +146,8 @@ const ContactPage = () => {
           <Box mb="3">
             <FormLabel color="#000">{t("message")}</FormLabel>
             <Textarea
+              value={formData.message}
+              onChange={handleChange}
               id="message"
               name="message"
               focusBorderColor="#000"
@@ -110,6 +165,17 @@ const ContactPage = () => {
             </Button>
           </Flex>
         </Box>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          // hideProgressBar
+          closeOnClick
+          pauseOnHover
+          draggable
+          style={{ width: "auto", textAlign: "center" }}
+          progressStyle={{ backgroundColor: "white" }}
+          toastStyle={{ backgroundColor: "#000", color: "#fff" }}
+        />
       </Flex>
     </>
   );

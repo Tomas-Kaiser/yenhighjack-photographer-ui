@@ -27,19 +27,27 @@ const AlbumMenu = ({ scrollDown }: Props) => {
   const { t } = useTranslation();
   const context = useContext(NavBarActiveContext);
 
-  const hanlderClick = (index: number) => {
+  const hanlderClick = (urlName: string) => {
     context.setActive("albums");
-    window.location.href = `/albums/${index}`;
+    window.location.href = `/${t(
+      "albums"
+    ).toLowerCase()}/${getAlbumUrlNameBasedLang(urlName)}`;
   };
+
+  function getAlbumUrlNameBasedLang(urlName: string) {
+    if (urlName === "wedding") return t("wedding").toLowerCase();
+    if (urlName === "portraits") return t("portraits").toLowerCase();
+    return urlName;
+  }
 
   return (
     <>
       <Box id="albums" ref={scrollDown}></Box>
       <Heading headingText={t("albums").toUpperCase()} />
       <Box sx={outerBoxStyle}>
-        {photoCoverAlbums.map((photo, index) => (
+        {photoCoverAlbums.map(({ path, name, subName, urlName }) => (
           <Box
-            key={photo.path}
+            key={path}
             display="inline-flex"
             flexGrow={1}
             justifyContent={"center"}
@@ -47,10 +55,10 @@ const AlbumMenu = ({ scrollDown }: Props) => {
             <Link
               as="button"
               width={{ base: "100%" }}
-              onClick={() => hanlderClick(index)}
+              onClick={() => hanlderClick(urlName)}
             >
               <Box
-                id={photo.path}
+                id={path}
                 position="relative"
                 _hover={{
                   "> div": {
@@ -60,7 +68,7 @@ const AlbumMenu = ({ scrollDown }: Props) => {
                 }}
               >
                 <Image
-                  src={photo.path}
+                  src={path}
                   objectFit="cover"
                   width="100%"
                   height="400px"
@@ -80,24 +88,24 @@ const AlbumMenu = ({ scrollDown }: Props) => {
                   transition="opacity 1s"
                 >
                   <Box>
-                    {photo.name === "Wedding" && (
+                    {name === "Wedding" && (
                       <Text color="white">
                         - {t("wedding").toUpperCase()} -
                       </Text>
                     )}
 
-                    {photo.name === "Portraits" && (
+                    {name === "Portraits" && (
                       <Text color="white">
                         - {t("portraits").toUpperCase()} -
                       </Text>
                     )}
 
-                    {photo.name !== "Wedding" && photo.name !== "Portraits" && (
-                      <Text color="white">- {photo.name.toUpperCase()} -</Text>
+                    {name !== "Wedding" && name !== "Portraits" && (
+                      <Text color="white">- {name.toUpperCase()} -</Text>
                     )}
-                    {photo.subName && (
+                    {subName && (
                       <Text color="white" fontSize={".8rem"}>
-                        {photo.subName.toUpperCase()}
+                        {subName.toUpperCase()}
                       </Text>
                     )}
                   </Box>

@@ -1,7 +1,7 @@
 import { Link, ScrollRestoration, useParams } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
-import { photosBasedAlbum } from "../assets/photos";
+import { photoCoverAlbums, photosBasedAlbum } from "../assets/photos";
 import PhotoGrid from "./PhotoGrid";
 import { useContext, useEffect } from "react";
 import NavBarActiveContext from "../state-management/Contexts/NavBarActiveContext";
@@ -14,9 +14,10 @@ const AlbumPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     if (context.active !== "albums") context.setActive("albums");
-  }, []);
+  });
 
   const params = useParams();
+  // TODO: Instead of returning null, return a default value for the album
   if (!params.id) return null;
 
   const handleClickHome = () => {
@@ -24,7 +25,13 @@ const AlbumPage = () => {
     window.location.href = "/";
   };
 
-  const albumName = getAlbumName(+params.id);
+  const getAlbumIndex = (urlName: string) => {
+    if (urlName === "svatba" || urlName === "portréty")
+      urlName = urlName === "svatba" ? "wedding" : "portraits";
+    return photoCoverAlbums.findIndex((album) => album.urlName === urlName);
+  };
+  const id = getAlbumIndex(params.id);
+  const albumName = getAlbumName(id);
 
   return (
     <>
@@ -41,7 +48,11 @@ const AlbumPage = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/albums" color="#000">
+          <BreadcrumbLink
+            as={Link}
+            to={`/${t("albums").toLowerCase()}`}
+            color="#000"
+          >
             {t("albums")}
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -54,7 +65,7 @@ const AlbumPage = () => {
       <PhotoGrid
         heading={albumName}
         subHeading={t("subHeadingAlbumPage")}
-        photos={photosBasedAlbum[+params.id].photos}
+        photos={photosBasedAlbum[id].photos}
       />
     </>
   );
