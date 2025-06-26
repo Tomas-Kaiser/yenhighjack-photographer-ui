@@ -1,6 +1,12 @@
 export const photoCoverAlbums = [
   {
     name: "JANINE MADE BY LOVE",
+    subName: "Vanguard",
+    urlName: "janine-made-by-love-vanguard-collection",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0a1cbc50-a73d-4c69-108c-3e06b53a2b00/public",
+  },
+  {
+    name: "JANINE MADE BY LOVE",
     subName: "Spring Collection",
     urlName: "janine-made-by-love-spring-collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/14789a56-e5e8-4429-6df9-c78ec4ccf000/public",
@@ -54,6 +60,87 @@ export const photoCoverAlbums = [
 ];
 
 export const photosBasedAlbum = [
+  {
+    name: "JANINE MADE BY LOVE - Vaguard",
+    photos: [
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 25",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0daac82a-2e82-41d6-0a97-f91cd1b2fb00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 27",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5b1221a6-351a-4a91-7a1d-313b833ee000/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 34",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/b9297421-3c44-4d15-81b3-f2c395400a00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 41",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d2dd37f6-2dcc-4667-850d-16970c4bde00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 44",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8c0c336e-5a12-441f-0f74-0c5d736d5800/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 52",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/05f03a51-330c-429c-3174-8feac952f200/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 54",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/816a82dd-8ac1-4ac7-af2a-3f95df34e000/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 58",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9c210625-6124-446a-e87d-80da97331900/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 60",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/c0b4e96b-a56f-4ab5-963c-4801d2b92500/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 62",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/06f99cc0-0faa-46f2-2433-f787f5235300/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 63",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0a1cbc50-a73d-4c69-108c-3e06b53a2b00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 69",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/770ebb3f-d5be-4016-2e04-a9c8b49a5600/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 73",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a9faf13a-7b82-4984-b0df-806da1402a00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 81",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/67c0f9bf-7f87-4f65-baee-9fdf6810f700/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 83",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/91d5cdfa-d9cc-4cf3-a483-e043bb16b100/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 84",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0b9f551e-6648-4da3-80e3-3239b2abc800/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 88",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/f89e8c42-ccc9-4552-b752-f8268dd8ba00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 91",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5212bdeb-d8d7-4e1f-d97c-d89e0e1f4a00/public",
+      },
+      {
+        name: "JANINE MADE BY LOVE - Vanguard 92",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/71fcec33-ab2c-4d29-4f13-ca586eab8000/public",
+      },
+    ],
+  },
   {
     name: "JANINE MADE BY LOVE",
     photos: [
@@ -278,7 +365,8 @@ export const photosBasedAlbum = [
       },
     ],
   },
-  {name: "Couple Style",
+  {
+    name: "Couple Style",
     photos: [
       {
         name: "Couple 01",
