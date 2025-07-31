@@ -33,7 +33,7 @@ i18n
 
           // Albums Menu
           albumSubText: "Explore more of my work",
-          wedding: "Wedding",
+          wedding: "Wedding 2025",
           portraits: "Portraits",
 
           // Album Page
@@ -96,7 +96,7 @@ i18n
 
           // Albums Menu
           albumSubText: "Prozkoumejte mé alba",
-          wedding: "Svatba",
+          wedding: "Svatba 2025",
           portraits: "Portréty",
 
           // Album Page
