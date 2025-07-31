@@ -1,7 +1,7 @@
 export const photoCoverAlbums = [
   {
     name: "JANINE MADE BY LOVE",
-    subName: "Vanguard New Collection 2026",
+    subName: "Vanguard New Collection 2025",
     urlName: "janine-made-by-love-vanguard-collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0a1cbc50-a73d-4c69-108c-3e06b53a2b00/public",
   },
