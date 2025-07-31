@@ -330,6 +330,14 @@ export const photosBasedAlbum = [
         name: "Portrait 8",
         path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/79882449-209d-4651-f384-cf67b0ffb100/public",
       },
+      {
+        name: "Portrait 9",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9682c2cf-bda1-4f8f-a30b-1765f7e9e700/public",
+      },
+      {
+        name: "Portrait 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/da6a911f-e6cf-421d-995f-23f0ca73ea00/public",
+      },
     ],
   },
   {
