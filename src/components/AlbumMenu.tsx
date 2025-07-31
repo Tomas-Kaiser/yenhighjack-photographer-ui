@@ -35,7 +35,7 @@ const AlbumMenu = ({ scrollDown }: Props) => {
   };
 
   function getAlbumUrlNameBasedLang(urlName: string) {
-    if (urlName === "wedding") return t("wedding").toLowerCase();
+    if (urlName.startsWith("wedding")) return "wedding";
     if (urlName === "portraits") return t("portraits").toLowerCase();
     return urlName;
   }
