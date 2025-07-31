@@ -1,5 +1,16 @@
 export const photoCoverAlbums = [
   {
+    name: "DEBBIE BROWN",
+    subName: "KVIFF 2025",
+    urlName: "KVIFF-2025",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2f2f9811-e3a0-4562-8ed7-efeb265b1500/public",
+  },
+  {
+    name: "WIDE SHOOTING",
+    urlName: "wide-shooting",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0ed6883a-3978-46be-0773-97b50a45e800/public",
+  },
+  {
     name: "JANINE MADE BY LOVE",
     subName: "Vanguard New Collection 2025",
     urlName: "janine-made-by-love-vanguard-collection",
@@ -60,6 +71,165 @@ export const photoCoverAlbums = [
 ];
 
 export const photosBasedAlbum = [
+  {
+    name: "DEBBIE BROWN - KVIFF 2025",
+    photos: [
+      {
+        name: "DEBBIE BROWN 25",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/c136bb4c-b1f7-4a50-e8da-38b80910fc00/public",
+      },
+      {
+        name: "DEBBIE BROWN 23",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2f2f9811-e3a0-4562-8ed7-efeb265b1500/public",
+      },
+      {
+        name: "DEBBIE BROWN 22",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/67e1379f-c257-475f-1a78-253a11a93a00/public",
+      },
+      {
+        name: "DEBBIE BROWN 21",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0191312e-5fa6-4851-05c1-4892abb97e00/public",
+      },
+      {
+        name: "DEBBIE BROWN 20",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0d2ad591-9d57-4ed8-ea44-d728f489a900/public",
+      },
+      {
+        name: "DEBBIE BROWN 19",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ded09576-89c8-4d94-770b-42ab3912b800/public",
+      },
+      {
+        name: "DEBBIE BROWN 18",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1f94e662-efb7-4b49-4868-bb511ffc6500/public",
+      },
+      {
+        name: "DEBBIE BROWN 16",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ea891179-a98e-447c-c09f-6dd0c38a5200/public",
+      },
+      {
+        name: "DEBBIE BROWN 15",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/1eeafa70-2318-4bc6-eed7-134eae83e700/public",
+      },
+      {
+        name: "DEBBIE BROWN 13",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/f42fe80d-eacb-481f-0c25-38586f3c7a00/public",
+      },
+      {
+        name: "DEBBIE BROWN 12",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/51fafaa5-5408-4245-1d93-ea093d76e300/public",
+      },
+      {
+        name: "DEBBIE BROWN 11",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/02040a24-6d16-4911-01fb-69023ed59600/public",
+      },
+      {
+        name: "DEBBIE BROWN 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9f8e4241-644c-4e2d-eb33-1234957ea300/public",
+      },
+      {
+        name: "DEBBIE BROWN 8",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/c8f6475c-9150-4838-32c6-3ebeb7515400/public",
+      },
+      {
+        name: "DEBBIE BROWN 7",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e250c77f-48cf-44d6-959e-3f7461b56700/public",
+      },
+      {
+        name: "DEBBIE BROWN 6",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9148fa7a-8f23-434f-4a45-6e8f69f3ae00/public",
+      },
+      {
+        name: "DEBBIE BROWN 5",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5fa201aa-790d-4f29-bb5c-6711de6c6100/public",
+      },
+      {
+        name: "DEBBIE BROWN 3",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/b5a567c4-9651-4385-793a-196222e7ee00/public",
+      },
+      {
+        name: "DEBBIE BROWN 4",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/9a4f40d5-59c7-43c2-de9d-3f4c81c71a00/public",
+      },
+      {
+        name: "DEBBIE BROWN 2",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/c136bb4c-b1f7-4a50-e8da-38b80910fc00/public",
+      },
+    ],
+  },
+  {
+    name: "WIDE SHOOTING",
+    photos: [
+      {
+        name: "WIDE SHOOTING 01",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/72ceb85d-788a-416d-e52a-db5b22f17900/public",
+      },
+      {
+        name: "WIDE SHOOTING 02",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/0ed6883a-3978-46be-0773-97b50a45e800/public",
+      },
+      {
+        name: "WIDE SHOOTING 03",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/35c66228-6470-4221-cef9-bcb644e5a500/public",
+      },
+      {
+        name: "WIDE SHOOTING 04",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/87d11b5e-b6fb-4679-c739-452c99e42c00/public",
+      },
+      {
+        name: "WIDE SHOOTING 05",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/ad8a9ba4-6fe0-4262-3c37-31ee69fba400/public",
+      },
+      {
+        name: "WIDE SHOOTING 06",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/72cb6b04-4082-4ff6-8af5-2f51e51a4d00/public",
+      },
+      {
+        name: "WIDE SHOOTING 07",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/129987b9-8407-4a10-eb06-f5026336b200/public",
+      },
+      {
+        name: "WIDE SHOOTING 08",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/e0649c36-22cf-400a-7d1a-b79494a26b00/public",
+      },
+      {
+        name: "WIDE SHOOTING 09",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/65a6e4a5-f150-4896-6d22-205e2641fd00/public",
+      },
+      {
+        name: "WIDE SHOOTING 10",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d11532a7-0b83-4b03-51ed-a45aaaf92300/public",
+      },
+      {
+        name: "WIDE SHOOTING 11",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5a3040bc-b21c-43af-7182-ae5b9e0bb000/public",
+      },
+      {
+        name: "WIDE SHOOTING 12",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/b2d89ae9-8229-42e9-10af-87849d5a1200/public",
+      },
+      {
+        name: "WIDE SHOOTING 13",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/2c0ff312-acdb-4259-7160-cc54a4759c00/public",
+      },
+      {
+        name: "WIDE SHOOTING 14",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8ae4539f-1916-45ba-e28b-5c8ed0e54a00/public",
+      },
+      {
+        name: "WIDE SHOOTING 15",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/a9691f73-0db9-49e8-2296-95cc95694200/public",
+      },
+      {
+        name: "WIDE SHOOTING 16",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/7fca7fd0-b63b-4fbf-42c8-3ab6bdf06900/public",
+      },
+      {
+        name: "WIDE SHOOTING 18",
+        path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/37d0d67c-4a3a-4346-b1fb-790a8e01cc00/public",
+      },
+
+    ],
+  },
   {
     name: "JANINE MADE BY LOVE - Vanguard",
     photos: [
