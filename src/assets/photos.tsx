@@ -18,7 +18,7 @@ export const photoCoverAlbums = [
   },
   {
     name: "JANINE MADE BY LOVE",
-    subName: "Spring Collection",
+    subName: "Spring Collection 2024",
     urlName: "janine-made-by-love-spring-collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/14789a56-e5e8-4429-6df9-c78ec4ccf000/public",
   },
@@ -30,7 +30,7 @@ export const photoCoverAlbums = [
   {
     name: `Portraits`,
     urlName: "portraits",
-    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d541f89a-a95a-40c4-bae6-aaa622ab2100/public",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/da6a911f-e6cf-421d-995f-23f0ca73ea00/public",
   },
   {
     name: `Stillin Style`,
@@ -50,7 +50,7 @@ export const photoCoverAlbums = [
   {
     name: "Wedding",
     urlName: "wedding",
-    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/d64b4903-ee1f-47e0-2704-5518ba82f800/public",
+    path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/8c6b22a7-9fae-424d-75b9-0da010ea0300/public",
   },
   {
     name: "Grandhotel Pupp",
@@ -64,7 +64,7 @@ export const photoCoverAlbums = [
   },
   {
     name: "JANINE MADE BY LOVE",
-    subName: "Autumn Collection",
+    subName: "Autumn Collection 2024",
     urlName: "janine-made-by-love-autumn-collection",
     path: "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/3d889cda-13a5-44f8-7300-225575d6ce00/public",
   },
@@ -312,7 +312,7 @@ export const photosBasedAlbum = [
     ],
   },
   {
-    name: "JANINE MADE BY LOVE",
+    name: "JANINE MADE BY LOVE - Spring Collection 2024",
     photos: [
       {
         name: "JANINE MADE BY LOVE 1",
@@ -809,7 +809,7 @@ export const photosBasedAlbum = [
     ],
   },
   {
-    name: "JANINE MADE BY LOVE - Autumn Collection",
+    name: "JANINE MADE BY LOVE - Autumn Collection 2024",
     photos: [
       {
         name: "JANINE MADE BY LOVE 1",
