@@ -14,7 +14,7 @@ const LandingPage = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const imgUrlSmallScreen = photosBasedAlbum[0].photos[0].path;
   const imgUrlBigScreen =
-    "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/bfe5d970-7db5-4a5d-f28a-6413cd365500/full";
+    "https://imagedelivery.net/nGg_6H5MpzveW4sWn4-OFg/5212bdeb-d8d7-4e1f-d97c-d89e0e1f4a00/full";
   const imgSelected = width > 900 ? imgUrlBigScreen : imgUrlSmallScreen;
 
   useEffect(() => {
