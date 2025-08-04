@@ -39,7 +39,7 @@ const LandingPage = () => {
           height: `${width <= 950 ? "94vh" : "87vh"}`,
           width: "100%",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "0% 0%",
+          backgroundPosition: "57% 30%",
           backgroundSize: "cover",
         }}
       >
